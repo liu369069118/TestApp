@@ -1,0 +1,89 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - DTCoreText (1.6.23):
+    - DTCoreText/Core (= 1.6.23)
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTCoreText/Core (1.6.23):
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTFoundation/Core (1.7.14)
+  - DTFoundation/DTAnimatedGIF (1.7.14)
+  - DTFoundation/DTHTMLParser (1.7.14):
+    - DTFoundation/Core
+  - DTFoundation/UIKit (1.7.14):
+    - DTFoundation/Core
+  - HappyDNS (0.3.15)
+  - JCore (1.1.9)
+  - JPush (3.0.6):
+    - JCore (~> 1.1.1)
+  - Masonry (1.1.0)
+  - MJRefresh (3.1.15.7)
+  - Qiniu (7.1.5):
+    - AFNetworking (~> 3)
+    - HappyDNS (~> 0.3)
+  - ReactiveObjC (3.0.0)
+  - YYCache (1.0.4)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - AFNetworking (= 3.1.0)
+  - DTCoreText (~> 1.6.23)
+  - JPush (= 3.0.6)
+  - Masonry
+  - MJRefresh (= 3.1.15.7)
+  - Qiniu (= 7.1.5)
+  - ReactiveObjC (= 3.0.0)
+  - YYCache (= 1.0.4)
+  - YYModel (~> 1.0.4)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - DTCoreText
+    - DTFoundation
+    - HappyDNS
+    - JCore
+    - JPush
+    - Masonry
+    - MJRefresh
+    - Qiniu
+    - ReactiveObjC
+    - YYCache
+    - YYModel
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  DTCoreText: 67023bb51b26711d5f640c851f4845aea14c24c9
+  DTFoundation: 25aa19bb7c6e225b1dfae195604fb8cf1da0ab4c
+  HappyDNS: 00c15e651a347206e58a20503a32a5564589b56a
+  JCore: 27598485098d0db99d2812cba048003457d08cfb
+  JPush: c41be50eb1a574a66aeb68d237f00a4ec6ec3a82
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  Qiniu: 77a3dba411556a383d72d17e842345a9d4c83252
+  ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: 4584cd8097c2cc887e704a843340eae73f8435d1
+
+COCOAPODS: 1.7.3

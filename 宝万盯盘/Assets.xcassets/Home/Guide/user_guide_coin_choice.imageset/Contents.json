@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "user_guide_coin_choice.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

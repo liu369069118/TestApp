@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "new_user_guide_choice.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
