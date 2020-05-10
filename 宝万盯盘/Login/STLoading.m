@@ -84,6 +84,47 @@
         [_backbtn setTitleColor:[UIColor colorWithHexRGBString:@"fb5555"] forState:UIControlStateNormal];
         [self addSubview:_backbtn];
         
+        UILabel *tip = [[UILabel alloc] init];
+        tip.text = @"登录即代表同意:";
+        tip.font = [UIFont systemFontOfSize:16];
+        tip.textColor = [UIColor whiteColor];
+        [self addSubview:tip];
+        
+        _regisAgreement = [[UIButton alloc] init];
+        [_regisAgreement setTitle:@"注册协议" forState:UIControlStateNormal];
+        [_regisAgreement setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        _regisAgreement.titleLabel.font = [UIFont systemFontOfSize:16];
+        [self addSubview:_regisAgreement];
+        
+        UILabel *sep = [[UILabel alloc] init];
+        sep.text = @" / ";
+        sep.font = [UIFont systemFontOfSize:16];
+        sep.textColor = [UIColor redColor];
+        [self addSubview:sep];
+        
+        _loginAgreement = [[UIButton alloc] init];
+        [_loginAgreement setTitle:@"隐私协议" forState:UIControlStateNormal];
+        [_loginAgreement setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        _loginAgreement.titleLabel.font = [UIFont systemFontOfSize:16];
+        [self addSubview:_loginAgreement];
+        
+        [tip mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(_regisAcc.mas_top).offset(-15);
+            make.centerX.mas_equalTo(-65);
+        }];
+        [_regisAgreement mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(tip.mas_centerY).mas_equalTo(0);
+            make.left.equalTo(sep.mas_right).offset(0);
+        }];
+        [_loginAgreement mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(tip.mas_centerY).mas_equalTo(0);
+            make.left.equalTo(tip.mas_right).offset(0);
+        }];
+        [sep mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(tip.mas_centerY).mas_equalTo(0);
+            make.left.equalTo(_loginAgreement.mas_right).offset(0);
+        }];
+        
     }
     return self;
 }

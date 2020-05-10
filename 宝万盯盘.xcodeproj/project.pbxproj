@@ -145,6 +145,7 @@
 		CF513E0A2467AD88009CED33 /* UIViewController+JKRStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513E092467AD88009CED33 /* UIViewController+JKRStatusBarStyle.m */; };
 		CF513E0D2467ADA7009CED33 /* UIColor+JKRColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513E0C2467ADA6009CED33 /* UIColor+JKRColor.m */; };
 		CF513E102467AE5D009CED33 /* WBSearchListController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513E0F2467AE5D009CED33 /* WBSearchListController.m */; };
+		CF513E20246836F9009CED33 /* STWebviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513E1F246836F9009CED33 /* STWebviewController.m */; };
 		D7087E66C27F262374674469 /* libPods-宝万盯盘.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 205EC578F5D9D0CB4AF00055 /* libPods-宝万盯盘.a */; };
 /* End PBXBuildFile section */
 
@@ -439,6 +440,8 @@
 		CF513E0C2467ADA6009CED33 /* UIColor+JKRColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JKRColor.m"; sourceTree = "<group>"; };
 		CF513E0E2467AE5D009CED33 /* WBSearchListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBSearchListController.h; sourceTree = "<group>"; };
 		CF513E0F2467AE5D009CED33 /* WBSearchListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBSearchListController.m; sourceTree = "<group>"; };
+		CF513E1E246836F9009CED33 /* STWebviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STWebviewController.h; sourceTree = "<group>"; };
+		CF513E1F246836F9009CED33 /* STWebviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STWebviewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1002,6 +1005,8 @@
 				CF5136C12465B315009CED33 /* STRegisViewController.m */,
 				CF5136C02465B315009CED33 /* UIColor+MCUIColorsUtils.h */,
 				CF5136BC2465B315009CED33 /* UIColor+MCUIColorsUtils.m */,
+				CF513E1E246836F9009CED33 /* STWebviewController.h */,
+				CF513E1F246836F9009CED33 /* STWebviewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1272,6 +1277,7 @@
 				7BE9FBC82464F5BA00B90142 /* WBCommunityModel.m in Sources */,
 				7B09AEA32467EE8A00CB0D2C /* XHSegmentItem.m in Sources */,
 				7B09AE822467D75A00CB0D2C /* WBQuotationSecondCell.m in Sources */,
+				CF513E20246836F9009CED33 /* STWebviewController.m in Sources */,
 				7B09AEE72467F0AC00CB0D2C /* MyRelativeLayout.m in Sources */,
 				7B09AEF62467F0AC00CB0D2C /* MyBorderline.m in Sources */,
 				CF5136CA2465B316009CED33 /* STLoading.m in Sources */,

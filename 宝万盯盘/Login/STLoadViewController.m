@@ -70,6 +70,20 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)jumpLoginWeb {
+    STWebviewController *web = [[STWebviewController alloc] init];
+    web.titleStr = @"隐私协议";
+    web.type = 1;
+    [self.navigationController pushViewController:web animated:YES];
+}
+
+- (void)jumpRegisWeb {
+    STWebviewController *web = [[STWebviewController alloc] init];
+    web.titleStr = @"注册协议";
+    web.type = 2;
+    [self.navigationController pushViewController:web animated:YES];
+}
+
 #pragma -mark -LayoutView
 
 - (void)layoutView{
@@ -82,6 +96,8 @@
     [_loading.log_sure addTarget:self action:@selector(loadorregis:) forControlEvents:UIControlEventTouchUpInside];//登录
     [_loading.regisAcc addTarget:self action:@selector(loadorregis:) forControlEvents:UIControlEventTouchUpInside];//注册
     [_loading.backbtn addTarget:self action:@selector(jumpBack:) forControlEvents:UIControlEventTouchUpInside];//随便逛逛
+    [_loading.loginAgreement addTarget:self action:@selector(jumpLoginWeb) forControlEvents:UIControlEventTouchUpInside];
+    [_loading.regisAgreement addTarget:self action:@selector(jumpRegisWeb) forControlEvents:UIControlEventTouchUpInside];
 }
 
 @end
