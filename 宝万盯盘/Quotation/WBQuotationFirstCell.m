@@ -9,7 +9,7 @@
 #import "WBQuotationFirstCell.h"
 #import "WBQuotationFirstModel.h"
 #import <YYModel/YYModel.h>
-
+#import "SXHGTYStockDetailViewController.h"
 @interface WBQuotationFirstCell ()
 
 @property (nonatomic, strong) UIScrollView *mainScrollView;
@@ -50,7 +50,8 @@
     for (int i = 0; i < list.count; i++) {
         UIView *plateView = [self createPlateView:list[i]];
         plateView.frame = CGRectMake(view_x, view_y, btnW, btnW);
-        plateView.tag = i;
+        plateView.tag = 10000+i;
+        [plateView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goNextVC:)]];
         
         [_mainScrollView addSubview:plateView];
         
@@ -123,5 +124,18 @@
     
     return result;
 }
+
+- (void)goNextVC:(UITapGestureRecognizer *)tap {
+    NSInteger tag = tap.view.tag - 10000;
+    
+    NSArray *list  = [self getResponceListData];
+    WBQuotationFirstModel *model = list[tag];
+    
+    SXHGTYStockDetailViewController *detailvc = [SXHGTYStockDetailViewController new];
+    detailvc.hidesBottomBarWhenPushed = YES;
+    detailvc.gpcode = model.code;
+    [self.jkr_viewController.navigationController pushViewController:detailvc animated:YES];
+}
+
 
 @end

@@ -9,6 +9,7 @@
 #import "WBQuotationThirdCell.h"
 #import "WBQuotationFirstModel.h"
 #import <YYModel/YYModel.h>
+#import "SXHGTYStockDetailViewController.h"
 
 @implementation WBQuotationThirdCell
 
@@ -39,7 +40,8 @@
     for (int i = 0; i < list.count; i++) {
         UIView *plateView = [self createPlateView:list[i]];
         plateView.frame = CGRectMake(view_x, view_y, btnW, btnH);
-        plateView.tag = i;
+        plateView.tag = 10000+i;
+        [plateView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goNextVC:)]];
         [self.contentView addSubview:plateView];
         
         view_y += btnH;
@@ -109,6 +111,18 @@
     label.textAlignment = NSTextAlignmentCenter;
     
     return label;
+}
+
+- (void)goNextVC:(UITapGestureRecognizer *)tap {
+    NSInteger tag = tap.view.tag - 10000;
+    
+    NSMutableArray *list  = [self getResponceListData];
+    WBQuotationFirstModel *model = list[tag];
+    
+    SXHGTYStockDetailViewController *detailvc = [SXHGTYStockDetailViewController new];
+    detailvc.hidesBottomBarWhenPushed = YES;
+    detailvc.gpcode = model.code;
+    [self.jkr_viewController.navigationController pushViewController:detailvc animated:YES];
 }
 
 - (NSMutableArray *)getResponceListData {

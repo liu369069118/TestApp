@@ -40,4 +40,10 @@
     }
 }
 
++ (NSMutableArray *)mainDataList {
+    NSDictionary *homeDict = [WBUitl readLocalFileWithName:@"mainJsonList"];
+    NSMutableArray *list  = [homeDict objectForKey:@"list"];
+    return list;
+}
+
 @end

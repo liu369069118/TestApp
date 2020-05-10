@@ -9,6 +9,9 @@
 #ifndef HCDefine_h
 #define HCDefine_h
 
+#define  kSXHGW_SeletCell @"SXHGTY_SelectCell"
+#define WEAKSELF __weak typeof(self) weakSelf = self
+
 // 判断机型
 #define iPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
 #define BLIsPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)

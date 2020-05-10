@@ -98,10 +98,10 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         return (kScreenWidth - 30 - 6) / 4 * 3 + 4 + 40;
-    } else if (indexPath.row == 1){
+    } else if (indexPath.row == 1) {
         return 110;
     } else {
-        return 4500;
+        return 60 * 90 + 50;
     }
 }
 
