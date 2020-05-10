@@ -19,6 +19,10 @@
 #import "MJRefresh.h"
 #import "Masonry.h"
 #import "STLoginTool.h"
-
+#import "UIView+JKRTouch.h"
+#import "UIView+JKRViewController.h"
+#import "UIView+JKR_Frame.h"
+#import "UIViewController+JKRStatusBarStyle.h"
+#import "UIColor+JKRColor.h"
 
 #endif /* PrefixHeader_pch */
