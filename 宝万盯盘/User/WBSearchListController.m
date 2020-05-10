@@ -9,6 +9,7 @@
 #import "WBSearchListController.h"
 #import "JKRSearchController.h"
 #import "JKRSearchResultViewController.h"
+#import "JKRTestViewController.h"
 
 #define kSafeAreaNavHeight (([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125,2436), [[UIScreen mainScreen] currentMode].size) : NO) ? 88 : 64)
 
@@ -17,7 +18,10 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) JKRSearchController *searchController;
-@property (nonatomic, strong) NSArray<NSString *> *dataArray;
+@property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, strong) UILabel *searchFooter;
+
+@property (nonatomic, strong) NSArray<NSString *> *searchAllData; //检索数据中心
 
 @end
 
@@ -35,6 +39,16 @@ static NSString *const CellIdentifier = @"WEICHAT_ID";
     [self.view addSubview:self.tableView];
     [self.tableView setTableHeaderView:self.searchController.searchBar];
     self.jkr_lightStatusBar = YES;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clearSearchHistory)];
+    _searchFooter = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 40)];
+    _searchFooter.userInteractionEnabled = YES;
+    _searchFooter.font = [UIFont systemFontOfSize:14];
+    _searchFooter.textAlignment = NSTextAlignmentCenter;
+    _searchFooter.text = @"清空搜索历史";
+    _searchFooter.textColor = [HCColor colorWithHexString:@"666666"];
+    [_searchFooter addGestureRecognizer:tap];
+    self.tableView.tableFooterView = _searchFooter;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -85,7 +99,7 @@ static NSString *const CellIdentifier = @"WEICHAT_ID";
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(SELF CONTAINS %@)", searchText];
     JKRSearchResultViewController *resultController = (JKRSearchResultViewController *)searchController.searchResultsController;
     if (!(searchText.length > 0)) resultController.filterDataArray = @[];
-    else resultController.filterDataArray = [self.dataArray filteredArrayUsingPredicate:predicate];
+    else resultController.filterDataArray = [self.searchAllData filteredArrayUsingPredicate:predicate];
 }
 
 #pragma mark - JKRSearchControllerDelegate
@@ -107,11 +121,11 @@ static NSString *const CellIdentifier = @"WEICHAT_ID";
 
 #pragma mark - JKRSearchBarDelegate
 - (void)searchBarTextDidBeginEditing:(JKRSearchBar *)searchBar {
-    NSLog(@"searchBarTextDidBeginEditing %@", searchBar);
+    
 }
 
 - (void)searchBarTextDidEndEditing:(JKRSearchBar *)searchBar {
-    NSLog(@"searchBarTextDidEndEditing %@", searchBar);
+    
 }
 
 - (void)searchBar:(JKRSearchBar *)searchBar textDidChange:(NSString *)searchText {
@@ -137,6 +151,9 @@ static NSString *const CellIdentifier = @"WEICHAT_ID";
 - (JKRSearchController *)searchController {
     if (!_searchController) {
         JKRSearchResultViewController *resultSearchController = [[JKRSearchResultViewController alloc] init];
+        resultSearchController.kSearchContentClick = ^(NSString *text) {
+            [self updateHistoryData:text];
+        };
         _searchController = [[JKRSearchController alloc] initWithSearchResultsController:resultSearchController];
         _searchController.searchBar.placeholder = @"搜索";
         _searchController.hidesNavigationBarDuringPresentation = YES;
@@ -147,11 +164,47 @@ static NSString *const CellIdentifier = @"WEICHAT_ID";
     return _searchController;
 }
 
-- (NSArray<NSString *> *)dataArray {
+- (void)clearSearchHistory {
+    [self.dataArray  removeAllObjects];
+    [self.tableView reloadData];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"searchHistory"];
+}
+
+- (void)updateHistoryData:(NSString *)text {
+    if (text) {
+        if (![self.dataArray containsObject:text]) {
+            [self.dataArray addObject:text];
+            [self.tableView reloadData];
+            [[NSUserDefaults standardUserDefaults] setObject:self.dataArray.copy forKey:@"searchHistory"];
+        }
+        [self jumpDetail];
+    }
+}
+
+- (void)jumpDetail {
+    JKRTestViewController *vc = [[JKRTestViewController alloc] init];
+    vc.detailUrl = @"http://www.baidu.com";
+    vc.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (NSMutableArray *)dataArray {
     if (!_dataArray) {
-        _dataArray = @[@"aaa",@"bbb",@"aaa",@"bbb",@"aaa",@"bbb",@"aaa",@"bbb",@"aaa",@"bbb",@"aaa",@"bbb"];
+        NSArray *history = [[NSUserDefaults standardUserDefaults] objectForKey:@"searchHistory"];
+        if (history) {
+            _dataArray = history.mutableCopy;
+        } else {
+            _dataArray = [NSMutableArray array];
+        }
     }
     return _dataArray;
+}
+
+- (NSArray<NSString *> *)searchAllData {
+    if (!_searchAllData) {
+        _searchAllData = @[@"联通",@"电信",@"招行",@"工行",@"中行",@"建行",@"移动",@"浦发",@"农行",@"邮政",@"顺丰",@"阿里"];
+    }
+    return _searchAllData;
 }
 
 - (void)dealloc {

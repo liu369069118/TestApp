@@ -10,6 +10,7 @@
 #import "WBQuotationFirstCell.h"
 #import "WBQuotationSecondCell.h"
 #import "WBQuotationThirdCell.h"
+#import "WBSearchListController.h"
 
 @interface WBQuotationController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -31,14 +32,23 @@
     label.textAlignment = NSTextAlignmentCenter;
     label.font = [UIFont systemFontOfSize:20];
     
+    UIButton *searchBtn = [[UIButton alloc] init];
+    [searchBtn setImage:[UIImage imageNamed:@"SearchContactsBarIcon"] forState:UIControlStateNormal];
+    [searchBtn addTarget:self action:@selector(jumpSearchVc) forControlEvents:UIControlEventTouchUpInside];
+    
     UIView *titleView = [[UIView alloc] init];
     [titleView addSubview:label];
+    [titleView addSubview:searchBtn];
     [self.view addSubview:titleView];
     
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(-12);
         make.left.right.mas_equalTo(0);
         make.height.mas_equalTo(20);
+    }];
+    [searchBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(label.mas_centerY).offset(0);
+        make.right.mas_equalTo(-16);
     }];
     
     [titleView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -115,5 +125,15 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
+- (void)jumpSearchVc {
+    WBSearchListController *vc = [[WBSearchListController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end

@@ -29,7 +29,7 @@ UIKIT_EXTERN NSString *SEARCH_CANCEL_NOTIFICATION_KEY;
     self.backgroundColor = JKRColor(243, 243, 243, 1.0);
     [self addSubview:self.backgroundImageView];
     [self addSubview:self.searchTextField];
-    [self addSubview:self.rightButton];
+//    [self addSubview:self.rightButton];
     [self addSubview:self.cancelButton];
     return self;
 }
