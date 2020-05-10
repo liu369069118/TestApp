@@ -7,7 +7,6 @@
 //
 
 #import "JKRSearchResultViewController.h"
-#import "JKRTestViewController.h"
 
 @interface JKRSearchResultViewController ()
 
@@ -40,8 +39,13 @@ static NSString *const cellID = @"RESULT_CELL_ID";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"ResultTableView click index: %zd", indexPath.row);
-//    [self.navigationController pushViewController:[JKRTestViewController new] animated:YES];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:[JKRTestViewController new] animated:YES completion:nil];
+    NSString *content = [self.filterDataArray objectAtIndex:indexPath.row];
+    if (content && content.length > 0) {
+        if (self.kSearchContentClick) {
+            self.kSearchContentClick(content);
+        }
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"SEARCH_CANCEL_NOTIFICATION_KEY" object:nil];
+    }
 }
 
 - (void)dealloc {
