@@ -33,7 +33,7 @@
     self.navigationController.navigationBar.hidden = YES;
     
     UILabel *label = [[UILabel alloc] init];
-    label.text = @"首页";
+    label.text = @"资讯";
     label.textColor = [UIColor blackColor];
     label.textAlignment = NSTextAlignmentCenter;
     label.font = [UIFont systemFontOfSize:20];

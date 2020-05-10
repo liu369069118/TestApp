@@ -73,23 +73,27 @@
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[HCColor appColor1_A70], NSForegroundColorAttributeName, [HCFont pingfangM_F_11], NSFontAttributeName, nil] forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[HCColor HCBlueColor],NSForegroundColorAttributeName, [HCFont pingfangM_F_11], NSFontAttributeName, nil]forState:UIControlStateSelected];
     
-    NSArray *tabBarMenu = @[
-                                 @{
-                                     @"title" : @"首页",
-                                     @"image" : @"tabbar_news",
-                                     @"class" : @"WBHomeController",
-                                     },
-                                 @{
-                                     @"title" : @"社区",
-                                     @"image" : @"tabbar_community",
-                                     @"class" : @"WBCommunityController",
-                                     },
-                                 @{
-                                     @"title" : @"我的",
-                                     @"image" : @"tabbar_profile",
-                                     @"class" : @"WBUserController",
-                                    },
-                                 ];
+    NSArray *tabBarMenu = @[@{
+                                @"title" : @"行情",
+                                @"image" : @"tabbar_quotation",
+                                @"class" : @"WBQuotationController",
+                            },
+                            @{
+                                @"title" : @"资讯",
+                                @"image" : @"tabbar_news",
+                                @"class" : @"WBHomeController",
+                            },
+                            @{
+                                @"title" : @"社区",
+                                @"image" : @"tabbar_community",
+                                @"class" : @"WBCommunityController",
+                            },
+                            @{
+                                @"title" : @"我的",
+                                @"image" : @"tabbar_profile",
+                                @"class" : @"WBUserController",
+                            },
+    ];
     NSMutableArray *viewControllers = [NSMutableArray array];
     for (NSDictionary *menu in tabBarMenu) {
         UIViewController *viewController = [[NSClassFromString(menu[@"class"]) alloc] init];

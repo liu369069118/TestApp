@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B09AE742467B59000CB0D2C /* WBQuotationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09AE732467B59000CB0D2C /* WBQuotationController.m */; };
 		7B7F2A35246691F300E2134D /* home3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B7F2A33246691F300E2134D /* home3.geojson */; };
 		7B7F2A36246691F300E2134D /* home2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B7F2A34246691F300E2134D /* home2.geojson */; };
 		7BE9F9AC2463E78400B90142 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9F9AB2463E78400B90142 /* AppDelegate.m */; };
@@ -106,6 +107,8 @@
 
 /* Begin PBXFileReference section */
 		205EC578F5D9D0CB4AF00055 /* libPods-宝万盯盘.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-宝万盯盘.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B09AE722467B59000CB0D2C /* WBQuotationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBQuotationController.h; sourceTree = "<group>"; };
+		7B09AE732467B59000CB0D2C /* WBQuotationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBQuotationController.m; sourceTree = "<group>"; };
 		7B7F2A33246691F300E2134D /* home3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = home3.geojson; sourceTree = "<group>"; };
 		7B7F2A34246691F300E2134D /* home2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = home2.geojson; sourceTree = "<group>"; };
 		7BE9F9A72463E78400B90142 /* 万宝盯盘.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "万宝盯盘.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -297,6 +300,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7B09AE712467B52400CB0D2C /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				7BE9FCD324653A7900B90142 /* WBWebController.h */,
+				7BE9FCD424653A7900B90142 /* WBWebController.m */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		7B09AE752467B59400CB0D2C /* Quotation */ = {
+			isa = PBXGroup;
+			children = (
+				7B09AE722467B59000CB0D2C /* WBQuotationController.h */,
+				7B09AE732467B59000CB0D2C /* WBQuotationController.m */,
+			);
+			path = Quotation;
+			sourceTree = "<group>";
+		};
 		7BE9F99E2463E78400B90142 = {
 			isa = PBXGroup;
 			children = (
@@ -334,8 +355,8 @@
 				7BE9FA892463F9FF00B90142 /* community.geojson */,
 				7BE9FA8B2463FAAB00B90142 /* WBUitl.h */,
 				7BE9FA8C2463FAAB00B90142 /* WBUitl.m */,
-				7BE9FCD324653A7900B90142 /* WBWebController.h */,
-				7BE9FCD424653A7900B90142 /* WBWebController.m */,
+				7B09AE752467B59400CB0D2C /* Quotation */,
+				7B09AE712467B52400CB0D2C /* WebView */,
 				7BE9FBBE2464048400B90142 /* Labrary */,
 				7BE9FA732463EECF00B90142 /* Community */,
 				7BE9F9E22463E8A900B90142 /* Home */,
@@ -869,6 +890,7 @@
 				7BE9FBF124650C8900B90142 /* NSMutableAttributedString+TY.m in Sources */,
 				7BE9F9AC2463E78400B90142 /* AppDelegate.m in Sources */,
 				7BE9FBB02464029E00B90142 /* UIControl+XFExt.m in Sources */,
+				7B09AE742467B59000CB0D2C /* WBQuotationController.m in Sources */,
 				7BE9FBEE24650C8900B90142 /* TYDrawStorage.m in Sources */,
 				7BE9FBF424650C8900B90142 /* TYAttributedLabel.m in Sources */,
 				CF5136CE2465B3B2009CED33 /* WBUserHeader.m in Sources */,
