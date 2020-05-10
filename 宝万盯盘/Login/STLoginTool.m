@@ -37,7 +37,7 @@
     NSDictionary *accountDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"loginData"];
     if (!accountDic) {
         _accountDic = [NSMutableDictionary dictionary];
-        [_accountDic setObject:@"11112222" forKey:@"testuseraccount"];
+        [_accountDic setObject:@"qwe123456" forKey:@"18201121824"];
         [[NSUserDefaults standardUserDefaults] setObject:_accountDic.copy forKey:@"loginData"];
     } else {
         _accountDic = accountDic.mutableCopy;

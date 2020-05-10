@@ -8,6 +8,7 @@
 
 #import "STRegisViewController.h"
 #import "STRegistration.h"
+#import "KNToast.h"
 
 @interface STRegisViewController ()<UITextFieldDelegate>
 
@@ -69,13 +70,13 @@
 - (void)regisMyAccount:(UIButton *)btn{
     if ([_mysec isEqualToString:_mysecs]&&_myEmail.length!=0&&_myName.length!=0&&_mysec.length!=0&&_mysecs.length!=0) {
         if ([[STLoginTool sharedInstance] userRegisWithAccount:_myName password:_mysec]) {
-            NSLog(@"注册成功");
+            [[KNToast shareToast] initWithText:@"注册成功"];
             [self dismissViewControllerAnimated:YES completion:nil];
         }else{
-            NSLog(@"注册失败");
+            [[KNToast shareToast] initWithText:@"注册失败"];
         }
     }else{
-        NSLog(@"不符合条件");
+        [[KNToast shareToast] initWithText:@"不符合条件"];
     }
 }
 - (void)jumpLoading:(UIButton *)btn{
@@ -86,7 +87,7 @@
 }
 
 #pragma -mark -layoutView
-- (void)layoutView{
+- (void)layoutView {
     STRegistration *regis = [[STRegistration alloc] initWithFrame:self.view.frame WithDelegate:self];
     [regis.regis_sure addTarget:self action:@selector(regisMyAccount:) forControlEvents:UIControlEventTouchUpInside];
     [regis.jumpload addTarget:self action:@selector(jumpLoading:) forControlEvents:UIControlEventTouchUpInside];

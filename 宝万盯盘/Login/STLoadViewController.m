@@ -10,6 +10,7 @@
 #import "STLoading.h"
 #import "STRegisViewController.h"
 #import "STLoginTool.h"
+#import "KNToast.h"
 
 @interface STLoadViewController ()<UITextFieldDelegate>
 
@@ -51,7 +52,7 @@
             }
             [self.navigationController popViewControllerAnimated:YES];
         } else {
-            NSLog(@"登录失败");
+            [[KNToast shareToast] initWithText:@"账号密码错误"];
         }
     }else if (btn.tag == 1004){
         //注册

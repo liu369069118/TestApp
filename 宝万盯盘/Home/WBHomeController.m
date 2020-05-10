@@ -90,24 +90,90 @@
         }
     }
     
-    [_tableView reloadData];
+    @WeakObj(self);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        selfWeak.pageRefer = 2;
+        [selfWeak.tableView reloadData];
+        [selfWeak.tableView.mj_header endRefreshing];
+        [selfWeak.tableView.mj_footer endRefreshing];
+    });
 }
 
+- (void)loadArticleListData2 {
+    NSDictionary *homeDict = [WBUitl readLocalFileWithName:@"home2"];
+    NSArray *newsDicts = [homeDict getArray:@"list"];
+
+    for (NSDictionary *tempDict in newsDicts) {
+        NSInteger cardType = [[tempDict getNotNilString:@"card"] integerValue];
+        if (cardType == 1 || cardType == 2) {
+            WBNewsModel *model = [WBNewsModel newsItemWithDict:tempDict];
+            WBNewsLayout *layout = [[WBNewsLayout alloc] initWithNews:model];
+            [_articleList addObject:layout];
+        }
+    }
+    
+    @WeakObj(self);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        selfWeak.pageRefer = 3;
+        [selfWeak.tableView reloadData];
+        [selfWeak.tableView.mj_header endRefreshing];
+        [selfWeak.tableView.mj_footer endRefreshing];
+    });
+}
+
+- (void)loadArticleListData3 {
+    NSDictionary *homeDict = [WBUitl readLocalFileWithName:@"home3"];
+    NSArray *newsDicts = [homeDict getArray:@"list"];
+
+    for (NSDictionary *tempDict in newsDicts) {
+        NSInteger cardType = [[tempDict getNotNilString:@"card"] integerValue];
+        if (cardType == 1 || cardType == 2) {
+            WBNewsModel *model = [WBNewsModel newsItemWithDict:tempDict];
+            WBNewsLayout *layout = [[WBNewsLayout alloc] initWithNews:model];
+            [_articleList addObject:layout];
+        }
+    }
+    
+    @WeakObj(self);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        selfWeak.pageRefer = 4;
+        [selfWeak.tableView reloadData];
+        [selfWeak.tableView.mj_header endRefreshing];
+        [selfWeak.tableView.mj_footer endRefreshing];
+    });
+}
+
+- (NSString*)dictionaryToJson:(NSDictionary *)dic
+
+{
+
+NSError *parseError = nil;
+
+NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&parseError];
+
+return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+
+}
 
 - (void)addRefresh {
     @WeakObj(self);
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         selfWeak.pageRefer = 1;
-        [selfWeak loadCommunityTopicData];
+        [selfWeak loadArticleListData];
     }];
     header.lastUpdatedTimeLabel.hidden = YES;
     header.stateLabel.hidden = YES;
     _tableView.mj_header = header;
-    //立即输入刷新状态
     [_tableView.mj_header beginRefreshing];
     
     MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        [selfWeak loadCommunityTopicData];
+        if (selfWeak.pageRefer == 2) {
+            [selfWeak loadArticleListData2];
+        } else if (selfWeak.pageRefer == 3) {
+            [selfWeak loadArticleListData3];
+        } else {
+            [selfWeak loadCommunityTopicData];
+        }
     }];
     footer.stateLabel.hidden = YES;
     footer.refreshingTitleHidden = YES;
@@ -124,6 +190,8 @@
     
     @WeakObj(self);
     [fetcher requestWithSuccess:^(id responseObject) {
+//        NSString *string = [self dictionaryToJson:responseObject];
+        
         NSDictionary *dataDict = [responseObject getObject:@"data"];
         
         if (selfWeak.pageRefer == 1) {

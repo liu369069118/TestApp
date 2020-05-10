@@ -9,9 +9,10 @@
 #import "WBWebController.h"
 #import <WebKit/WebKit.h>
 
-@interface WBWebController ()
+@interface WBWebController () <WKNavigationDelegate, WKUIDelegate>
 
 @property (nonatomic, weak) WKWebView *webView;
+@property (nonatomic, strong) UIProgressView *progressView;
 
 @end
 
@@ -56,13 +57,20 @@
     
     WKWebView *webView = [[WKWebView alloc] init];
     webView.backgroundColor = [UIColor clearColor];
-//    webView.navigationDelegate = self;
-//    webView.UIDelegate = self;
+    webView.navigationDelegate = self;
+    webView.UIDelegate = self;
     [self.view addSubview:webView];
     _webView = webView;
     
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:_url]];
+    //进度条初始化
+    self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, kHCNavigationBarHeight, kScreenWidth, 1.5)];
+    self.progressView.backgroundColor = [UIColor clearColor];
+    self.progressView.transform = CGAffineTransformMakeScale(1.0f, 1.5f);
+    [self.view addSubview:self.progressView];
     
+    [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
+
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:_url]];
     [_webView loadRequest:request];
     
     [webView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -75,14 +83,55 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-/*
-#pragma mark - Navigation
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"estimatedProgress"]) {
+        self.progressView.progress = self.webView.estimatedProgress;
+        if (self.progressView.progress == 1) {
+            /*
+             *添加一个简单的动画，将progressView的Height变为1.4倍，在开始加载网页的代理中会恢复为1.5倍
+             *动画时长0.25s，延时0.3s后开始动画
+             *动画结束后将progressView隐藏
+             */
+            __weak typeof (self)weakSelf = self;
+            [UIView animateWithDuration:0.25f delay:0.3f options:UIViewAnimationOptionCurveEaseOut animations:^{
+                weakSelf.progressView.transform = CGAffineTransformMakeScale(1.0f, 1.4f);
+            } completion:^(BOOL finished) {
+                weakSelf.progressView.hidden = YES;
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+            }];
+        }
+    }else{
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
 }
-*/
+
+//开始加载
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
+    NSLog(@"开始加载网页");
+    //开始加载网页时展示出progressView
+    self.progressView.hidden = NO;
+    //开始加载网页的时候将progressView的Height恢复为1.5倍
+    self.progressView.transform = CGAffineTransformMakeScale(1.0f, 1.5f);
+    //防止progressView被网页挡住
+    [self.view bringSubviewToFront:self.progressView];
+}
+
+//加载完成
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    NSLog(@"加载完成");
+    //加载完成后隐藏progressView
+    //self.progressView.hidden = YES;
+}
+
+//加载失败
+- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error {
+    NSLog(@"加载失败");
+    //加载失败同样需要隐藏progressView
+    //self.progressView.hidden = YES;
+}
+
+- (void)dealloc {
+    [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
+}
 
 @end

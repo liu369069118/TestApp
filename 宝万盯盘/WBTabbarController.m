@@ -86,7 +86,7 @@
                                      },
                                  @{
                                      @"title" : @"我的",
-                                     @"image" : @"tabbar_community",
+                                     @"image" : @"tabbar_profile",
                                      @"class" : @"WBUserController",
                                     },
                                  ];

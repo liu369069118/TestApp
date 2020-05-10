@@ -80,12 +80,11 @@
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         selfWeak.pageRefer = 1;
         selfWeak.topicTime = @"";
-        [selfWeak loadCommunityTopicData];
+        [selfWeak loadArticleListData];
     }];
     header.lastUpdatedTimeLabel.hidden = YES;
     header.stateLabel.hidden = YES;
     _tableView.mj_header = header;
-    //立即输入刷新状态
     [_tableView.mj_header beginRefreshing];
     
     MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
@@ -94,6 +93,30 @@
     footer.stateLabel.hidden = YES;
     footer.refreshingTitleHidden = YES;
     self.tableView.mj_footer = footer;
+}
+
+/// >>> 文章
+- (void)loadArticleListData {
+    NSDictionary *homeDict = [WBUitl readLocalFileWithName:@"community"];
+    [_articleList removeAllObjects];
+
+    NSArray *newsDicts = [[homeDict getObject:@"data"] getArray:@"list"];
+
+    for (NSDictionary *tempDict in newsDicts) {
+        WBCommunityModel *model = [WBCommunityModel createCommunityModelWithDict:tempDict];
+        WBCommunityLayout *layout = [[WBCommunityLayout alloc] initWithTopicModel:model];
+        
+        [_articleList addObject:layout];
+    }
+    
+    @WeakObj(self);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        selfWeak.pageRefer = 2;
+        selfWeak.topicTime = @"";
+        [selfWeak.tableView reloadData];
+        [selfWeak.tableView.mj_header endRefreshing];
+        [selfWeak.tableView.mj_footer endRefreshing];
+    });
 }
 
 - (void)loadCommunityTopicData {
@@ -106,6 +129,7 @@
     
     @WeakObj(self);
     [fetcher requestWithSuccess:^(id responseObject) {
+//        NSString *string = [self dictionaryToJson:responseObject];
         if ([[responseObject getNotNilString:@"code"] isEqualToString:@"1"]) {
             NSDictionary *data = [responseObject getObject:@"data"];
             
@@ -137,6 +161,18 @@
         [selfWeak.tableView.mj_header endRefreshing];
         [selfWeak.tableView.mj_footer endRefreshing];
     }];
+}
+
+- (NSString*)dictionaryToJson:(NSDictionary *)dic
+
+{
+
+NSError *parseError = nil;
+
+NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&parseError];
+
+return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+
 }
 
 #pragma mark - UITableViewDelegate && UITAbleViewDataSource
@@ -179,6 +215,15 @@
     WBWebController *webVC = [[WBWebController alloc] init];
     webVC.url = mainCell.layout.topicModel.h5_url;
     [self.navigationController pushViewController:webVC animated:YES];
+}
+
+- (void)commentClickForCummunityCell:(nonnull WBCommunityCell *)mainCell {
+    
+}
+
+
+- (void)likeClickForCummunityCell:(nonnull WBCommunityCell *)mainCell {
+    
 }
 
 @end

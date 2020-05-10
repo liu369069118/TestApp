@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B7F2A35246691F300E2134D /* home3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B7F2A33246691F300E2134D /* home3.geojson */; };
+		7B7F2A36246691F300E2134D /* home2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B7F2A34246691F300E2134D /* home2.geojson */; };
 		7BE9F9AC2463E78400B90142 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9F9AB2463E78400B90142 /* AppDelegate.m */; };
 		7BE9F9B52463E78400B90142 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE9F9B32463E78400B90142 /* Main.storyboard */; };
 		7BE9F9B72463E78800B90142 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BE9F9B62463E78800B90142 /* Assets.xcassets */; };
@@ -162,7 +164,9 @@
 
 /* Begin PBXFileReference section */
 		205EC578F5D9D0CB4AF00055 /* libPods-宝万盯盘.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-宝万盯盘.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BE9F9A72463E78400B90142 /* 宝万盯盘.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "宝万盯盘.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B7F2A33246691F300E2134D /* home3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = home3.geojson; sourceTree = "<group>"; };
+		7B7F2A34246691F300E2134D /* home2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = home2.geojson; sourceTree = "<group>"; };
+		7BE9F9A72463E78400B90142 /* 万宝盯盘.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "万宝盯盘.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BE9F9AA2463E78400B90142 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7BE9F9AB2463E78400B90142 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7BE9F9B42463E78400B90142 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -486,7 +490,7 @@
 		7BE9F9A82463E78400B90142 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7BE9F9A72463E78400B90142 /* 宝万盯盘.app */,
+				7BE9F9A72463E78400B90142 /* 万宝盯盘.app */,
 				7BE9F9C22463E78800B90142 /* 宝万盯盘Tests.xctest */,
 				7BE9F9CD2463E78800B90142 /* 宝万盯盘UITests.xctest */,
 			);
@@ -503,6 +507,8 @@
 				7BE9F9E72463EAA600B90142 /* PrefixHeader.pch */,
 				7BE9FA982463FDF000B90142 /* HCDefine.h */,
 				7BE9FA872463F9B700B90142 /* home.geojson */,
+				7B7F2A34246691F300E2134D /* home2.geojson */,
+				7B7F2A33246691F300E2134D /* home3.geojson */,
 				7BE9FA892463F9FF00B90142 /* community.geojson */,
 				7BE9FA8B2463FAAB00B90142 /* WBUitl.h */,
 				7BE9FA8C2463FAAB00B90142 /* WBUitl.m */,
@@ -1018,7 +1024,7 @@
 			);
 			name = "宝万盯盘";
 			productName = "宝万盯盘";
-			productReference = 7BE9F9A72463E78400B90142 /* 宝万盯盘.app */;
+			productReference = 7BE9F9A72463E78400B90142 /* 万宝盯盘.app */;
 			productType = "com.apple.product-type.application";
 		};
 		7BE9F9C12463E78800B90142 /* 宝万盯盘Tests */ = {
@@ -1107,6 +1113,8 @@
 				7BE9FA8A2463F9FF00B90142 /* community.geojson in Resources */,
 				7BE9FA882463F9B800B90142 /* home.geojson in Resources */,
 				7BE9FB7F2463FF6800B90142 /* KNPhotoBrower.bundle in Resources */,
+				7B7F2A36246691F300E2134D /* home2.geojson in Resources */,
+				7B7F2A35246691F300E2134D /* home3.geojson in Resources */,
 				7BE9F9BA2463E78800B90142 /* LaunchScreen.storyboard in Resources */,
 				7BE9F9B72463E78800B90142 /* Assets.xcassets in Resources */,
 				7BE9F9B52463E78400B90142 /* Main.storyboard in Resources */,
@@ -1471,7 +1479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MP6Y6VYMET;
+				DEVELOPMENT_TEAM = AG3SS72TJN;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/宝万盯盘/PrefixHeader.pch";
 				INFOPLIST_FILE = "宝万盯盘/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1479,6 +1487,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1527,8 +1536,8 @@
 					"-weak_framework",
 					"\"UserNotifications\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wanbao.dingpan;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.home.wanbao.dingpan;
+				PRODUCT_NAME = "万宝盯盘";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1539,7 +1548,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MP6Y6VYMET;
+				DEVELOPMENT_TEAM = AG3SS72TJN;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/宝万盯盘/PrefixHeader.pch";
 				INFOPLIST_FILE = "宝万盯盘/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1547,6 +1556,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1595,8 +1605,8 @@
 					"-weak_framework",
 					"\"UserNotifications\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wanbao.dingpan;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.home.wanbao.dingpan;
+				PRODUCT_NAME = "万宝盯盘";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

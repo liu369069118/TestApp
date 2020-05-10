@@ -31,59 +31,108 @@ PODS:
     - DTFoundation/Core
   - DTFoundation/UIKit (1.7.14):
     - DTFoundation/Core
-  - HappyDNS (0.3.15)
+  - FDFullscreenPopGesture (1.1)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - HappyDNS (0.3.16)
+  - IQKeyboardManager (6.5.5)
   - JCore (1.1.9)
+  - JHChainableAnimations (3.0.1)
   - JPush (3.0.6):
     - JCore (~> 1.1.1)
   - Masonry (1.1.0)
   - MJRefresh (3.1.15.7)
+  - MMPopupView (1.7.2):
+    - Masonry
   - Qiniu (7.1.5):
     - AFNetworking (~> 3)
     - HappyDNS (~> 0.3)
   - ReactiveObjC (3.0.0)
+  - RKNotificationHub (2.0.5)
+  - SDCycleScrollView (1.80):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.7.4):
+    - SDWebImage/Core (= 5.7.4)
+  - SDWebImage/Core (5.7.4)
+  - TTTAttributedLabel (2.0.0)
   - YYCache (1.0.4)
   - YYModel (1.0.4)
+  - YYText (1.0.7)
+  - zipzap (8.1.1)
 
 DEPENDENCIES:
   - AFNetworking (= 3.1.0)
   - DTCoreText (~> 1.6.23)
+  - FDFullscreenPopGesture (= 1.1)
+  - FMDB (~> 2.7)
+  - IQKeyboardManager
+  - JHChainableAnimations (~> 3.0.1)
   - JPush (= 3.0.6)
   - Masonry
   - MJRefresh (= 3.1.15.7)
+  - MMPopupView
   - Qiniu (= 7.1.5)
   - ReactiveObjC (= 3.0.0)
+  - RKNotificationHub
+  - SDCycleScrollView
+  - TTTAttributedLabel
   - YYCache (= 1.0.4)
   - YYModel (~> 1.0.4)
+  - YYText
+  - zipzap (~> 8.1.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - DTCoreText
     - DTFoundation
+    - FDFullscreenPopGesture
+    - FMDB
     - HappyDNS
+    - IQKeyboardManager
     - JCore
+    - JHChainableAnimations
     - JPush
     - Masonry
     - MJRefresh
+    - MMPopupView
     - Qiniu
     - ReactiveObjC
+    - RKNotificationHub
+    - SDCycleScrollView
+    - SDWebImage
+    - TTTAttributedLabel
     - YYCache
     - YYModel
+    - YYText
+    - zipzap
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   DTCoreText: 67023bb51b26711d5f640c851f4845aea14c24c9
   DTFoundation: 25aa19bb7c6e225b1dfae195604fb8cf1da0ab4c
-  HappyDNS: 00c15e651a347206e58a20503a32a5564589b56a
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  HappyDNS: 158044ed01375cb27b28f272b198bca3901aced8
+  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   JCore: 27598485098d0db99d2812cba048003457d08cfb
+  JHChainableAnimations: 0237489ed063f0ec5b351f5c7bb26c1891517074
   JPush: c41be50eb1a574a66aeb68d237f00a4ec6ec3a82
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  MMPopupView: fe1dd010824029dfb632fdf1a531db5dd5386020
   Qiniu: 77a3dba411556a383d72d17e842345a9d4c83252
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
+  RKNotificationHub: e926748820d719f21ff374657a47fceefa1796b4
+  SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
+  SDWebImage: 48b88379b798fd1e4298f95bb25d2cdabbf4deb3
+  TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+  zipzap: 940162d9c9c60472c2eab341385e4214da0fdf1c
 
-PODFILE CHECKSUM: 4584cd8097c2cc887e704a843340eae73f8435d1
+PODFILE CHECKSUM: 401488614ce531f6722aae639a2cb77a230bf368
 
 COCOAPODS: 1.7.3

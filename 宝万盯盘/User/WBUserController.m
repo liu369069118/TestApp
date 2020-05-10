@@ -12,6 +12,10 @@
 #import "WBUserHeader.h"
 #import "WBFooterView.h"
 #import "STLoadViewController.h"
+#import "HBActionSheet.h"
+#import "KNToast.h"
+#import "SDImageCache.h"
+#import "HCRequestCache.h"
 
 @interface WBUserController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -101,9 +105,28 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 1) {
         if (indexPath.row == 0) {
-            
+
+            NSString *cacheString = [NSString stringWithFormat:@"如果您发现任何问题，请发送邮件联系我们，是否需要复制我们的邮箱到您的剪切板？"];
+            HBActionSheet *actionSheet = [[HBActionSheet alloc] initActionSheetWithTitle:@"" descriptiveText:cacheString cancelButtonTitle:@"取消" destructiveButtonTitles:@[@"复制邮箱"] otherButtonTitles:@[] itemAction:^(HBActionSheet *actionSheet, NSString *title, NSInteger index) {
+                if ([title isEqualToString:@"复制邮箱"]) {
+                    [UIPasteboard generalPasteboard].string = @"baowan@163.com";
+                    [[KNToast shareToast] initWithText:@"复制成功"];
+                } else {
+                    
+                }
+            }];
+            [actionSheet showAction];
         } else if (indexPath.row == 1) {
-            
+            @WeakObj(self);
+            NSString *cacheString = [NSString stringWithFormat:@"是否清空 %@ 缓存?",[self getCacheSize]];
+            HBActionSheet *actionSheet = [[HBActionSheet alloc] initActionSheetWithTitle:@"" descriptiveText:cacheString cancelButtonTitle:@"取消" destructiveButtonTitles:@[@"清空"] otherButtonTitles:@[] itemAction:^(HBActionSheet *actionSheet, NSString *title, NSInteger index) {
+                if ([title isEqualToString:@"清空"]) {
+                    [selfWeak clearCache];
+                } else {
+                    
+                }
+            }];
+            [actionSheet showAction];
         } else if (indexPath.row == 2) {
             if ([STLoginTool sharedInstance].isLogin) {
                 MJWeakSelf
@@ -123,11 +146,24 @@
     }
 }
 
+- (NSString *)getCacheSize{
+    CGFloat imageCacheSize = ((CGFloat)[[SDImageCache sharedImageCache] totalDiskSize])/1024.0/1024.0;
+    CGFloat localCacheSize = ((CGFloat)[HCRequestCache allRequestCacheSize])/1024.0/1024.0;
+    return [NSString stringWithFormat:@"%.2fM",imageCacheSize + localCacheSize];
+}
+
+- (void)clearCache{
+    [HCRequestCache removeAllRequestCache];
+    [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+        [[KNToast shareToast] initWithText:@"清空成功"];
+    }];
+}
+
 - (NSArray *)dataArray {
     if (!_dataArray) {
         _dataArray = @[
                         @[@"护眼模式"],
-                        @[@"意见反馈",@"关于我们",@"退出账号"]
+                        @[@"联系我们",@"清空缓存",@"退出账号"]
                     ];
     }
     return _dataArray;

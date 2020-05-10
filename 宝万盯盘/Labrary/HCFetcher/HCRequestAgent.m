@@ -11,6 +11,7 @@
 #include <arpa/inet.h>
 #import "NSString+MD5.h"
 #import <YYModel/YYModel.h>
+#import <AdSupport/AdSupport.h>
 
 // break-if 宏
 #ifndef BREAK_IF
