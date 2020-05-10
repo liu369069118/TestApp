@@ -27,6 +27,11 @@
     [self layoutView];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -68,7 +73,6 @@
 #pragma -mark -LayoutView
 
 - (void)layoutView{
-    
     self.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     _loading = [[STLoading alloc] initWithFrame:self.view.frame];

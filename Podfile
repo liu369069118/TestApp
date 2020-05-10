@@ -17,7 +17,6 @@ target '宝万盯盘' do
     pod 'TTTAttributedLabel'
     pod 'MMPopupView'
     pod 'zipzap', '~> 8.1.1'
-    pod 'FDFullscreenPopGesture', '1.1'
     pod 'FMDB', '~> 2.7'
     pod 'SDCycleScrollView'
     pod 'IQKeyboardManager'

@@ -85,6 +85,17 @@
 		CF5136CE2465B3B2009CED33 /* WBUserHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5136CD2465B3B2009CED33 /* WBUserHeader.m */; };
 		CF513A442465BA16009CED33 /* WBFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513A432465BA16009CED33 /* WBFooterView.m */; };
 		CF513A472465C171009CED33 /* WBFunctionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513A462465C171009CED33 /* WBFunctionCell.m */; };
+		CF513DF62467AAF7009CED33 /* JKRSearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513DF12467AAF7009CED33 /* JKRSearchTextField.m */; };
+		CF513DF72467AAF7009CED33 /* JKRSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513DF32467AAF7009CED33 /* JKRSearchController.m */; };
+		CF513DF82467AAF7009CED33 /* JKRSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513DF42467AAF7009CED33 /* JKRSearchBar.m */; };
+		CF513DFB2467AB73009CED33 /* JKRSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513DFA2467AB73009CED33 /* JKRSearchResultViewController.m */; };
+		CF513DFE2467AC04009CED33 /* JKRTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513DFD2467AC04009CED33 /* JKRTestViewController.m */; };
+		CF513E012467AC81009CED33 /* UIView+JKRTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513E002467AC81009CED33 /* UIView+JKRTouch.m */; };
+		CF513E042467ACBC009CED33 /* UIView+JKRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513E032467ACBC009CED33 /* UIView+JKRViewController.m */; };
+		CF513E072467AD60009CED33 /* UIView+JKR_Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513E052467AD60009CED33 /* UIView+JKR_Frame.m */; };
+		CF513E0A2467AD88009CED33 /* UIViewController+JKRStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513E092467AD88009CED33 /* UIViewController+JKRStatusBarStyle.m */; };
+		CF513E0D2467ADA7009CED33 /* UIColor+JKRColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513E0C2467ADA6009CED33 /* UIColor+JKRColor.m */; };
+		CF513E102467AE5D009CED33 /* WBSearchListController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513E0F2467AE5D009CED33 /* WBSearchListController.m */; };
 		D7087E66C27F262374674469 /* libPods-宝万盯盘.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 205EC578F5D9D0CB4AF00055 /* libPods-宝万盯盘.a */; };
 /* End PBXBuildFile section */
 
@@ -264,6 +275,28 @@
 		CF513A432465BA16009CED33 /* WBFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBFooterView.m; sourceTree = "<group>"; };
 		CF513A452465C171009CED33 /* WBFunctionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBFunctionCell.h; sourceTree = "<group>"; };
 		CF513A462465C171009CED33 /* WBFunctionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBFunctionCell.m; sourceTree = "<group>"; };
+		CF513DF02467AAF7009CED33 /* JKRSearchTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKRSearchTextField.h; sourceTree = "<group>"; };
+		CF513DF12467AAF7009CED33 /* JKRSearchTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKRSearchTextField.m; sourceTree = "<group>"; };
+		CF513DF22467AAF7009CED33 /* JKRSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKRSearchController.h; sourceTree = "<group>"; };
+		CF513DF32467AAF7009CED33 /* JKRSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKRSearchController.m; sourceTree = "<group>"; };
+		CF513DF42467AAF7009CED33 /* JKRSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKRSearchBar.m; sourceTree = "<group>"; };
+		CF513DF52467AAF7009CED33 /* JKRSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKRSearchBar.h; sourceTree = "<group>"; };
+		CF513DF92467AB73009CED33 /* JKRSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKRSearchResultViewController.h; sourceTree = "<group>"; };
+		CF513DFA2467AB73009CED33 /* JKRSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKRSearchResultViewController.m; sourceTree = "<group>"; };
+		CF513DFC2467AC04009CED33 /* JKRTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKRTestViewController.h; sourceTree = "<group>"; };
+		CF513DFD2467AC04009CED33 /* JKRTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKRTestViewController.m; sourceTree = "<group>"; };
+		CF513DFF2467AC81009CED33 /* UIView+JKRTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKRTouch.h"; sourceTree = "<group>"; };
+		CF513E002467AC81009CED33 /* UIView+JKRTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKRTouch.m"; sourceTree = "<group>"; };
+		CF513E022467ACBC009CED33 /* UIView+JKRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKRViewController.h"; sourceTree = "<group>"; };
+		CF513E032467ACBC009CED33 /* UIView+JKRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKRViewController.m"; sourceTree = "<group>"; };
+		CF513E052467AD60009CED33 /* UIView+JKR_Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKR_Frame.m"; sourceTree = "<group>"; };
+		CF513E062467AD60009CED33 /* UIView+JKR_Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKR_Frame.h"; sourceTree = "<group>"; };
+		CF513E082467AD88009CED33 /* UIViewController+JKRStatusBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JKRStatusBarStyle.h"; sourceTree = "<group>"; };
+		CF513E092467AD88009CED33 /* UIViewController+JKRStatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JKRStatusBarStyle.m"; sourceTree = "<group>"; };
+		CF513E0B2467ADA6009CED33 /* UIColor+JKRColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JKRColor.h"; sourceTree = "<group>"; };
+		CF513E0C2467ADA6009CED33 /* UIColor+JKRColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JKRColor.m"; sourceTree = "<group>"; };
+		CF513E0E2467AE5D009CED33 /* WBSearchListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBSearchListController.h; sourceTree = "<group>"; };
+		CF513E0F2467AE5D009CED33 /* WBSearchListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBSearchListController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -661,8 +694,11 @@
 		CF51369E2465A7CF009CED33 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				CF513DE62467AAE9009CED33 /* SearchController */,
 				CF51369F2465A7FA009CED33 /* WBUserController.h */,
 				CF5136A02465A7FA009CED33 /* WBUserController.m */,
+				CF513E0E2467AE5D009CED33 /* WBSearchListController.h */,
+				CF513E0F2467AE5D009CED33 /* WBSearchListController.m */,
 				CF5136A22465AD51009CED33 /* WBContentCell.h */,
 				CF5136A32465AD51009CED33 /* WBContentCell.m */,
 				CF513A452465C171009CED33 /* WBFunctionCell.h */,
@@ -693,6 +729,33 @@
 				CF5136BC2465B315009CED33 /* UIColor+MCUIColorsUtils.m */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		CF513DE62467AAE9009CED33 /* SearchController */ = {
+			isa = PBXGroup;
+			children = (
+				CF513E0B2467ADA6009CED33 /* UIColor+JKRColor.h */,
+				CF513E0C2467ADA6009CED33 /* UIColor+JKRColor.m */,
+				CF513E082467AD88009CED33 /* UIViewController+JKRStatusBarStyle.h */,
+				CF513E092467AD88009CED33 /* UIViewController+JKRStatusBarStyle.m */,
+				CF513E062467AD60009CED33 /* UIView+JKR_Frame.h */,
+				CF513E052467AD60009CED33 /* UIView+JKR_Frame.m */,
+				CF513E022467ACBC009CED33 /* UIView+JKRViewController.h */,
+				CF513E032467ACBC009CED33 /* UIView+JKRViewController.m */,
+				CF513DFF2467AC81009CED33 /* UIView+JKRTouch.h */,
+				CF513E002467AC81009CED33 /* UIView+JKRTouch.m */,
+				CF513DF92467AB73009CED33 /* JKRSearchResultViewController.h */,
+				CF513DFA2467AB73009CED33 /* JKRSearchResultViewController.m */,
+				CF513DF52467AAF7009CED33 /* JKRSearchBar.h */,
+				CF513DF42467AAF7009CED33 /* JKRSearchBar.m */,
+				CF513DF22467AAF7009CED33 /* JKRSearchController.h */,
+				CF513DF32467AAF7009CED33 /* JKRSearchController.m */,
+				CF513DF02467AAF7009CED33 /* JKRSearchTextField.h */,
+				CF513DF12467AAF7009CED33 /* JKRSearchTextField.m */,
+				CF513DFC2467AC04009CED33 /* JKRTestViewController.h */,
+				CF513DFD2467AC04009CED33 /* JKRTestViewController.m */,
+			);
+			path = SearchController;
 			sourceTree = "<group>";
 		};
 		E5091AC65CA703E59DD8F7DC /* Pods */ = {
@@ -891,9 +954,11 @@
 				7BE9F9AC2463E78400B90142 /* AppDelegate.m in Sources */,
 				7BE9FBB02464029E00B90142 /* UIControl+XFExt.m in Sources */,
 				7B09AE742467B59000CB0D2C /* WBQuotationController.m in Sources */,
+				CF513E0D2467ADA7009CED33 /* UIColor+JKRColor.m in Sources */,
 				7BE9FBEE24650C8900B90142 /* TYDrawStorage.m in Sources */,
 				7BE9FBF424650C8900B90142 /* TYAttributedLabel.m in Sources */,
 				CF5136CE2465B3B2009CED33 /* WBUserHeader.m in Sources */,
+				CF513E012467AC81009CED33 /* UIView+JKRTouch.m in Sources */,
 				7BE9FB7A2463FF6800B90142 /* KNPhotoBrower.m in Sources */,
 				7BE9FCCF24652DF900B90142 /* NSString+MD5.m in Sources */,
 				7BE9FBEF24650C8900B90142 /* TYViewStorage.m in Sources */,
@@ -905,6 +970,7 @@
 				7BE9F9E52463E93D00B90142 /* WBTabbarController.m in Sources */,
 				7BE9FBC82464F5BA00B90142 /* WBCommunityModel.m in Sources */,
 				CF5136CA2465B316009CED33 /* STLoading.m in Sources */,
+				CF513DF82467AAF7009CED33 /* JKRSearchBar.m in Sources */,
 				7BE9FCC724652D7700B90142 /* HCDownloadAgent.m in Sources */,
 				7BE9F9BD2463E78800B90142 /* main.m in Sources */,
 				7BE9F9E12463E8A600B90142 /* WBNewsCell.m in Sources */,
@@ -915,6 +981,7 @@
 				7BE9FBF924650CA000B90142 /* WBHyperLinkLabel.m in Sources */,
 				7BE9F9EF2463EB9000B90142 /* HCFont.m in Sources */,
 				7BE9FB792463FF6800B90142 /* KNActionSheetView.m in Sources */,
+				CF513DFE2467AC04009CED33 /* JKRTestViewController.m in Sources */,
 				CF513A442465BA16009CED33 /* WBFooterView.m in Sources */,
 				7BE9FB7B2463FF6800B90142 /* UIView+PBExtesion.m in Sources */,
 				7BE9FB822463FF6800B90142 /* KNProgressHUD.m in Sources */,
@@ -925,18 +992,25 @@
 				7BE9FA8D2463FAAB00B90142 /* WBUitl.m in Sources */,
 				7BE9FB842463FF6800B90142 /* KNToast.m in Sources */,
 				7BE9FB7E2463FF6800B90142 /* FLAnimatedImageView.m in Sources */,
+				CF513E072467AD60009CED33 /* UIView+JKR_Frame.m in Sources */,
 				7BE9FB882463FF8D00B90142 /* BLExpandButton.m in Sources */,
 				CF5136A42465AD51009CED33 /* WBContentCell.m in Sources */,
 				CF5136C62465B316009CED33 /* STRegistration.m in Sources */,
+				CF513E0A2467AD88009CED33 /* UIViewController+JKRStatusBarStyle.m in Sources */,
 				7BE9FB832463FF6800B90142 /* KNPhotoBrowerCell.m in Sources */,
 				CF5136C82465B316009CED33 /* STLoadViewController.m in Sources */,
+				CF513DFB2467AB73009CED33 /* JKRSearchResultViewController.m in Sources */,
 				7BE9FA942463FB7000B90142 /* WBNewsModel.m in Sources */,
 				CF5136C92465B316009CED33 /* STRegisViewController.m in Sources */,
 				CF5136A12465A7FA009CED33 /* WBUserController.m in Sources */,
 				7BE9FBD424650BE800B90142 /* WBCommunityFunctionView.m in Sources */,
 				7BE9FCD2246530AF00B90142 /* YYReachability.m in Sources */,
+				CF513E042467ACBC009CED33 /* UIView+JKRViewController.m in Sources */,
 				7BE9FBED24650C8900B90142 /* TYLinkTextStorage.m in Sources */,
 				7BE9FBF524650C8900B90142 /* TYTextContainer+Extended.m in Sources */,
+				CF513DF72467AAF7009CED33 /* JKRSearchController.m in Sources */,
+				CF513E102467AE5D009CED33 /* WBSearchListController.m in Sources */,
+				CF513DF62467AAF7009CED33 /* JKRSearchTextField.m in Sources */,
 				CF5136C72465B316009CED33 /* UIColor+MCUIColorsUtils.m in Sources */,
 				7BE9FBD724650C2F00B90142 /* WBCommunityButton.m in Sources */,
 				7BE9FA912463FB0700B90142 /* NSDictionary+XFExt.m in Sources */,

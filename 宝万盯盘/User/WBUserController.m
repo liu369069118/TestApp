@@ -16,6 +16,7 @@
 #import "KNToast.h"
 #import "SDImageCache.h"
 #import "HCRequestCache.h"
+#import "WBSearchListController.h"
 
 @interface WBUserController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -64,6 +65,10 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+}
 
 #pragma mark - UITableViewDelegate
 
@@ -143,6 +148,12 @@
                 [self presentViewController:alert animated:YES completion:nil];
             }
         }
+    } else if (indexPath.section == 0) {
+        if (indexPath.row == 1) {
+            WBSearchListController *vc = [[WBSearchListController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
     }
 }
 
@@ -162,7 +173,7 @@
 - (NSArray *)dataArray {
     if (!_dataArray) {
         _dataArray = @[
-                        @[@"护眼模式"],
+                        @[@"护眼模式",@"搜索"],
                         @[@"联系我们",@"清空缓存",@"退出账号"]
                     ];
     }
