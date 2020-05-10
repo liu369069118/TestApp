@@ -1,0 +1,74 @@
+{
+"list": [
+    {
+        "block": "医护用具",
+        "name": "东风汽车",
+        "percent": "5.77%",
+        "containtopTitle":"热股",
+        "code" : "sh600006"
+    },
+    {
+        "block": "家电产业",
+        "name": "横店影视",
+        "percent": "+2.37%",
+        "containtopTitle":"人气股",
+        "code" : "sh603103"
+    },
+    {
+        "block": "航天工程",
+        "name": "中远海能",
+        "percent": "3.53%",
+        "containtopTitle":"异动",
+        "code": "sh600026"
+    },
+    {
+        "block": "卫生环保",
+        "name": "中牧股份",
+        "percent": "-2.80%",
+        "containtopTitle":"昨日涨停表现",
+        "code" : "sh600195"
+    },
+    {
+        "block": "镍矿",
+        "name": "节能风电",
+        "percent": "+3.42%",
+        "containtopTitle":"10.31",
+        "code" : "sh601965"
+    },
+    {
+        "name": "江苏新能",
+        "block": "卫生环保",
+        "percent": "+3.06%",
+        "containtopTitle": "12.46",
+        "code": "sh601965"
+    },
+    {
+        "name": "亚翔集成",
+        "block": "公路养护",
+        "percent": "+3.04%",
+        "containtopTitle": "6.20",
+        "code": "sh603929"
+    },
+    {
+        "name": "欧派家居",
+        "block": "公路养护",
+        "percent": "+2.63%",
+        "containtopTitle": "2.76",
+        "code": "sh603833"
+    },
+    {
+        "name": "全柴动力",
+        "block": "医护用具",
+        "percent": "+3.22%",
+        "containtopTitle": "15.05",
+        "code": "sh600218"
+    },
+    {
+        "name": "景嘉微",
+        "block": "镍矿",
+        "percent": "+6.94%",
+        "containtopTitle": "6.69",
+        "code": "sz300474"
+    }
+    ]
+}

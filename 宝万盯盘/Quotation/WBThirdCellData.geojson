@@ -1,0 +1,667 @@
+{
+    "list": [
+        {
+            "block": "北方稀土",
+            "percent": "2.44%",
+            "name": "108",
+            "containtopTitle": "19.70",
+            "code": "sh600111"
+        },
+        {
+            "block": "苏博特",
+            "percent": "3.06%",
+            "name": "70",
+            "containtopTitle": "12.46",
+            "code": "sh603916"
+        },
+        
+        {
+            "order": "11",
+            "block": "大港股份",
+            "code": "sz002077",
+            "percent": "9.99%",
+            "name": "10",
+            "containtopTitle": "22.58"
+        },
+        {
+            "order": "12",
+            "block": "湘邮科技",
+            "code": "sh600476",
+            "percent": "9.98%",
+            "name": "11",
+            "containtopTitle": "6.83"
+            
+        },
+        {
+            "order": "13",
+            "block": "东方能源",
+            "code": "sz000958",
+            "percent": "9.97%",
+            "name": "12",
+            "containtopTitle": "854.5"
+            
+        },
+        {
+            "order": "17",
+            "block": "迪贝电气",
+            "code": "sh603320",
+            "percent": "8.42%",
+            "name": "16",
+            "containtopTitle": "25.72"
+            
+        },
+        {
+            "order": "18",
+            "block": "森远股份",
+            "code": "sz300210",
+            "percent": "7.23%",
+            "name": "17",
+            "containtopTitle": "4.35"
+            
+        },
+        {
+            "order": "19",
+            "block": "长江通信",
+            "code": "sh600345",
+            "percent": "7.10%",
+            "name": "18",
+            "containtopTitle": "16.74"
+            
+        },
+        {
+            "block": "东风汽车",
+            "percent": "5.77%",
+            "name": "25",
+            "containtopTitle": "5.13",
+            "code": "sh600006"
+        },
+        {
+            "block": "普莱柯",
+            "percent": "5.48%",
+            "name": "26",
+            "containtopTitle": "12.70",
+            "code": "sh603566"
+        },
+        {
+            "block": "威派格",
+            "percent": "5.30%",
+            "name": "27",
+            "containtopTitle": "19.07",
+            "code": "sh603956"
+        },
+        {
+            "block": "弘业股份",
+            "percent": "5.20%",
+            "name": "28",
+            "containtopTitle": "8.70",
+            "code": "sh600128"
+        },
+        {
+            "block": "东方材料",
+            "percent": "5.18%",
+            "name": "29",
+            "containtopTitle": "14.82",
+            "code": "sh603110"
+        },
+        {
+            "block": "合力科技",
+            "percent": "5.17%",
+            "name": "30",
+            "containtopTitle": "12.62",
+            "code": "sh603917"
+        },
+        {
+            "block": "珀莱雅",
+            "percent": "3.01%",
+            "name": "72",
+            "containtopTitle": "63.00",
+            "code": "sh603605"
+        },
+        {
+            "block": "亚翔集成",
+            "percent": "3.04%",
+            "name": "71",
+            "containtopTitle": "19.31",
+            "code": "sh603929"
+        },
+        {
+            "block": "生物股份",
+            "percent": "3.22%",
+            "name": "66",
+            "containtopTitle": "15.05",
+            "code": "sh600201"
+        },
+        {
+            "block": "全柴动力",
+            "percent": "3.21%",
+            "name": "67",
+            "containtopTitle": "15.75",
+            "code": "sh600218"
+        },
+        {
+            "block": "万东医疗",
+            "percent": "3.15%",
+            "name": "68",
+            "containtopTitle": "10.80",
+            "code": "sh600055"
+        },
+        {
+            "block": "美诺华",
+            "percent": "3.10%",
+            "name": "69",
+            "containtopTitle": "23.28",
+            "code": "sh603538"
+        },
+        {
+            "block": "ST慧球",
+            "percent": "2.73%",
+            "name": "85",
+            "containtopTitle": "7.90",
+            "code": "sh600556"
+        },
+        {
+            "block": "派思股份",
+            "percent": "2.71%",
+            "name": "86",
+            "containtopTitle": "24.65",
+            "code": "sh603318"
+        },
+        {
+            "block": "元成股份",
+            "percent": "2.68%",
+            "name": "87",
+            "containtopTitle": "10.35",
+            "code": "sh603388"
+        },
+        {
+            "block": "天坛生物",
+            "percent": "2.68%",
+            "name": "88",
+            "containtopTitle": "25.68",
+            "code": "sh600161"
+        },
+        {
+            "block": "贵州燃气",
+            "percent": "2.99%",
+            "name": "73",
+            "containtopTitle": "18.24",
+            "code": "sh600903"
+        },
+        
+        {
+            "order" : "4",
+            "block" : "网达软件",
+            "code" : "sh603189",
+            "percent" : "10.06%",
+            "name" : "3",
+            "containtopTitle" : "8.97"
+        },
+        
+        {
+            "block": "再升科技",
+            "percent": "3.53%",
+            "name": "59",
+            "containtopTitle": "7.04",
+            "code": "sh603601"
+        },
+        {
+            "block": "宁波水表",
+            "percent": "3.45%",
+            "name": "60",
+            "containtopTitle": "24.00",
+            "code": "sh603700"
+        },
+        {
+            "block": "福莱特",
+            "percent": "3.41%",
+            "name": "61",
+            "containtopTitle": "10.31",
+            "code": "sh601865"
+        },
+        {
+            "block": "节能风电",
+            "percent": "2.60%",
+            "name": "90",
+            "containtopTitle": "2.76",
+            "code": "sh601016"
+        },
+        {
+            "block": "中远海能",
+            "percent": "2.59%",
+            "name": "91",
+            "containtopTitle": "5.94",
+            "code": "sh600026"
+        },
+        {
+            "block": "龙净环保",
+            "percent": "2.55%",
+            "name": "92",
+            "containtopTitle": "12.06",
+            "code": "sh600388"
+        },
+        {
+            "order": "9",
+            "block": "北京君正",
+            "code": "sz300223",
+            "percent": "9.99%",
+            "name": "8",
+            "containtopTitle": "17.06"
+            
+        },
+        {
+            "block": "安信信托",
+            "percent": "3.34%",
+            "name": "62",
+            "containtopTitle": "5.26",
+            "code": "sh600816"
+        },
+        
+        {
+            "block": "金徽酒",
+            "percent": "3.26%",
+            "name": "64",
+            "containtopTitle": "14.27",
+            "code": "sh603919"
+        },
+        {
+            "block": "天龙股份",
+            "percent": "3.22%",
+            "name": "65",
+            "containtopTitle": "15.40",
+            "code": "sh603266"
+        },
+        
+        {
+            "order": "20",
+            "block": "丰乐种业",
+            "code": "sz000713",
+            "percent": "7.09%",
+            "name": "19",
+            "containtopTitle": "4.68"
+            
+        },
+        {
+            "order": "21",
+            "block": "天龙光电",
+            "code": "sz300029",
+            "percent": "6.94%",
+            "name": "20",
+            "containtopTitle": "6.69"
+            
+        },
+        {
+            "order": "23",
+            "block": "景嘉微",
+            "code": "sz300474",
+            "percent": "6.77%",
+            "name": "22",
+            "containtopTitle": "14.20"
+            
+        },
+        {
+            "order": "24",
+            "block": "科融环境",
+            "code": "sz300152",
+            "percent": "6.42%",
+            "name": "23",
+            "containtopTitle": "5.62"
+            
+        },
+        {
+            "order": "25",
+            "block": "中元股份",
+            "code": "sz300018",
+            "percent": "6.24%",
+            "name": "24",
+            "containtopTitle": "6.25"
+            
+        },
+        
+        {
+            "block": "ST坊展",
+            "percent": "5.04%",
+            "name": "31",
+            "containtopTitle": "5.63",
+            "code": "sh600149"
+        },
+        {
+            "block": "ST正源",
+            "percent": "5.03%",
+            "name": "32",
+            "containtopTitle": "1.88",
+            "code": "sh600321"
+        },
+        {
+            "block": "利通电子",
+            "percent": "5.00%",
+            "name": "33",
+            "containtopTitle": "30.44",
+            "code": "sh603629"
+        },
+        {
+            "block": "ST岩石",
+            "percent": "4.99%",
+            "name": "34",
+            "containtopTitle": "7.37",
+            "code": "sh600696"
+        },
+        
+        {
+            "block": "东方时尚",
+            "percent": "4.58%",
+            "name": "39",
+            "containtopTitle": "16.88",
+            "code": "sh603377"
+        },
+        {
+            "block": "宏发股份",
+            "percent": "4.48%",
+            "name": "40",
+            "containtopTitle": "23.08",
+            "code": "sh600885"
+        },
+        {
+            "block": "大豪科技",
+            "percent": "4.28%",
+            "name": "41",
+            "containtopTitle": "10.23",
+            "code": "sh603025"
+        },
+        {
+            "block": "金晶科技",
+            "percent": "4.23%",
+            "name": "42",
+            "containtopTitle": "3.20",
+            "code": "sh600586"
+        },
+        {
+            "block": "方正证券",
+            "percent": "4.21%",
+            "name": "43",
+            "containtopTitle": "7.67",
+            "code": "sh601901"
+        },
+        {
+            "block": "龙韵股份",
+            "percent": "4.21%",
+            "name": "44",
+            "containtopTitle": "16.83",
+            "code": "sh603729"
+        },
+        {
+            "block": "玉龙股份",
+            "percent": "4.17%",
+            "name": "45",
+            "containtopTitle": "5.24",
+            "code": "sh601028"
+        },
+        {
+            "block": "易德龙",
+            "percent": "4.16%",
+            "name": "46",
+            "containtopTitle": "14.76",
+            "code": "sh603380"
+        },
+        {
+            "block": "华菱星马",
+            "percent": "4.16%",
+            "name": "47",
+            "containtopTitle": "5.26",
+            "code": "sh600375"
+        },
+        {
+            "block": "明阳智能",
+            "percent": "4.10%",
+            "name": "48",
+            "containtopTitle": "10.66",
+            "code": "sh601615"
+        },
+        {
+            "block": "歌力思",
+            "percent": "3.98%",
+            "name": "49",
+            "containtopTitle": "15.43",
+            "code": "sh603808"
+        },
+        {
+            "block": "上海凤凰",
+            "percent": "3.98%",
+            "name": "50",
+            "containtopTitle": "13.31",
+            "code": "sh600679"
+        },
+        {
+            "block": "新华文轩",
+            "percent": "3.98%",
+            "name": "51",
+            "containtopTitle": "12.79",
+            "code": "sh601811"
+        },
+        {
+            "block": "东风科技",
+            "percent": "3.95%",
+            "name": "52",
+            "containtopTitle": "12.12",
+            "code": "sh600081"
+        },
+        {
+            "block": "大名城",
+            "percent": "3.82%",
+            "name": "53",
+            "containtopTitle": "7.06",
+            "code": "sh600094"
+        },
+        {
+            "block": "ST安通",
+            "percent": "3.82%",
+            "name": "54",
+            "containtopTitle": "5.16",
+            "code": "sh600179"
+        },
+        {
+            "block": "畅联股份",
+            "percent": "3.69%",
+            "name": "55",
+            "containtopTitle": "11.25",
+            "code": "sh603648"
+        },
+        {
+            "block": "湘电股份",
+            "percent": "3.63%",
+            "name": "56",
+            "containtopTitle": "6.85",
+            "code": "sh600416"
+        },
+        {
+            "block": "汇顶科技",
+            "percent": "3.55%",
+            "name": "57",
+            "containtopTitle": "111.67",
+            "code": "sh603160"
+        },
+        {
+            "block": "欧派家居",
+            "percent": "3.54%",
+            "name": "58",
+            "containtopTitle": "111.18",
+            "code": "sh603833"
+        },
+        {
+            "block": "顾家家居",
+            "percent": "2.98%",
+            "name": "74",
+            "containtopTitle": "43.20",
+            "code": "sh603816"
+        },
+        {
+            "block": "天永智能",
+            "percent": "2.97%",
+            "name": "75",
+            "containtopTitle": "23.60",
+            "code": "sh603895"
+        },
+        {
+            "block": "有研新材",
+            "percent": "2.49%",
+            "name": "96",
+            "containtopTitle": "9.48",
+            "code": "sh600206"
+        },
+        
+        {
+            "block": "鸣志电器",
+            "percent": "2.90%",
+            "name": "76",
+            "containtopTitle": "12.42",
+            "code": "sh603728"
+        },
+        {
+            "block": "天味食品",
+            "percent": "2.84%",
+            "name": "77",
+            "containtopTitle": "32.60",
+            "code": "sh603317"
+        },
+        {
+            "block": "金域医学",
+            "percent": "2.82%",
+            "name": "78",
+            "containtopTitle": "32.50",
+            "code": "sh603882"
+        },
+        {
+            "block": "四方股份",
+            "percent": "4.91%",
+            "name": "35",
+            "containtopTitle": "6.20",
+            "code": "sh601126"
+        },
+        {
+            "block": "江苏新能",
+            "percent": "4.73%",
+            "name": "36",
+            "containtopTitle": "12.17",
+            "code": "sh603693"
+        },
+        {
+            "block": "中国汽研",
+            "percent": "4.70%",
+            "name": "37",
+            "containtopTitle": "7.80",
+            "code": "sh601965"
+        },
+        {
+            "block": "永冠新材",
+            "percent": "4.63%",
+            "name": "38",
+            "containtopTitle": "24.17",
+            "code": "sh603681"
+        },
+        {
+            "block": "老百姓",
+            "percent": "2.63%",
+            "name": "89",
+            "containtopTitle": "60.55",
+            "code": "sh603883"
+        },
+        
+        {
+            "block": "一汽富维",
+            "percent": "2.54%",
+            "name": "93",
+            "containtopTitle": "11.31",
+            "code": "sh600742"
+        },
+        {
+            "block": "西安银行",
+            "percent": "2.53%",
+            "name": "94",
+            "containtopTitle": "8.12",
+            "code": "sh600928"
+        },
+        {
+            "block": "新华网",
+            "percent": "2.52%",
+            "name": "95",
+            "containtopTitle": "21.12",
+            "code": "sh603888"
+        },
+        {
+            "block": "联明股份",
+            "percent": "2.47%",
+            "name": "99",
+            "containtopTitle": "12.04",
+            "code": "sh603006"
+        },
+        {
+            "block": "华域汽车",
+            "percent": "2.44%",
+            "name": "100",
+            "containtopTitle": "19.70",
+            "code": "sh600741"
+        },
+        {
+            "block": "横店影视",
+            "percent": "2.37%",
+            "name": "97",
+            "containtopTitle": "22.38",
+            "code": "sh603103"
+        },
+        {
+            "block": "嘉化能源",
+            "percent": "2.41%",
+            "name": "98",
+            "containtopTitle": "11.18",
+            "code": "sh600273"
+        },
+        {
+            "block": "汇得科技",
+            "percent": "2.80%",
+            "name": "79",
+            "containtopTitle": "26.43",
+            "code": "sh603192"
+        },
+        {
+            "block": "威尔药业",
+            "percent": "2.80%",
+            "name": "80",
+            "containtopTitle": "51.11",
+            "code": "sh603351"
+        },
+        {
+            "block": "中牧股份",
+            "percent": "2.80%",
+            "name": "81",
+            "containtopTitle": "12.10",
+            "code": "sh600195"
+        },
+        {
+            "block": "金杯汽车",
+            "percent": "2.78%",
+            "name": "82",
+            "containtopTitle": "4.06",
+            "code": "sh600609"
+        },
+        {
+            "block": "北汽蓝谷",
+            "percent": "2.76%",
+            "name": "83",
+            "containtopTitle": "8.93",
+            "code": "sh600733"
+        },
+        {
+            "block": "云南城投",
+            "percent": "2.73%",
+            "name": "84",
+            "containtopTitle": "3.01",
+            "code": "sh600239"
+        },
+        {
+            "block": "天风证券",
+            "percent": "3.32%",
+            "name": "63",
+            "containtopTitle": "8.10",
+            "code": "sh601162"
+        }
+    ]
+}

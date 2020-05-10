@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		7B09AE742467B59000CB0D2C /* WBQuotationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09AE732467B59000CB0D2C /* WBQuotationController.m */; };
+		7B09AE782467BFC100CB0D2C /* WBQuotationFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09AE772467BFC100CB0D2C /* WBQuotationFirstCell.m */; };
+		7B09AE7B2467CA4900CB0D2C /* WBQuotationFirstModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09AE7A2467CA4900CB0D2C /* WBQuotationFirstModel.m */; };
+		7B09AE7F2467D56A00CB0D2C /* WBFirstCellData.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B09AE7E2467D56A00CB0D2C /* WBFirstCellData.geojson */; };
+		7B09AE822467D75A00CB0D2C /* WBQuotationSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09AE812467D75A00CB0D2C /* WBQuotationSecondCell.m */; };
+		7B09AE842467DB7A00CB0D2C /* WBSecondCellData.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B09AE832467DB7A00CB0D2C /* WBSecondCellData.geojson */; };
+		7B09AE872467E09000CB0D2C /* WBQuotationThirdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09AE862467E09000CB0D2C /* WBQuotationThirdCell.m */; };
+		7B09AE892467E35400CB0D2C /* WBThirdCellData.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B09AE882467E35400CB0D2C /* WBThirdCellData.geojson */; };
 		7B7F2A35246691F300E2134D /* home3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B7F2A33246691F300E2134D /* home3.geojson */; };
 		7B7F2A36246691F300E2134D /* home2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B7F2A34246691F300E2134D /* home2.geojson */; };
 		7BE9F9AC2463E78400B90142 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9F9AB2463E78400B90142 /* AppDelegate.m */; };
@@ -120,6 +127,17 @@
 		205EC578F5D9D0CB4AF00055 /* libPods-宝万盯盘.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-宝万盯盘.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B09AE722467B59000CB0D2C /* WBQuotationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBQuotationController.h; sourceTree = "<group>"; };
 		7B09AE732467B59000CB0D2C /* WBQuotationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBQuotationController.m; sourceTree = "<group>"; };
+		7B09AE762467BFC100CB0D2C /* WBQuotationFirstCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBQuotationFirstCell.h; sourceTree = "<group>"; };
+		7B09AE772467BFC100CB0D2C /* WBQuotationFirstCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBQuotationFirstCell.m; sourceTree = "<group>"; };
+		7B09AE792467CA4900CB0D2C /* WBQuotationFirstModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBQuotationFirstModel.h; sourceTree = "<group>"; };
+		7B09AE7A2467CA4900CB0D2C /* WBQuotationFirstModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBQuotationFirstModel.m; sourceTree = "<group>"; };
+		7B09AE7E2467D56A00CB0D2C /* WBFirstCellData.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = WBFirstCellData.geojson; sourceTree = "<group>"; };
+		7B09AE802467D75A00CB0D2C /* WBQuotationSecondCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBQuotationSecondCell.h; sourceTree = "<group>"; };
+		7B09AE812467D75A00CB0D2C /* WBQuotationSecondCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBQuotationSecondCell.m; sourceTree = "<group>"; };
+		7B09AE832467DB7A00CB0D2C /* WBSecondCellData.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = WBSecondCellData.geojson; sourceTree = "<group>"; };
+		7B09AE852467E09000CB0D2C /* WBQuotationThirdCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBQuotationThirdCell.h; sourceTree = "<group>"; };
+		7B09AE862467E09000CB0D2C /* WBQuotationThirdCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBQuotationThirdCell.m; sourceTree = "<group>"; };
+		7B09AE882467E35400CB0D2C /* WBThirdCellData.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = WBThirdCellData.geojson; sourceTree = "<group>"; };
 		7B7F2A33246691F300E2134D /* home3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = home3.geojson; sourceTree = "<group>"; };
 		7B7F2A34246691F300E2134D /* home2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = home2.geojson; sourceTree = "<group>"; };
 		7BE9F9A72463E78400B90142 /* 万宝盯盘.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "万宝盯盘.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -347,6 +365,17 @@
 			children = (
 				7B09AE722467B59000CB0D2C /* WBQuotationController.h */,
 				7B09AE732467B59000CB0D2C /* WBQuotationController.m */,
+				7B09AE852467E09000CB0D2C /* WBQuotationThirdCell.h */,
+				7B09AE862467E09000CB0D2C /* WBQuotationThirdCell.m */,
+				7B09AE882467E35400CB0D2C /* WBThirdCellData.geojson */,
+				7B09AE802467D75A00CB0D2C /* WBQuotationSecondCell.h */,
+				7B09AE812467D75A00CB0D2C /* WBQuotationSecondCell.m */,
+				7B09AE832467DB7A00CB0D2C /* WBSecondCellData.geojson */,
+				7B09AE762467BFC100CB0D2C /* WBQuotationFirstCell.h */,
+				7B09AE772467BFC100CB0D2C /* WBQuotationFirstCell.m */,
+				7B09AE792467CA4900CB0D2C /* WBQuotationFirstModel.h */,
+				7B09AE7A2467CA4900CB0D2C /* WBQuotationFirstModel.m */,
+				7B09AE7E2467D56A00CB0D2C /* WBFirstCellData.geojson */,
 			);
 			path = Quotation;
 			sourceTree = "<group>";
@@ -872,11 +901,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B09AE842467DB7A00CB0D2C /* WBSecondCellData.geojson in Resources */,
 				7BE9FA8A2463F9FF00B90142 /* community.geojson in Resources */,
 				7BE9FA882463F9B800B90142 /* home.geojson in Resources */,
+				7B09AE7F2467D56A00CB0D2C /* WBFirstCellData.geojson in Resources */,
 				7BE9FB7F2463FF6800B90142 /* KNPhotoBrower.bundle in Resources */,
 				7B7F2A36246691F300E2134D /* home2.geojson in Resources */,
 				7B7F2A35246691F300E2134D /* home3.geojson in Resources */,
+				7B09AE892467E35400CB0D2C /* WBThirdCellData.geojson in Resources */,
 				7BE9F9BA2463E78800B90142 /* LaunchScreen.storyboard in Resources */,
 				7BE9F9B72463E78800B90142 /* Assets.xcassets in Resources */,
 				7BE9F9B52463E78400B90142 /* Main.storyboard in Resources */,
@@ -957,6 +989,7 @@
 				CF513E0D2467ADA7009CED33 /* UIColor+JKRColor.m in Sources */,
 				7BE9FBEE24650C8900B90142 /* TYDrawStorage.m in Sources */,
 				7BE9FBF424650C8900B90142 /* TYAttributedLabel.m in Sources */,
+				7B09AE872467E09000CB0D2C /* WBQuotationThirdCell.m in Sources */,
 				CF5136CE2465B3B2009CED33 /* WBUserHeader.m in Sources */,
 				CF513E012467AC81009CED33 /* UIView+JKRTouch.m in Sources */,
 				7BE9FB7A2463FF6800B90142 /* KNPhotoBrower.m in Sources */,
@@ -969,6 +1002,7 @@
 				7BE9FA792463F40200B90142 /* WBNewsLayout.m in Sources */,
 				7BE9F9E52463E93D00B90142 /* WBTabbarController.m in Sources */,
 				7BE9FBC82464F5BA00B90142 /* WBCommunityModel.m in Sources */,
+				7B09AE822467D75A00CB0D2C /* WBQuotationSecondCell.m in Sources */,
 				CF5136CA2465B316009CED33 /* STLoading.m in Sources */,
 				CF513DF82467AAF7009CED33 /* JKRSearchBar.m in Sources */,
 				7BE9FCC724652D7700B90142 /* HCDownloadAgent.m in Sources */,
@@ -1000,6 +1034,7 @@
 				7BE9FB832463FF6800B90142 /* KNPhotoBrowerCell.m in Sources */,
 				CF5136C82465B316009CED33 /* STLoadViewController.m in Sources */,
 				CF513DFB2467AB73009CED33 /* JKRSearchResultViewController.m in Sources */,
+				7B09AE782467BFC100CB0D2C /* WBQuotationFirstCell.m in Sources */,
 				7BE9FA942463FB7000B90142 /* WBNewsModel.m in Sources */,
 				CF5136C92465B316009CED33 /* STRegisViewController.m in Sources */,
 				CF5136A12465A7FA009CED33 /* WBUserController.m in Sources */,
@@ -1021,6 +1056,7 @@
 				7BE9FBBD2464041F00B90142 /* HBActionSheet.m in Sources */,
 				7BE9FCC824652D7700B90142 /* HCRequestAgent.m in Sources */,
 				7BE9FBCE2464F5DC00B90142 /* WBCommunityCell.m in Sources */,
+				7B09AE7B2467CA4900CB0D2C /* WBQuotationFirstModel.m in Sources */,
 				7BE9FCD524653A7A00B90142 /* WBWebController.m in Sources */,
 				7BE9FCC624652D7700B90142 /* HCBaseFetcher.m in Sources */,
 				7BE9F9EE2463EB9000B90142 /* HCColor.m in Sources */,

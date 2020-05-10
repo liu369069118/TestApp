@@ -1,0 +1,25 @@
+{
+"list": [
+    {
+        "block": "上证指数",
+        "name": "2859.34",
+        "percent": "+0.83%",
+        "containtopTitle":"+23.82",
+        "code" : "sh000001"
+    },
+    {
+        "block": "创业板指",
+        "name": "2125.24",
+        "percent": "+0.87%",
+        "containtopTitle":"+18.40",
+        "code" : "sz399006"
+    },
+    {
+        "block": "深证成指",
+        "name": "11001.58",
+        "percent": "+1.27%",
+        "containtopTitle":"+138.29",
+        "code": "sz399001"
+    }
+    ]
+}
