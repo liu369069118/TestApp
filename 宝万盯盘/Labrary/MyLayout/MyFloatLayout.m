@@ -443,8 +443,8 @@
             MyFrame *sbvmyFrame = sbv.myFrame;
             UIView *sbvsc = [self myCurrentSizeClassFrom:sbvmyFrame];
            
-            CGFloat leadingSpace = sbvsc.leadingPosInner.absVal;
-            CGFloat trailingSpace = sbvsc.trailingPosInner.absVal;
+            CGFloat leadingSpace = sbvsc.leadingPosInner.aal;
+            CGFloat trailingSpace = sbvsc.trailingPosInner.aal;
             CGRect rect = sbvmyFrame.frame;
             
             //因为这里是计算包裹宽度属性，所以只会计算那些设置了固定宽度的子视图
@@ -539,10 +539,10 @@
         MyFrame *sbvmyFrame = sbv.myFrame;
         UIView *sbvsc = [self myCurrentSizeClassFrom:sbvmyFrame];
         
-        CGFloat topSpace = sbvsc.topPosInner.absVal;
-        CGFloat leadingSpace = sbvsc.leadingPosInner.absVal;
-        CGFloat bottomSpace = sbvsc.bottomPosInner.absVal;
-        CGFloat trailingSpace = sbvsc.trailingPosInner.absVal;
+        CGFloat topSpace = sbvsc.topPosInner.aal;
+        CGFloat leadingSpace = sbvsc.leadingPosInner.aal;
+        CGFloat bottomSpace = sbvsc.bottomPosInner.aal;
+        CGFloat trailingSpace = sbvsc.trailingPosInner.aal;
         CGRect rect = sbvmyFrame.frame;
         
         
@@ -944,8 +944,8 @@
             MyFrame *sbvmyFrame = sbv.myFrame;
             UIView *sbvsc = [self myCurrentSizeClassFrom:sbvmyFrame];
             
-            CGFloat topSpace = sbvsc.topPosInner.absVal;
-            CGFloat bottomSpace = sbvsc.bottomPosInner.absVal;
+            CGFloat topSpace = sbvsc.topPosInner.aal;
+            CGFloat bottomSpace = sbvsc.bottomPosInner.aal;
             CGRect rect = sbvmyFrame.frame;
             
             
@@ -1042,10 +1042,10 @@
         MyFrame *sbvmyFrame = sbv.myFrame;
         UIView *sbvsc = [self myCurrentSizeClassFrom:sbvmyFrame];
 
-        CGFloat topSpace = sbvsc.topPosInner.absVal;
-        CGFloat leadingSpace = sbvsc.leadingPosInner.absVal;
-        CGFloat bottomSpace = sbvsc.bottomPosInner.absVal;
-        CGFloat trailingSpace = sbvsc.trailingPosInner.absVal;
+        CGFloat topSpace = sbvsc.topPosInner.aal;
+        CGFloat leadingSpace = sbvsc.leadingPosInner.aal;
+        CGFloat bottomSpace = sbvsc.bottomPosInner.aal;
+        CGFloat trailingSpace = sbvsc.trailingPosInner.aal;
         CGRect rect = sbvmyFrame.frame;
         
         if (sbvsc.widthSizeInner.dimeNumVal != nil)

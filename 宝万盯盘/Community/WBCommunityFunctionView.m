@@ -125,7 +125,7 @@
 //        [HCRouterManager openURL:@"hold://Login"];
 //        return;
 //    }
-//    [self changeFollowState:_topicModel.is_rates];
+    [self changeFollowState:_topicModel.is_rates];
     
     if ([_delegate respondsToSelector:@selector(likeForFunctionViewClick)]) {
         [_delegate likeForFunctionViewClick];

@@ -644,8 +644,8 @@
         
         
         //中心点的位置。。
-        rect.origin.x = pt.x - rect.size.width * sbv.layer.anchorPoint.x - sbvsc.rightPosInner.absVal + sbvsc.leftPosInner.absVal;
-        rect.origin.y = pt.y - rect.size.height * sbv.layer.anchorPoint.y - sbvsc.bottomPosInner.absVal + sbvsc.topPosInner.absVal;
+        rect.origin.x = pt.x - rect.size.width * sbv.layer.anchorPoint.x - sbvsc.rightPosInner.aal + sbvsc.leftPosInner.aal;
+        rect.origin.y = pt.y - rect.size.height * sbv.layer.anchorPoint.y - sbvsc.bottomPosInner.aal + sbvsc.topPosInner.aal;
         
         if (_myCGFloatLess(CGRectGetMinY(rect), minYPos))
         {
@@ -732,8 +732,8 @@
         }
         
         //位置在原点位置。。
-        rect.origin.x = (selfSize.width - lsc.myLayoutLeftPadding - lsc.myLayoutRightPadding)*self.coordinateSetting.origin.x  - rect.size.width *sbv.layer.anchorPoint.x + sbvsc.leftPosInner.absVal + lsc.myLayoutLeftPadding - sbvsc.rightPosInner.absVal;
-        rect.origin.y = (selfSize.height - lsc.myLayoutTopPadding - lsc.myLayoutBottomPadding)*self.coordinateSetting.origin.y - rect.size.height * sbv.layer.anchorPoint.y + sbvsc.topPosInner.absVal + lsc.myLayoutTopPadding - sbvsc.bottomPosInner.absVal;
+        rect.origin.x = (selfSize.width - lsc.myLayoutLeftPadding - lsc.myLayoutRightPadding)*self.coordinateSetting.origin.x  - rect.size.width *sbv.layer.anchorPoint.x + sbvsc.leftPosInner.aal + lsc.myLayoutLeftPadding - sbvsc.rightPosInner.aal;
+        rect.origin.y = (selfSize.height - lsc.myLayoutTopPadding - lsc.myLayoutBottomPadding)*self.coordinateSetting.origin.y - rect.size.height * sbv.layer.anchorPoint.y + sbvsc.topPosInner.aal + lsc.myLayoutTopPadding - sbvsc.bottomPosInner.aal;
         
         if (_myCGFloatLess(CGRectGetMinY(rect), minYPos))
         {

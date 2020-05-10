@@ -456,18 +456,18 @@
             switch (vertAlignment) {
                 case MyGravity_Vert_Center:
                 {
-                    sbvmyFrame.top += (rowMaxHeight - sbvsc.topPosInner.absVal - sbvsc.bottomPosInner.absVal - sbvmyFrame.height) / 2;
+                    sbvmyFrame.top += (rowMaxHeight - sbvsc.topPosInner.aal - sbvsc.bottomPosInner.aal - sbvmyFrame.height) / 2;
                     
                 }
                     break;
                 case MyGravity_Vert_Bottom:
                 {
-                    sbvmyFrame.top += rowMaxHeight - sbvsc.topPosInner.absVal - sbvsc.bottomPosInner.absVal - sbvmyFrame.height;
+                    sbvmyFrame.top += rowMaxHeight - sbvsc.topPosInner.aal - sbvsc.bottomPosInner.aal - sbvmyFrame.height;
                 }
                     break;
                 case MyGravity_Vert_Fill:
                 {
-                    sbvmyFrame.height = [self myValidMeasure:sbvsc.heightSizeInner sbv:sbv calcSize:rowMaxHeight - sbvsc.topPosInner.absVal - sbvsc.bottomPosInner.absVal sbvSize:sbvmyFrame.frame.size selfLayoutSize:selfSize];
+                    sbvmyFrame.height = [self myValidMeasure:sbvsc.heightSizeInner sbv:sbv calcSize:rowMaxHeight - sbvsc.topPosInner.aal - sbvsc.bottomPosInner.aal sbvSize:sbvmyFrame.frame.size selfLayoutSize:selfSize];
                 }
                     break;
                 default:
@@ -619,18 +619,18 @@
             switch (horzAlignment) {
                 case MyGravity_Horz_Center:
                 {
-                    sbvmyFrame.leading += (colMaxWidth - sbvsc.leadingPosInner.absVal - sbvsc.trailingPosInner.absVal - sbvmyFrame.width) / 2;
+                    sbvmyFrame.leading += (colMaxWidth - sbvsc.leadingPosInner.aal - sbvsc.trailingPosInner.aal - sbvmyFrame.width) / 2;
                     
                 }
                     break;
                 case MyGravity_Horz_Trailing:
                 {
-                    sbvmyFrame.leading += colMaxWidth - sbvsc.leadingPosInner.absVal - sbvsc.trailingPosInner.absVal - sbvmyFrame.width;
+                    sbvmyFrame.leading += colMaxWidth - sbvsc.leadingPosInner.aal - sbvsc.trailingPosInner.aal - sbvmyFrame.width;
                 }
                     break;
                 case MyGravity_Horz_Fill:
                 {
-                    sbvmyFrame.width = [self myValidMeasure:sbvsc.widthSizeInner sbv:sbv calcSize:colMaxWidth - sbvsc.leadingPosInner.absVal - sbvsc.trailingPosInner.absVal sbvSize:sbvmyFrame.frame.size selfLayoutSize:selfSize];
+                    sbvmyFrame.width = [self myValidMeasure:sbvsc.widthSizeInner sbv:sbv calcSize:colMaxWidth - sbvsc.leadingPosInner.aal - sbvsc.trailingPosInner.aal sbvSize:sbvmyFrame.frame.size selfLayoutSize:selfSize];
                 }
                     break;
                 default:
@@ -791,8 +791,8 @@
             //约束异常：垂直流式布局设置autoArrange为YES时，子视图不能将weight设置为非0.
             NSCAssert(sbvsc.weight == 0, @"Constraint exception!! vertical flow layout:%@ 's subview:%@ can't set weight when the autoArrange set to YES",self, sbv);
 #endif
-            CGFloat leadingSpace = sbvsc.leadingPosInner.absVal;
-            CGFloat trailingSpace = sbvsc.trailingPosInner.absVal;
+            CGFloat leadingSpace = sbvsc.leadingPosInner.aal;
+            CGFloat trailingSpace = sbvsc.trailingPosInner.aal;
             CGRect rect = sbvmyFrame.frame;
             
             if (sbvsc.widthSizeInner.dimeNumVal != nil)
@@ -824,10 +824,10 @@
         MyFrame *sbvmyFrame = sbv.myFrame;
         UIView *sbvsc = [self myCurrentSizeClassFrom:sbvmyFrame];
        
-        CGFloat topSpace = sbvsc.topPosInner.absVal;
-        CGFloat leadingSpace = sbvsc.leadingPosInner.absVal;
-        CGFloat bottomSpace = sbvsc.bottomPosInner.absVal;
-        CGFloat trailingSpace = sbvsc.trailingPosInner.absVal;
+        CGFloat topSpace = sbvsc.topPosInner.aal;
+        CGFloat leadingSpace = sbvsc.leadingPosInner.aal;
+        CGFloat bottomSpace = sbvsc.bottomPosInner.aal;
+        CGFloat trailingSpace = sbvsc.trailingPosInner.aal;
         CGRect rect = sbvmyFrame.frame;
         
         
@@ -1100,8 +1100,8 @@
             
         }
         
-        CGFloat leadingSpace = sbvsc.leadingPosInner.absVal;
-        CGFloat trailingSpace = sbvsc.trailingPosInner.absVal;
+        CGFloat leadingSpace = sbvsc.leadingPosInner.aal;
+        CGFloat trailingSpace = sbvsc.trailingPosInner.aal;
         CGRect rect = sbvmyFrame.frame;
         
         
@@ -1208,10 +1208,10 @@
         }
         
         
-        CGFloat topSpace = sbvsc.topPosInner.absVal;
-        CGFloat leadingSpace = sbvsc.leadingPosInner.absVal;
-        CGFloat bottomSpace = sbvsc.bottomPosInner.absVal;
-        CGFloat trailingSpace = sbvsc.trailingPosInner.absVal;
+        CGFloat topSpace = sbvsc.topPosInner.aal;
+        CGFloat leadingSpace = sbvsc.leadingPosInner.aal;
+        CGFloat bottomSpace = sbvsc.bottomPosInner.aal;
+        CGFloat trailingSpace = sbvsc.trailingPosInner.aal;
         CGRect rect = sbvmyFrame.frame;
         BOOL isFlexedHeight = sbvsc.wrapContentHeight && ![sbv isKindOfClass:[MyBaseLayout class]] && sbvsc.heightSizeInner.dimeRelaVal.view != self;
         
@@ -1407,8 +1407,8 @@
 #endif
             
             
-            CGFloat topSpace = sbvsc.topPosInner.absVal;
-            CGFloat bottomSpace = sbvsc.bottomPosInner.absVal;
+            CGFloat topSpace = sbvsc.topPosInner.aal;
+            CGFloat bottomSpace = sbvsc.bottomPosInner.aal;
             CGRect rect = sbvmyFrame.frame;
             
             if (sbvsc.widthSizeInner.dimeNumVal != nil)
@@ -1458,10 +1458,10 @@
         UIView *sbvsc = [self myCurrentSizeClassFrom:sbvmyFrame];
 
         
-        CGFloat topSpace = sbvsc.topPosInner.absVal;
-        CGFloat leadingSpace = sbvsc.leadingPosInner.absVal;
-        CGFloat bottomSpace = sbvsc.bottomPosInner.absVal;
-        CGFloat trailingSpace = sbvsc.trailingPosInner.absVal;
+        CGFloat topSpace = sbvsc.topPosInner.aal;
+        CGFloat leadingSpace = sbvsc.leadingPosInner.aal;
+        CGFloat bottomSpace = sbvsc.bottomPosInner.aal;
+        CGFloat trailingSpace = sbvsc.trailingPosInner.aal;
         CGRect rect = sbvmyFrame.frame;
         
         if (sbvsc.widthSizeInner.dimeNumVal != nil)
@@ -1728,8 +1728,8 @@
             
         }
         
-        CGFloat topSpace = sbvsc.topPosInner.absVal;
-        CGFloat bottomSpace = sbvsc.bottomPosInner.absVal;
+        CGFloat topSpace = sbvsc.topPosInner.aal;
+        CGFloat bottomSpace = sbvsc.bottomPosInner.aal;
         CGRect rect = sbvmyFrame.frame;
         
         
@@ -1858,10 +1858,10 @@
             colMaxHeight = 0;
         }
         
-        CGFloat topSpace = sbvsc.topPosInner.absVal;
-        CGFloat leadingSpace = sbvsc.leadingPosInner.absVal;
-        CGFloat bottomSpace = sbvsc.bottomPosInner.absVal;
-        CGFloat trailingSpace = sbvsc.trailingPosInner.absVal;
+        CGFloat topSpace = sbvsc.topPosInner.aal;
+        CGFloat leadingSpace = sbvsc.leadingPosInner.aal;
+        CGFloat bottomSpace = sbvsc.bottomPosInner.aal;
+        CGFloat trailingSpace = sbvsc.trailingPosInner.aal;
         CGRect rect = sbvmyFrame.frame;
         
         

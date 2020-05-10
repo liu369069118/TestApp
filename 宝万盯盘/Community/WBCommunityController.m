@@ -88,7 +88,17 @@
     [_tableView.mj_header beginRefreshing];
     
     MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        [selfWeak loadCommunityTopicData];
+        if (selfWeak.pageRefer == 2) {
+            [selfWeak loadArticleListData2];
+        } else if (selfWeak.pageRefer == 3) {
+            [selfWeak loadArticleListData3];
+        } else {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [[KNToast shareToast] initWithText:@"没有更多数据了~"];
+                [selfWeak.tableView.mj_header endRefreshing];
+                [selfWeak.tableView.mj_footer endRefreshing];
+            });
+        }
     }];
     footer.stateLabel.hidden = YES;
     footer.refreshingTitleHidden = YES;
@@ -112,6 +122,52 @@
     @WeakObj(self);
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         selfWeak.pageRefer = 2;
+        selfWeak.topicTime = @"";
+        [selfWeak.tableView reloadData];
+        [selfWeak.tableView.mj_header endRefreshing];
+        [selfWeak.tableView.mj_footer endRefreshing];
+    });
+}
+
+/// >>> 文章
+- (void)loadArticleListData2 {
+    NSDictionary *homeDict = [WBUitl readLocalFileWithName:@"community2"];
+
+    NSArray *newsDicts = [[homeDict getObject:@"data"] getArray:@"list"];
+
+    for (NSDictionary *tempDict in newsDicts) {
+        WBCommunityModel *model = [WBCommunityModel createCommunityModelWithDict:tempDict];
+        WBCommunityLayout *layout = [[WBCommunityLayout alloc] initWithTopicModel:model];
+        
+        [_articleList addObject:layout];
+    }
+    
+    @WeakObj(self);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        selfWeak.pageRefer = 3;
+        selfWeak.topicTime = @"";
+        [selfWeak.tableView reloadData];
+        [selfWeak.tableView.mj_header endRefreshing];
+        [selfWeak.tableView.mj_footer endRefreshing];
+    });
+}
+
+/// >>> 文章
+- (void)loadArticleListData3 {
+    NSDictionary *homeDict = [WBUitl readLocalFileWithName:@"community3"];
+
+    NSArray *newsDicts = [[homeDict getObject:@"data"] getArray:@"list"];
+
+    for (NSDictionary *tempDict in newsDicts) {
+        WBCommunityModel *model = [WBCommunityModel createCommunityModelWithDict:tempDict];
+        WBCommunityLayout *layout = [[WBCommunityLayout alloc] initWithTopicModel:model];
+        
+        [_articleList addObject:layout];
+    }
+    
+    @WeakObj(self);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        selfWeak.pageRefer = 4;
         selfWeak.topicTime = @"";
         [selfWeak.tableView reloadData];
         [selfWeak.tableView.mj_header endRefreshing];
@@ -218,7 +274,9 @@ return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 }
 
 - (void)commentClickForCummunityCell:(nonnull WBCommunityCell *)mainCell {
-    
+    WBWebController *webVC = [[WBWebController alloc] init];
+    webVC.url = mainCell.layout.topicModel.h5_url;
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 
 

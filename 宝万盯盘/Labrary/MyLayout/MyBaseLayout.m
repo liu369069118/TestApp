@@ -3405,8 +3405,8 @@ MySizeClass _myGlobalSizeClass = 0xFF;
             //如果同时设置左右边界则左右边界为最小的宽度
             if (sbvsc.leadingPosInner.posVal != nil && sbvsc.trailingPosInner.posVal != nil)
             {
-                if (_myCGFloatLess(pMaxWrapSize->width, sbvsc.leadingPosInner.absVal + sbvsc.trailingPosInner.absVal + paddingLeading + paddingTrailing))
-                    pMaxWrapSize->width = sbvsc.leadingPosInner.absVal + sbvsc.trailingPosInner.absVal + paddingLeading + paddingTrailing;
+                if (_myCGFloatLess(pMaxWrapSize->width, sbvsc.leadingPosInner.aal + sbvsc.trailingPosInner.aal + paddingLeading + paddingTrailing))
+                    pMaxWrapSize->width = sbvsc.leadingPosInner.aal + sbvsc.trailingPosInner.aal + paddingLeading + paddingTrailing;
             }
             
             //宽度不依赖布局并且没有同时设置左右边距则参与最大宽度计算。
@@ -3414,11 +3414,11 @@ MySizeClass _myGlobalSizeClass = 0xFF;
                 (sbvsc.leadingPosInner.posVal == nil || sbvsc.trailingPosInner.posVal == nil))
             {
                 
-                if (_myCGFloatLess(pMaxWrapSize->width, sbvmyFrame.width + sbvsc.leadingPosInner.absVal + sbvsc.centerXPosInner.absVal + sbvsc.trailingPosInner.absVal + paddingLeading + paddingTrailing))
-                    pMaxWrapSize->width = sbvmyFrame.width + sbvsc.leadingPosInner.absVal + sbvsc.centerXPosInner.absVal + sbvsc.trailingPosInner.absVal + paddingLeading + paddingTrailing;
+                if (_myCGFloatLess(pMaxWrapSize->width, sbvmyFrame.width + sbvsc.leadingPosInner.aal + sbvsc.centerXPosInner.aal + sbvsc.trailingPosInner.aal + paddingLeading + paddingTrailing))
+                    pMaxWrapSize->width = sbvmyFrame.width + sbvsc.leadingPosInner.aal + sbvsc.centerXPosInner.aal + sbvsc.trailingPosInner.aal + paddingLeading + paddingTrailing;
                 
-                if (_myCGFloatLess(pMaxWrapSize->width,sbvmyFrame.trailing + sbvsc.trailingPosInner.absVal + paddingTrailing))
-                    pMaxWrapSize->width = sbvmyFrame.trailing + sbvsc.trailingPosInner.absVal + paddingTrailing;
+                if (_myCGFloatLess(pMaxWrapSize->width,sbvmyFrame.trailing + sbvsc.trailingPosInner.aal + paddingTrailing))
+                    pMaxWrapSize->width = sbvmyFrame.trailing + sbvsc.trailingPosInner.aal + paddingTrailing;
                 
             }
         }
@@ -3428,19 +3428,19 @@ MySizeClass _myGlobalSizeClass = 0xFF;
             //如果同时设置上下边界则上下边界为最小的高度
             if (sbvsc.topPosInner.posVal != nil && sbvsc.bottomPosInner.posVal != nil)
             {
-                if (_myCGFloatLess(pMaxWrapSize->height, sbvsc.topPosInner.absVal + sbvsc.bottomPosInner.absVal + paddingTop + paddingBottom))
-                    pMaxWrapSize->height = sbvsc.topPosInner.absVal + sbvsc.bottomPosInner.absVal + paddingTop + paddingBottom;
+                if (_myCGFloatLess(pMaxWrapSize->height, sbvsc.topPosInner.aal + sbvsc.bottomPosInner.aal + paddingTop + paddingBottom))
+                    pMaxWrapSize->height = sbvsc.topPosInner.aal + sbvsc.bottomPosInner.aal + paddingTop + paddingBottom;
             }
             
             //高度不依赖布局并且没有同时设置上下边距则参与最大高度计算。
             if ((sbvsc.heightSizeInner.dimeRelaVal.view != self) &&
                 (sbvsc.topPosInner.posVal == nil || sbvsc.bottomPosInner.posVal == nil))
             {
-                if (_myCGFloatLess(pMaxWrapSize->height, sbvmyFrame.height + sbvsc.topPosInner.absVal + sbvsc.centerYPosInner.absVal + sbvsc.bottomPosInner.absVal + paddingTop + paddingBottom))
-                    pMaxWrapSize->height = sbvmyFrame.height + sbvsc.topPosInner.absVal + sbvsc.centerYPosInner.absVal + sbvsc.bottomPosInner.absVal + paddingTop + paddingBottom;
+                if (_myCGFloatLess(pMaxWrapSize->height, sbvmyFrame.height + sbvsc.topPosInner.aal + sbvsc.centerYPosInner.aal + sbvsc.bottomPosInner.aal + paddingTop + paddingBottom))
+                    pMaxWrapSize->height = sbvmyFrame.height + sbvsc.topPosInner.aal + sbvsc.centerYPosInner.aal + sbvsc.bottomPosInner.aal + paddingTop + paddingBottom;
                 
-                if (_myCGFloatLess(pMaxWrapSize->height, sbvmyFrame.bottom + sbvsc.bottomPosInner.absVal + paddingBottom))
-                    pMaxWrapSize->height = sbvmyFrame.bottom + sbvsc.bottomPosInner.absVal + paddingBottom;
+                if (_myCGFloatLess(pMaxWrapSize->height, sbvmyFrame.bottom + sbvsc.bottomPosInner.aal + paddingBottom))
+                    pMaxWrapSize->height = sbvmyFrame.bottom + sbvsc.bottomPosInner.aal + paddingBottom;
             }
         }
     }

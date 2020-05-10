@@ -55,6 +55,9 @@
 		7B09AF082467F3B900CB0D2C /* UIColor+BinaryColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09AF052467F3B800CB0D2C /* UIColor+BinaryColor.m */; };
 		7B09AF092467F3B900CB0D2C /* UIViewController+BarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09AF072467F3B800CB0D2C /* UIViewController+BarButton.m */; };
 		7B09AF0B2467F81200CB0D2C /* SXHGTYStockDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B09AF0A2467F81100CB0D2C /* SXHGTYStockDetailViewController.xib */; };
+		7B09B07C24684BEE00CB0D2C /* community2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B09B07924684BED00CB0D2C /* community2.geojson */; };
+		7B09B07D24684BEE00CB0D2C /* community.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B09B07A24684BED00CB0D2C /* community.geojson */; };
+		7B09B07E24684BEE00CB0D2C /* community3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B09B07B24684BEE00CB0D2C /* community3.geojson */; };
 		7B7F2A35246691F300E2134D /* home3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B7F2A33246691F300E2134D /* home3.geojson */; };
 		7B7F2A36246691F300E2134D /* home2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B7F2A34246691F300E2134D /* home2.geojson */; };
 		7BE9F9AC2463E78400B90142 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9F9AB2463E78400B90142 /* AppDelegate.m */; };
@@ -73,7 +76,6 @@
 		7BE9FA722463EEC300B90142 /* WBHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9FA712463EEC300B90142 /* WBHomeController.m */; };
 		7BE9FA792463F40200B90142 /* WBNewsLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9FA782463F40200B90142 /* WBNewsLayout.m */; };
 		7BE9FA882463F9B800B90142 /* home.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7BE9FA872463F9B700B90142 /* home.geojson */; };
-		7BE9FA8A2463F9FF00B90142 /* community.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7BE9FA892463F9FF00B90142 /* community.geojson */; };
 		7BE9FA8D2463FAAB00B90142 /* WBUitl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9FA8C2463FAAB00B90142 /* WBUitl.m */; };
 		7BE9FA912463FB0700B90142 /* NSDictionary+XFExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9FA8F2463FB0700B90142 /* NSDictionary+XFExt.m */; };
 		7BE9FA942463FB7000B90142 /* WBNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9FA932463FB7000B90142 /* WBNewsModel.m */; };
@@ -259,6 +261,9 @@
 		7B09AF062467F3B800CB0D2C /* UIColor+BinaryColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BinaryColor.h"; sourceTree = "<group>"; };
 		7B09AF072467F3B800CB0D2C /* UIViewController+BarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BarButton.m"; sourceTree = "<group>"; };
 		7B09AF0A2467F81100CB0D2C /* SXHGTYStockDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SXHGTYStockDetailViewController.xib; sourceTree = "<group>"; };
+		7B09B07924684BED00CB0D2C /* community2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = community2.geojson; sourceTree = "<group>"; };
+		7B09B07A24684BED00CB0D2C /* community.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = community.geojson; sourceTree = "<group>"; };
+		7B09B07B24684BEE00CB0D2C /* community3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = community3.geojson; sourceTree = "<group>"; };
 		7B7F2A33246691F300E2134D /* home3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = home3.geojson; sourceTree = "<group>"; };
 		7B7F2A34246691F300E2134D /* home2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = home2.geojson; sourceTree = "<group>"; };
 		7BE9F9A72463E78400B90142 /* 万宝盯盘.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "万宝盯盘.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,7 +298,6 @@
 		7BE9FA772463F40200B90142 /* WBNewsLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBNewsLayout.h; sourceTree = "<group>"; };
 		7BE9FA782463F40200B90142 /* WBNewsLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBNewsLayout.m; sourceTree = "<group>"; };
 		7BE9FA872463F9B700B90142 /* home.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = home.geojson; sourceTree = "<group>"; };
-		7BE9FA892463F9FF00B90142 /* community.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = community.geojson; sourceTree = "<group>"; };
 		7BE9FA8B2463FAAB00B90142 /* WBUitl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBUitl.h; sourceTree = "<group>"; };
 		7BE9FA8C2463FAAB00B90142 /* WBUitl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBUitl.m; sourceTree = "<group>"; };
 		7BE9FA8F2463FB0700B90142 /* NSDictionary+XFExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+XFExt.m"; sourceTree = "<group>"; };
@@ -651,7 +655,9 @@
 				7BE9FA872463F9B700B90142 /* home.geojson */,
 				7B7F2A34246691F300E2134D /* home2.geojson */,
 				7B7F2A33246691F300E2134D /* home3.geojson */,
-				7BE9FA892463F9FF00B90142 /* community.geojson */,
+				7B09B07A24684BED00CB0D2C /* community.geojson */,
+				7B09B07924684BED00CB0D2C /* community2.geojson */,
+				7B09B07B24684BEE00CB0D2C /* community3.geojson */,
 				7BE9FA8B2463FAAB00B90142 /* WBUitl.h */,
 				7BE9FA8C2463FAAB00B90142 /* WBUitl.m */,
 				7B09AEFD2467F26F00CB0D2C /* mainJsonList.geojson */,
@@ -1146,11 +1152,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B09B07D24684BEE00CB0D2C /* community.geojson in Resources */,
 				7B09AE9A2467EE6400CB0D2C /* SXHGTYOPtiondicorationEditCell.xib in Resources */,
 				7B09AE842467DB7A00CB0D2C /* WBSecondCellData.geojson in Resources */,
-				7BE9FA8A2463F9FF00B90142 /* community.geojson in Resources */,
 				7BE9FA882463F9B800B90142 /* home.geojson in Resources */,
 				7B09AEFE2467F27400CB0D2C /* mainJsonList.geojson in Resources */,
+				7B09B07E24684BEE00CB0D2C /* community3.geojson in Resources */,
+				7B09B07C24684BEE00CB0D2C /* community2.geojson in Resources */,
 				7B09AF0B2467F81200CB0D2C /* SXHGTYStockDetailViewController.xib in Resources */,
 				7B09AEAA2467EEF300CB0D2C /* SXHGTYGPListViewController.xib in Resources */,
 				7B09AE7F2467D56A00CB0D2C /* WBFirstCellData.geojson in Resources */,

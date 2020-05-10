@@ -6,7 +6,7 @@
       "id" : 729,
       "subject" : "",
       "comments" : 3,
-      "message" : "2019年比特币还能不能重新站上8000？你觉得呢？加油，还剩5天！",
+      "message" : "2019年还能不能重新站上8000？你觉得呢？加油，还剩5天！",
       "rates" : "13",
       "data_type" : 1,
       "url" : "hold:\/\/TopicDetail?topic_id=729&url=https%3A%2F%2Fh5.c21.lileino9.com%2Fposting.html%3Fid%3D729%26type%3D1%26from_source%3Drecommendation",
@@ -18,7 +18,7 @@
       "last_post_time" : "1天前",
       "card" : 8,
       "is_new" : -1,
-      "content_str" : "2019年比特币还能不能重新站上8000？你觉得呢？加油，还剩5天！",
+      "content_str" : "2019年还能不能重新站上8000？你觉得呢？加油，还剩5天！",
       "create_time" : "2019-12-26 15:35:13",
       "user" : {
         "user_avatar" : "https:\/\/hold1.oss-cn-beijing.aliyuncs.com\/avatar\/PHP_UPLOAD\/2019\/06\/11\/5cff519f699a4.jpeg",
@@ -39,7 +39,7 @@
         "profile_url" : ""
       },
       "item_type" : 6,
-      "summary" : "比特币正在成为名副其实的数字黄金。",
+      "summary" : "正在成为名副其实的数字黄金。",
       "id" : 51857,
       "share_summary" : "2017年对于加密货币投资者来说是充满了机遇伟大的一年，2018年则是一场灾难。那么，2019年呢？所有投资者都应该意识到，2018年的灾难仅限于市场价格方面，技术发展在2018年取得了巨大的飞跃。在我们给出答案之前，所有投资者都应该意识到，2018年加密货币行业，只是在市场价格下跌方面是灾难，就加密货币行业的技术发展来看，在2018年还是取得了巨大的进步，...",
       "card" : 1,
@@ -145,20 +145,20 @@
       "en_name" : "TRON"
     },
     {
-      "cht_name" : "比特币",
+      "cht_name" : "",
       "author" : {
         "name" : "",
         "head_img" : "",
         "profile_url" : ""
       },
       "item_type" : 5,
-      "summary" : "BTC，或称为比特币核心，去年有大约1,815次提交；以太坊(ETH)的Go版本大约有989次提交。",
+      "summary" : "，或称为核心，去年有大约1,815次提交；以太坊(ETH)的Go版本大约有989次提交。",
       "id" : 51619,
       "share_summary" : "在过去的12个月中，数字资产价值大幅下降，但其背后加密货币的发展有所增加。来自跟踪加密货币存储库中发生的Github活动量数据收集网站的研究表明，区块链开发正继续增长。2018年加密货币Github活跃度尽管加密市场去年的价格下跌超过三分之二，但项目开发并未遵循相同的趋势。许多项目自2017年创历史新高以来已经失去了90%以上的价值，但仍有相当大的发展。去年...",
       "card" : 1,
       "rf" : "fall",
       "slug" : "bitcoin",
-      "coin_name" : "BTC",
+      "coin_name" : "",
       "thumb" : [
         "https:\/\/hold1.oss-cn-beijing.aliyuncs.com\/PHP_UPLOAD\/20190107\/b0af\/b0afe85f69691353bd173ea279e1e315_.png"
       ],
@@ -168,20 +168,20 @@
         {
           "coin_id" : "301",
           "slug" : "bitcoin",
-          "coin_name" : "BTC",
+          "coin_name" : "",
           "coin_icon" : "https:\/\/hold1.oss-cn-beijing.aliyuncs.com\/images\/76556ef0392f74257be6b42b13303ab2",
           "rf_rate" : "-4.06%",
-          "h5_url" : "https:\/\/h5.c21.lileino9.com\/detail.html?id=code_309778&name=BTC&rf=fall&rf_rate=-4.06%25&slug=bitcoin&coin_id=301",
+          "h5_url" : "https:\/\/h5.c21.lileino9.com\/detail.html?id=code_309778&name=&rf=fall&rf_rate=-4.06%25&slug=bitcoin&coin_id=301",
           "pair_id" : 0,
           "rf" : "fall"
         },
         {
           "coin_id" : "2054",
           "slug" : "bitcoin-cash",
-          "coin_name" : "BCH",
+          "coin_name" : "",
           "coin_icon" : "https:\/\/hold1.oss-cn-beijing.aliyuncs.com\/images\/775c252fe3d5805ad79b9214f3f4f581",
           "rf_rate" : "-5.68%",
-          "h5_url" : "https:\/\/h5.c21.lileino9.com\/detail.html?id=code_309778&name=BCH&rf=fall&rf_rate=-5.68%25&slug=bitcoin&coin_id=301",
+          "h5_url" : "https:\/\/h5.c21.lileino9.com\/detail.html?id=code_309778&name=&rf=fall&rf_rate=-5.68%25&slug=bitcoin&coin_id=301",
           "pair_id" : 0,
           "rf" : "fall"
         },
@@ -226,9 +226,9 @@
         "profile_url" : ""
       },
       "item_type" : 6,
-      "summary" : "比赛历时8天，在比特币波动幅度不大的情况下，获得如此高的收益，大家都十分好奇，开走飞机的人会是谁，他又是如何获得这么高收益的呢？",
+      "summary" : "比赛历时8天，在波动幅度不大的情况下，获得如此高的收益，大家都十分好奇，开走飞机的人会是谁，他又是如何获得这么高收益的呢？",
       "id" : 51526,
-      "share_summary" : "1月3日，OKEX举办的合约交易盈利竞赛结果出炉，第一名以2692%的盈利获得了直升机大奖。对，一周26倍的收益！比赛历时8天，在比特币波动幅度不大的情况下，获得如此高的收益，大家都十分好奇，开走飞机的人会是谁，他又是如何获得这么高收益的呢？冠军出炉，收益26倍1月3日15点，OKEX交易所举办的合约交易率盈利竞赛宣告结束。从12月26日15点到1月3日15...",
+      "share_summary" : "1月3日，OKEX举办的合约盈利竞赛结果出炉，第一名以2692%的盈利获得了直升机大奖。对，一周26倍的收益！比赛历时8天，在波动幅度不大的情况下，获得如此高的收益，大家都十分好奇，开走飞机的人会是谁，他又是如何获得这么高收益的呢？冠军出炉，收益26倍1月3日15点，OKEX所举办的合约率盈利竞赛宣告结束。从12月26日15点到1月3日15...",
       "card" : 1,
       "rf" : "rise",
       "slug" : "",
@@ -273,9 +273,9 @@
         "profile_url" : ""
       },
       "item_type" : 6,
-      "summary" : "有一些日期的到来可能会让2019年成为比特币打开主流金融市场的一年，这些时间点和两种期货衍生品、以及VanEck期待已久的比特币ETF都有着密切的关系。",
+      "summary" : "有一些日期的到来可能会让2019年成为打开主流金融市场的一年，这些时间点和两种期货衍生品、以及VanEck期待已久的ETF都有着密切的关系。",
       "id" : 51438,
-      "share_summary" : "△芝加哥期权交易所17年12月10日就比特币期货火爆反映发推一年多前，芝加哥期权交易所(Cboe)和芝加哥商品交易所(CME)推出了全球首个比特币期货合约，这是有史以来首个进入传统市场的比特币衍生品。在比特币创下2万美元的历史新高之前，这两种期货合约都开始进行交易。衍生品交易市场的火爆反映了2017年的市场狂热氛围。在合约上线交易的头两个小时里，芝加哥期权交...",
+      "share_summary" : "△芝加哥期权所17年12月10日就期货火爆反映发推一年多前，芝加哥期权所(Cboe)和芝加哥商品所(CME)推出了全球首个期货合约，这是有史以来首个进入传统市场的衍生品。在创下2万美元的历史新高之前，这两种期货合约都开始进行。衍生品市场的火爆反映了2017年的市场狂热氛围。在合约上线的头两个小时里，芝加哥期权交...",
       "card" : 1,
       "rf" : "rise",
       "slug" : "",
@@ -320,9 +320,9 @@
         "profile_url" : ""
       },
       "item_type" : 6,
-      "summary" : "HUB交易所推出多种项目，在诈骗用户之后直接跑路，网站关闭。",
+      "summary" : "HUB所推出多种项目，在诈骗用户之后直接跑路，网站关闭。",
       "id" : 51422,
-      "share_summary" : "币黑在之前的文章里多次提醒大家不要去小交易所交易，不管是什么“牛逼老师”推荐还是给与高额利益，都存在极高的跑路风险。最近有粉丝朋友向我反馈，他最近遇到了交易所跑路的事情。受害者在朋友推荐下，注册并实名了HUB交易所了。在HUB交易所上，注册并实名直接会送5个ETH，并且推荐的人也有奖励。还有另外在网上仍能看到他们11月份的推广，注册实名送ETC，拉人会送更多...",
+      "share_summary" : "币黑在之前的文章里多次提醒大家不要去小所，不管是什么“牛逼老师”推荐还是给与高额利益，都存在极高的跑路风险。最近有粉丝朋友向我反馈，他最近遇到了所跑路的事情。受害者在朋友推荐下，注册并实名了HUB所了。在HUB所上，注册并实名直接会送5个ETH，并且推荐的人也有奖励。还有另外在网上仍能看到他们11月份的推广，注册实名送ETC，拉人会送更多...",
       "card" : 1,
       "rf" : "rise",
       "slug" : "",
@@ -360,7 +360,7 @@
       "en_name" : ""
     },
     {
-      "cht_name" : "比特币",
+      "cht_name" : "",
       "author" : {
         "name" : "",
         "head_img" : "",
@@ -369,11 +369,11 @@
       "item_type" : 6,
       "summary" : "区块链当然是伟大的发明，也当然给像我一样的想要“掀桌子”或者说想要“挪凳子”的人提供了巨大的机会，但是你能看清“机会”在哪里吗？你能清晰的定位自己所处的位置吗？",
       "id" : 51413,
-      "share_summary" : "从巴菲特的股东大会，到各种富豪出席的什么公开活动，时不时的都会有人去问他们对于比特币的看法。逮着盖茨问盖茨，逮着马云问马云，然后每一次都会被发酵成大新闻。到现在为止，排在世界富豪榜上前100名的，至少有90位都公开对比特币发表过看法。但是这些人无一例外的都“不待见”比特币，而且似乎排名越靠前的越“不待见”。其中最不待见比特币的莫过于比尔·盖茨和沃伦·巴菲特，...",
+      "share_summary" : "从巴菲特的股东大会，到各种富豪出席的什么公开活动，时不时的都会有人去问他们对于的看法。逮着盖茨问盖茨，逮着马云问马云，然后每一次都会被发酵成大新闻。到现在为止，排在世界富豪榜上前100名的，至少有90位都公开对发表过看法。但是这些人无一例外的都“不待见”，而且似乎排名越靠前的越“不待见”。其中最不待见的莫过于比尔·盖茨和沃伦·巴菲特，...",
       "card" : 1,
       "rf" : "fall",
       "slug" : "bitcoin",
-      "coin_name" : "BTC",
+      "coin_name" : "",
       "thumb" : [
         "https:\/\/hold1.oss-cn-beijing.aliyuncs.com\/PHP_UPLOAD\/20190105\/448e\/448e3292f032b62ecc23e4bcd54a1844_.png",
         "https:\/\/hold1.oss-cn-beijing.aliyuncs.com\/PHP_UPLOAD\/20190105\/273c\/273c0fea19044fd9d89cd3e821229845_.png",
@@ -385,10 +385,10 @@
         {
           "coin_id" : "301",
           "slug" : "bitcoin",
-          "coin_name" : "BTC",
+          "coin_name" : "",
           "coin_icon" : "https:\/\/hold1.oss-cn-beijing.aliyuncs.com\/images\/76556ef0392f74257be6b42b13303ab2",
           "rf_rate" : "-4.06%",
-          "h5_url" : "https:\/\/h5.c21.lileino9.com\/detail.html?id=code_308542&name=BTC&rf=fall&rf_rate=-4.06%25&slug=bitcoin&coin_id=301",
+          "h5_url" : "https:\/\/h5.c21.lileino9.com\/detail.html?id=code_308542&name=&rf=fall&rf_rate=-4.06%25&slug=bitcoin&coin_id=301",
           "pair_id" : 0,
           "rf" : "fall"
         }
@@ -416,7 +416,7 @@
       "en_name" : "Bitcoin"
     },
     {
-      "cht_name" : "比特币",
+      "cht_name" : "",
       "author" : {
         "name" : "",
         "head_img" : "",
@@ -425,11 +425,11 @@
       "item_type" : 5,
       "summary" : "有人说这是私人财富第一次能够不被侵犯的幸运年代，历史进程不可逆。",
       "id" : 51319,
-      "share_summary" : "有人说这是私人财富第一次能够不被侵犯的幸运年代，历史进程不可逆。20年前，黑客帝国Neo毫不犹豫地选择了红色药丸，从此，他就深深掉进了兔子洞里。10年后，一个名为中本聪的极客，在亲手创建了第一个区块之后，新世界的大门被打开了……01创世区块十周年2019年1月4日凌晨2时15分05秒，比特币创世区块诞生10周年的日子。10年前，其神秘创始人satoshina...",
+      "share_summary" : "有人说这是私人财富第一次能够不被侵犯的幸运年代，历史进程不可逆。20年前，黑客帝国Neo毫不犹豫地选择了红色药丸，从此，他就深深掉进了兔子洞里。10年后，一个名为中本聪的极客，在亲手创建了第一个区块之后，新世界的大门被打开了……01创世区块十周年2019年1月4日凌晨2时15分05秒，创世区块诞生10周年的日子。10年前，其神秘创始人satoshina...",
       "card" : 1,
       "rf" : "fall",
       "slug" : "bitcoin",
-      "coin_name" : "BTC",
+      "coin_name" : "",
       "thumb" : [
         "https:\/\/hold1.oss-cn-beijing.aliyuncs.com\/PHP_UPLOAD\/20190105\/8992\/899255db68e0331b0c64d7f7e7cef8df_.png"
       ],
@@ -439,10 +439,10 @@
         {
           "coin_id" : "301",
           "slug" : "bitcoin",
-          "coin_name" : "BTC",
+          "coin_name" : "",
           "coin_icon" : "https:\/\/hold1.oss-cn-beijing.aliyuncs.com\/images\/76556ef0392f74257be6b42b13303ab2",
           "rf_rate" : "-4.06%",
-          "h5_url" : "https:\/\/h5.c21.lileino9.com\/detail.html?id=code_307978&name=BTC&rf=fall&rf_rate=-4.06%25&slug=bitcoin&coin_id=301",
+          "h5_url" : "https:\/\/h5.c21.lileino9.com\/detail.html?id=code_307978&name=&rf=fall&rf_rate=-4.06%25&slug=bitcoin&coin_id=301",
           "pair_id" : 0,
           "rf" : "fall"
         }
@@ -524,20 +524,20 @@
       "en_name" : "Ethereum"
     },
     {
-      "cht_name" : "比特币",
+      "cht_name" : "",
       "author" : {
         "name" : "",
         "head_img" : "",
         "profile_url" : ""
       },
       "item_type" : 6,
-      "summary" : "在市场痴迷比特币价格波动的表象之下，很多很有意义的事情正在悄悄地发生……",
+      "summary" : "在市场痴迷价格波动的表象之下，很多很有意义的事情正在悄悄地发生……",
       "id" : 51197,
-      "share_summary" : "币圈是一场零和游戏，同时也是一座金字塔。那么在末端的，一定是数量最多的炒币一族，往上一层是项目方、大户、庄家，再往上是排名靠前的交易所。而站在塔尖上的，便是一群低调的巨鲸，他们有币、有权、有资源。今天，小白想和大家聊的，是来自美国币圈的隐形大亨，数字货币集团(DigitalCurrencyGroup)，简称“DCG”。在全球币圈，DCG是一股不可忽视的强大力...",
+      "share_summary" : "币圈是一场零和游戏，同时也是一座金字塔。那么在末端的，一定是数量最多的炒币一族，往上一层是项目方、大户、庄家，再往上是排名靠前的所。而站在塔尖上的，便是一群低调的巨鲸，他们有币、有权、有资源。今天，小白想和大家聊的，是来自美国币圈的隐形大亨，数字货币集团(DigitalCurrencyGroup)，简称“DCG”。在全球币圈，DCG是一股不可忽视的强大力...",
       "card" : 1,
       "rf" : "fall",
       "slug" : "bitcoin",
-      "coin_name" : "BTC",
+      "coin_name" : "",
       "thumb" : [
         "https:\/\/hold1.oss-cn-beijing.aliyuncs.com\/PHP_UPLOAD\/20190104\/bb9c\/bb9c67ae15b52e0a0c3ab0e0ec4ad18e_.png",
         "https:\/\/hold1.oss-cn-beijing.aliyuncs.com\/PHP_UPLOAD\/20190104\/e5da\/e5da748d76d04c8920c9714299d65c13_.png",
@@ -549,10 +549,10 @@
         {
           "coin_id" : "301",
           "slug" : "bitcoin",
-          "coin_name" : "BTC",
+          "coin_name" : "",
           "coin_icon" : "https:\/\/hold1.oss-cn-beijing.aliyuncs.com\/images\/76556ef0392f74257be6b42b13303ab2",
           "rf_rate" : "-4.06%",
-          "h5_url" : "https:\/\/h5.c21.lileino9.com\/detail.html?id=code_307246&name=BTC&rf=fall&rf_rate=-4.06%25&slug=bitcoin&coin_id=301",
+          "h5_url" : "https:\/\/h5.c21.lileino9.com\/detail.html?id=code_307246&name=&rf=fall&rf_rate=-4.06%25&slug=bitcoin&coin_id=301",
           "pair_id" : 0,
           "rf" : "fall"
         }

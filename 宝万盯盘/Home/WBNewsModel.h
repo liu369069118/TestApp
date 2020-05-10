@@ -125,7 +125,7 @@ typedef NS_ENUM(NSUInteger, HCNewsArticleStyle) {
 @property (nonatomic, copy) NSString *price_cny;       // 币价格 - cny,
 @property (nonatomic, copy) NSString *unique_key;       // 预留字段, 文章Feed唯一标示,客户端暂时不使用,
 @property (nonatomic, copy) NSString *coin_id;           // 币种ID,
-@property (nonatomic, copy) NSString *pair_id;           // 交易对ID,
+@property (nonatomic, copy) NSString *pair_id;           // 对ID,
 @property (nonatomic, copy) NSString *tagName;          // 标签名称
 @property (nonatomic, copy) NSString *special_style;    // 特殊样式
 @property (nonatomic, copy) NSString *labelTypeString;
