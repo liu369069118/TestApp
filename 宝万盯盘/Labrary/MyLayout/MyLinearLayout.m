@@ -533,17 +533,17 @@
         }
         else
         {
-            fixedHeight += sbvsc.topPosInner.absVal;
+            fixedHeight += sbvsc.topPosInner.aal;
             
-            if (sbvsc.topPosInner.absVal != 0)
+            if (sbvsc.topPosInner.aal != 0)
             {
                 fixedSpaceCount += 1;
-                fixedSpaceHeight += sbvsc.topPosInner.absVal;
+                fixedSpaceHeight += sbvsc.topPosInner.aal;
             }
 
         }
         
-        pos += sbvsc.topPosInner.absVal;
+        pos += sbvsc.topPosInner.aal;
         rect.origin.y = pos;
         
         
@@ -572,17 +572,17 @@
         }
         else
         {
-            fixedHeight += sbvsc.bottomPosInner.absVal;
+            fixedHeight += sbvsc.bottomPosInner.aal;
             
-            if (sbvsc.bottomPosInner.absVal != 0)
+            if (sbvsc.bottomPosInner.aal != 0)
             {
                 fixedSpaceCount += 1;
-                fixedSpaceHeight += sbvsc.bottomPosInner.absVal;
+                fixedSpaceHeight += sbvsc.bottomPosInner.aal;
             }
 
         }
         
-        pos += sbvsc.bottomPosInner.absVal;
+        pos += sbvsc.bottomPosInner.aal;
         
         if (sbv != sbs.lastObject)
         {
@@ -826,11 +826,11 @@
         }
         else
         {
-            fixedWidth += sbvsc.leadingPosInner.absVal;
-            if (sbvsc.leadingPosInner.absVal != 0)
+            fixedWidth += sbvsc.leadingPosInner.aal;
+            if (sbvsc.leadingPosInner.aal != 0)
             {
                 fixedSpaceCount += 1;
-                fixedSpaceWidth += sbvsc.leadingPosInner.absVal;
+                fixedSpaceWidth += sbvsc.leadingPosInner.aal;
             }
         }
         
@@ -841,11 +841,11 @@
         }
         else
         {
-            fixedWidth += sbvsc.trailingPosInner.absVal;
-            if (sbvsc.trailingPosInner.absVal != 0)
+            fixedWidth += sbvsc.trailingPosInner.aal;
+            if (sbvsc.trailingPosInner.aal != 0)
             {
                 fixedSpaceCount += 1;
-                fixedSpaceWidth += sbvsc.trailingPosInner.absVal;
+                fixedSpaceWidth += sbvsc.trailingPosInner.aal;
             }
 
         }
@@ -1619,7 +1619,7 @@
         rect_p->size.width = [sbvsc.widthSizeInner measureWith:selfSize.width - paddingLeading - paddingTrailing];
     
     if (sbvsc.leadingPosInner.posVal != nil && sbvsc.trailingPosInner.posVal != nil)
-        rect_p->size.width = selfSize.width - paddingLeading - paddingTrailing - sbvsc.leadingPosInner.absVal - sbvsc.trailingPosInner.absVal;
+        rect_p->size.width = selfSize.width - paddingLeading - paddingTrailing - sbvsc.leadingPosInner.aal - sbvsc.trailingPosInner.aal;
     
 
     rect_p->size.width = [self myValidMeasure:sbvsc.widthSizeInner sbv:sbv calcSize:rect_p->size.width sbvSize:rect_p->size selfLayoutSize:selfSize];
@@ -1638,7 +1638,7 @@
     
     
     if (sbvsc.topPosInner.posVal != nil && sbvsc.bottomPosInner.posVal != nil)
-        rect_p->size.height = selfSize.height - paddingTop - paddingBottom - sbvsc.topPosInner.absVal - sbvsc.bottomPosInner.absVal;
+        rect_p->size.height = selfSize.height - paddingTop - paddingBottom - sbvsc.topPosInner.aal - sbvsc.bottomPosInner.aal;
     
     
     rect_p->size.height = [self myValidMeasure:sbvsc.heightSizeInner sbv:sbv calcSize:rect_p->size.height sbvSize:rect_p->size selfLayoutSize:selfSize];

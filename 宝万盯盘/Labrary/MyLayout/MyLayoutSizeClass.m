@@ -211,7 +211,7 @@ BOOL _myisRTL = NO;
 
 -(CGFloat)myTop
 {
-    return self.topPosInner.absVal;
+    return self.topPosInner.aal;
 }
 
 -(void)setMyTop:(CGFloat)myTop
@@ -222,7 +222,7 @@ BOOL _myisRTL = NO;
 
 -(CGFloat)myLeading
 {
-    return self.leadingPosInner.absVal;
+    return self.leadingPosInner.aal;
 }
 
 -(void)setMyLeading:(CGFloat)myLeading
@@ -233,7 +233,7 @@ BOOL _myisRTL = NO;
 
 -(CGFloat)myBottom
 {
-    return self.bottomPosInner.absVal;
+    return self.bottomPosInner.aal;
 }
 
 -(void)setMyBottom:(CGFloat)myBottom
@@ -244,7 +244,7 @@ BOOL _myisRTL = NO;
 
 -(CGFloat)myTrailing
 {
-    return self.trailingPosInner.absVal;
+    return self.trailingPosInner.aal;
 }
 
 -(void)setMyTrailing:(CGFloat)myTrailing
@@ -255,7 +255,7 @@ BOOL _myisRTL = NO;
 
 -(CGFloat)myCenterX
 {
-    return self.centerXPosInner.absVal;
+    return self.centerXPosInner.aal;
 }
 
 -(void)setMyCenterX:(CGFloat)myCenterX
@@ -265,7 +265,7 @@ BOOL _myisRTL = NO;
 
 -(CGFloat)myCenterY
 {
-    return self.centerYPosInner.absVal;
+    return self.centerYPosInner.aal;
 }
 
 -(void)setMyCenterY:(CGFloat)myCenterY
@@ -289,7 +289,7 @@ BOOL _myisRTL = NO;
 
 -(CGFloat)myLeft
 {
-    return self.leftPosInner.absVal;
+    return self.leftPosInner.aal;
 }
 
 -(void)setMyLeft:(CGFloat)myLeft
@@ -300,7 +300,7 @@ BOOL _myisRTL = NO;
 
 -(CGFloat)myRight
 {
-    return self.rightPosInner.absVal;
+    return self.rightPosInner.aal;
 }
 
 -(void)setMyRight:(CGFloat)myRight
@@ -313,7 +313,7 @@ BOOL _myisRTL = NO;
 
 -(CGFloat)myMargin
 {
-    return self.leftPosInner.absVal;
+    return self.leftPosInner.aal;
 }
 
 -(void)setMyMargin:(CGFloat)myMargin
@@ -327,7 +327,7 @@ BOOL _myisRTL = NO;
 
 -(CGFloat)myHorzMargin
 {
-    return self.leftPosInner.absVal;
+    return self.leftPosInner.aal;
 }
 
 -(void)setMyHorzMargin:(CGFloat)myHorzMargin
@@ -338,7 +338,7 @@ BOOL _myisRTL = NO;
 
 -(CGFloat)myVertMargin
 {
-    return self.topPosInner.absVal;
+    return self.topPosInner.aal;
 }
 
 -(void)setMyVertMargin:(CGFloat)myVertMargin

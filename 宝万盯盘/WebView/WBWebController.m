@@ -134,4 +134,13 @@
     [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
 }
 
+/// >>> 判断链接是否允许跳转
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    if ([navigationAction.request.URL.path isEqualToString:@"/guide.html"]) {
+        decisionHandler(WKNavigationActionPolicyCancel);
+        return;
+    }
+    
+    decisionHandler(WKNavigationActionPolicyAllow);
+}
 @end

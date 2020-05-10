@@ -29,5 +29,6 @@
 #import "UIViewController+BarButton.h"
 #import "UIView+PBExtesion.h"
 #import "MyLayout.h"
+#import "KNToast.h"
 
 #endif /* PrefixHeader_pch */

@@ -546,7 +546,7 @@
 
 
 
--(CGFloat)absVal
+-(CGFloat)aal
 {
     if (self.isActive)
     {
