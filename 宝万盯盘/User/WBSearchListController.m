@@ -10,6 +10,7 @@
 #import "JKRSearchController.h"
 #import "JKRSearchResultViewController.h"
 #import "JKRTestViewController.h"
+#import "SXHGTYStockDetailViewController.h"
 
 #define kSafeAreaNavHeight (([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125,2436), [[UIScreen mainScreen] currentMode].size) : NO) ? 88 : 64)
 
@@ -22,6 +23,7 @@
 @property (nonatomic, strong) UILabel *searchFooter;
 
 @property (nonatomic, strong) NSArray<NSString *> *searchAllData; //检索数据中心
+@property (nonatomic, strong) NSDictionary *gpcodeDatas;
 
 @end
 
@@ -49,6 +51,20 @@ static NSString *const CellIdentifier = @"WEICHAT_ID";
     _searchFooter.textColor = [HCColor colorWithHexString:@"666666"];
     [_searchFooter addGestureRecognizer:tap];
     self.tableView.tableFooterView = _searchFooter;
+    
+    
+    NSArray *datas = [WBUitl mainDataList];
+    NSMutableArray *names = [NSMutableArray array];
+    NSMutableDictionary *dics = [NSMutableDictionary dictionary];
+    for (NSDictionary *dic in datas) {
+        NSString *name = [dic objectForKey:@"SXHG_sname"];
+        if (name) {
+            [dics setObject:dic forKey:name.copy];
+            [names addObject:name.copy];
+        }
+    }
+    self.searchAllData = names.copy;
+    self.gpcodeDatas = dics.copy;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -68,7 +84,8 @@ static NSString *const CellIdentifier = @"WEICHAT_ID";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Home click index: %zd", indexPath.row);
+    NSString *str = [self.dataArray objectAtIndex:indexPath.row];
+    [self jumpDetail:str];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
@@ -177,15 +194,19 @@ static NSString *const CellIdentifier = @"WEICHAT_ID";
             [self.tableView reloadData];
             [[NSUserDefaults standardUserDefaults] setObject:self.dataArray.copy forKey:@"searchHistory"];
         }
-        [self jumpDetail];
+        [self jumpDetail:text];
     }
 }
 
-- (void)jumpDetail {
-    JKRTestViewController *vc = [[JKRTestViewController alloc] init];
-    vc.detailUrl = @"http://www.baidu.com";
-    vc.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentViewController:vc animated:YES completion:nil];
+- (void)jumpDetail:(NSString *)text {
+    if (text && text.length > 0) {
+        NSDictionary *dic = [self.gpcodeDatas objectForKey:text];
+        NSString *gpcode = [dic objectForKey:@"code"];
+        SXHGTYStockDetailViewController *detailvc = [SXHGTYStockDetailViewController new];
+        detailvc.hidesBottomBarWhenPushed = YES;
+        detailvc.gpcode = gpcode;
+        [self.navigationController pushViewController:detailvc animated:YES];
+    }
 }
 
 - (NSMutableArray *)dataArray {
@@ -198,13 +219,6 @@ static NSString *const CellIdentifier = @"WEICHAT_ID";
         }
     }
     return _dataArray;
-}
-
-- (NSArray<NSString *> *)searchAllData {
-    if (!_searchAllData) {
-        _searchAllData = @[@"联通",@"电信",@"招行",@"工行",@"中行",@"建行",@"移动",@"浦发",@"农行",@"邮政",@"顺丰",@"阿里"];
-    }
-    return _searchAllData;
 }
 
 - (void)dealloc {
