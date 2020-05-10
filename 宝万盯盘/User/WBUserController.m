@@ -16,6 +16,7 @@
 #import "KNToast.h"
 #import "SDImageCache.h"
 #import "HCRequestCache.h"
+#import "WBWebController.h"
 
 @interface WBUserController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -132,6 +133,11 @@
             }];
             [actionSheet showAction];
         } else if (indexPath.row == 2) {
+            STWebviewController *web = [[STWebviewController alloc] init];
+            web.titleStr = @"关于我们";
+            web.type = 3;
+            [self.navigationController pushViewController:web animated:YES];
+        } else if (indexPath.row == 3) {
             if ([STLoginTool sharedInstance].isLogin) {
                 MJWeakSelf
                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"确认退出当前账号吗？" preferredStyle:UIAlertControllerStyleAlert];
@@ -167,7 +173,7 @@
     if (!_dataArray) {
         _dataArray = @[
                         @[@"护眼模式"],
-                        @[@"联系我们",@"清空缓存",@"退出账号"]
+                        @[@"联系我们",@"清空缓存",@"关于我们",@"退出账号"]
                     ];
     }
     return _dataArray;

@@ -20,5 +20,7 @@
 
 @property(strong,nonatomic)UIButton *backbtn;
 
+@property(strong,nonatomic)UIButton *regisAgreement;
+@property(strong,nonatomic)UIButton *loginAgreement;
 
 @end
