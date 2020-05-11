@@ -58,6 +58,9 @@
 		7B09B07C24684BEE00CB0D2C /* community2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B09B07924684BED00CB0D2C /* community2.geojson */; };
 		7B09B07D24684BEE00CB0D2C /* community.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B09B07A24684BED00CB0D2C /* community.geojson */; };
 		7B09B07E24684BEE00CB0D2C /* community3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B09B07B24684BEE00CB0D2C /* community3.geojson */; };
+		7B09B0812468E50400CB0D2C /* SXHGTYReleaPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B0802468E50300CB0D2C /* SXHGTYReleaPageViewController.m */; };
+		7B09B0842468E54400CB0D2C /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B0822468E54400CB0D2C /* PlaceholderTextView.m */; };
+		7B09B0872468E55700CB0D2C /* SXHGTYAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B0862468E55700CB0D2C /* SXHGTYAlertViewController.m */; };
 		7B7F2A35246691F300E2134D /* home3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B7F2A33246691F300E2134D /* home3.geojson */; };
 		7B7F2A36246691F300E2134D /* home2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B7F2A34246691F300E2134D /* home2.geojson */; };
 		7BE9F9AC2463E78400B90142 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9F9AB2463E78400B90142 /* AppDelegate.m */; };
@@ -264,6 +267,12 @@
 		7B09B07924684BED00CB0D2C /* community2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = community2.geojson; sourceTree = "<group>"; };
 		7B09B07A24684BED00CB0D2C /* community.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = community.geojson; sourceTree = "<group>"; };
 		7B09B07B24684BEE00CB0D2C /* community3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = community3.geojson; sourceTree = "<group>"; };
+		7B09B07F2468E50300CB0D2C /* SXHGTYReleaPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXHGTYReleaPageViewController.h; sourceTree = "<group>"; };
+		7B09B0802468E50300CB0D2C /* SXHGTYReleaPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXHGTYReleaPageViewController.m; sourceTree = "<group>"; };
+		7B09B0822468E54400CB0D2C /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTextView.m; sourceTree = "<group>"; };
+		7B09B0832468E54400CB0D2C /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
+		7B09B0852468E55600CB0D2C /* SXHGTYAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXHGTYAlertViewController.h; sourceTree = "<group>"; };
+		7B09B0862468E55700CB0D2C /* SXHGTYAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXHGTYAlertViewController.m; sourceTree = "<group>"; };
 		7B7F2A33246691F300E2134D /* home3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = home3.geojson; sourceTree = "<group>"; };
 		7B7F2A34246691F300E2134D /* home2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = home2.geojson; sourceTree = "<group>"; };
 		7BE9F9A72463E78400B90142 /* 万宝盯盘.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "万宝盯盘.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -770,6 +779,12 @@
 				7BE9FBD624650C2F00B90142 /* WBCommunityButton.m */,
 				7BE9FBF724650CA000B90142 /* WBHyperLinkLabel.h */,
 				7BE9FBF824650CA000B90142 /* WBHyperLinkLabel.m */,
+				7B09B07F2468E50300CB0D2C /* SXHGTYReleaPageViewController.h */,
+				7B09B0802468E50300CB0D2C /* SXHGTYReleaPageViewController.m */,
+				7B09B0832468E54400CB0D2C /* PlaceholderTextView.h */,
+				7B09B0822468E54400CB0D2C /* PlaceholderTextView.m */,
+				7B09B0852468E55600CB0D2C /* SXHGTYAlertViewController.h */,
+				7B09B0862468E55700CB0D2C /* SXHGTYAlertViewController.m */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -1250,6 +1265,7 @@
 				7BE9FBF124650C8900B90142 /* NSMutableAttributedString+TY.m in Sources */,
 				7B09AE912467EE3900CB0D2C /* SXHGTYGUPTableViewCell.m in Sources */,
 				7BE9F9AC2463E78400B90142 /* AppDelegate.m in Sources */,
+				7B09B0812468E50400CB0D2C /* SXHGTYReleaPageViewController.m in Sources */,
 				7BE9FBB02464029E00B90142 /* UIControl+XFExt.m in Sources */,
 				7B09AEF72467F0AC00CB0D2C /* MyLayoutSizeClass.m in Sources */,
 				7B09AE742467B59000CB0D2C /* WBQuotationController.m in Sources */,
@@ -1273,6 +1289,7 @@
 				7BE9FB7D2463FF6800B90142 /* FLAnimatedImage.m in Sources */,
 				7B09AEEA2467F0AC00CB0D2C /* MyGridLayout.m in Sources */,
 				7BE9FA792463F40200B90142 /* WBNewsLayout.m in Sources */,
+				7B09B0872468E55700CB0D2C /* SXHGTYAlertViewController.m in Sources */,
 				7BE9F9E52463E93D00B90142 /* WBTabbarController.m in Sources */,
 				7BE9FBC82464F5BA00B90142 /* WBCommunityModel.m in Sources */,
 				7B09AEA32467EE8A00CB0D2C /* XHSegmentItem.m in Sources */,
@@ -1287,6 +1304,7 @@
 				7BE9F9E12463E8A600B90142 /* WBNewsCell.m in Sources */,
 				CF513A472465C171009CED33 /* WBFunctionCell.m in Sources */,
 				7BE9FB812463FF6800B90142 /* KNPhotoBrowerNumView.m in Sources */,
+				7B09B0842468E54400CB0D2C /* PlaceholderTextView.m in Sources */,
 				CF5136CB2465B316009CED33 /* STLoginTool.m in Sources */,
 				7BE9FBD124650A0F00B90142 /* WBUserModel.m in Sources */,
 				7BE9FBF924650CA000B90142 /* WBHyperLinkLabel.m in Sources */,
@@ -1533,7 +1551,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1602,7 +1620,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

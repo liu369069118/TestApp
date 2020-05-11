@@ -11,7 +11,7 @@
 #import "WBCommunityModel.h"
 #import "WBCommunityLayout.h"
 #import "HCBaseFetcher.h"
-#import "WBWebController.h"
+#import "SXHGTYReleaPageViewController.h"
 
 @interface WBCommunityController () <UITableViewDelegate, UITableViewDataSource, WBCommunityCellDelegate>
 
@@ -268,14 +268,14 @@ return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 }
 
 - (void)cummunityCellAction:(WBCommunityCell *)mainCell {
-    WBWebController *webVC = [[WBWebController alloc] init];
-    webVC.url = mainCell.layout.topicModel.h5_url;
+    SXHGTYReleaPageViewController *webVC = [[SXHGTYReleaPageViewController alloc] init];
+    webVC.naviTitle = @"评论";
     [self.navigationController pushViewController:webVC animated:YES];
 }
 
 - (void)commentClickForCummunityCell:(nonnull WBCommunityCell *)mainCell {
-    WBWebController *webVC = [[WBWebController alloc] init];
-    webVC.url = mainCell.layout.topicModel.h5_url;
+    SXHGTYReleaPageViewController *webVC = [[SXHGTYReleaPageViewController alloc] init];
+    webVC.naviTitle = @"评论";
     [self.navigationController pushViewController:webVC animated:YES];
 }
 
