@@ -172,7 +172,11 @@ return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
         } else if (selfWeak.pageRefer == 3) {
             [selfWeak loadArticleListData3];
         } else {
-            [selfWeak loadCommunityTopicData];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [[KNToast shareToast] initWithText:@"没有更多数据了~"];
+                [selfWeak.tableView.mj_header endRefreshing];
+                [selfWeak.tableView.mj_footer endRefreshing];
+            });
         }
     }];
     footer.stateLabel.hidden = YES;

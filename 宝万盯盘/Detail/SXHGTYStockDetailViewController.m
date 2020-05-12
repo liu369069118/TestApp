@@ -64,11 +64,11 @@
     
     self.navigationItem.leftBarButtonItem = self.SXHG_NaviBackButton;
     
-    if ([self has]) {
-        [self addRightBarButtonItemWithTitle:@"删除自选" action:@selector(sc)];
-    } else {
-        [self addRightBarButtonItemWithTitle:@"添加自选" action:@selector(tj)];
-    }
+//    if ([self has]) {
+//        [self addRightBarButtonItemWithTitle:@"删除自选" action:@selector(sc)];
+//    } else {
+//        [self addRightBarButtonItemWithTitle:@"添加自选" action:@selector(tj)];
+//    }
 }
 
 - (BOOL)isgp {
@@ -89,7 +89,7 @@
     
     [SXHGTYProgramProgressHUD showText:@"添加股票成功"];
     
-    [self addRightBarButtonItemWithTitle:@"删除自选" action:@selector(sc)];
+//    [self addRightBarButtonItemWithTitle:@"删除自选" action:@selector(sc)];
 }
 - (void)sc {
     
@@ -101,7 +101,7 @@
     
     [SXHGTYProgramProgressHUD showText:@"删除股票成功"];
     
-    [self addRightBarButtonItemWithTitle:@"添加自选" action:@selector(tj)];
+//    [self addRightBarButtonItemWithTitle:@"添加自选" action:@selector(tj)];
 }
 
 - (BOOL)has {
