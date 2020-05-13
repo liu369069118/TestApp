@@ -34,7 +34,7 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
-  - HappyDNS (0.3.16)
+  - HappyDNS (0.3.15)
   - IQKeyboardManager (6.5.5)
   - JCore (1.1.9)
   - JHChainableAnimations (3.0.1)
@@ -51,9 +51,9 @@ PODS:
   - RKNotificationHub (2.0.5)
   - SDCycleScrollView (1.80):
     - SDWebImage (>= 5.0.0)
-  - SDWebImage (5.7.4):
-    - SDWebImage/Core (= 5.7.4)
-  - SDWebImage/Core (5.7.4)
+  - SDWebImage (5.7.2):
+    - SDWebImage/Core (= 5.7.2)
+  - SDWebImage/Core (5.7.2)
   - TTTAttributedLabel (2.0.0)
   - YYCache (1.0.4)
   - YYModel (1.0.4)
@@ -81,7 +81,7 @@ DEPENDENCIES:
   - zipzap (~> 8.1.1)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - DTCoreText
     - DTFoundation
@@ -110,7 +110,7 @@ SPEC CHECKSUMS:
   DTCoreText: 67023bb51b26711d5f640c851f4845aea14c24c9
   DTFoundation: 25aa19bb7c6e225b1dfae195604fb8cf1da0ab4c
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  HappyDNS: 158044ed01375cb27b28f272b198bca3901aced8
+  HappyDNS: 00c15e651a347206e58a20503a32a5564589b56a
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   JCore: 27598485098d0db99d2812cba048003457d08cfb
   JHChainableAnimations: 0237489ed063f0ec5b351f5c7bb26c1891517074
@@ -122,13 +122,13 @@ SPEC CHECKSUMS:
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
   RKNotificationHub: e926748820d719f21ff374657a47fceefa1796b4
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
-  SDWebImage: 48b88379b798fd1e4298f95bb25d2cdabbf4deb3
+  SDWebImage: d9ea4959d99c52276dfada481987018fcaea3d58
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   zipzap: 940162d9c9c60472c2eab341385e4214da0fdf1c
 
-PODFILE CHECKSUM: cecf1066bbfe8d91195f3a16375e04a430dcdaad
+PODFILE CHECKSUM: eb48003f57d57617a854798b2cd46850486ebacc
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.9.1

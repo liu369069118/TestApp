@@ -101,47 +101,26 @@ static NSArray *records2Ips(NSArray *records) {
 @end
 
 @implementation QNDnsManager
-- (NSArray <NSString *> *)query:(NSString *)domain {
+- (NSArray *)query:(NSString *)domain {
     return [self queryWithDomain:[[QNDomain alloc] init:domain]];
 }
 
-- (NSArray <QNRecord *> *)queryRecords:(NSString *)domain{
-    
-    if (domain == nil) {
-        return nil;
-    }
-    if ([QNIP mayBeIpV4:domain]) {
-        return [NSArray arrayWithObject:domain];
-    }
-    NSArray *ips = [self queryInternalWithDomain:[[QNDomain alloc] init:domain] needRecordInfo:YES];
-    return [_sorter sort:ips];
-}
-
-- (NSArray <NSString *> *)queryWithDomain:(QNDomain *)domain {
+- (NSArray *)queryWithDomain:(QNDomain *)domain {
     if (domain.domain == nil) {
         return nil;
     }
     if ([QNIP mayBeIpV4:domain.domain]) {
         return [NSArray arrayWithObject:domain.domain];
     }
-    NSArray *ips = [self queryInternalWithDomain:domain needRecordInfo:NO];
+    NSArray *ips = [self queryInternalWithDomain:domain];
     return [_sorter sort:ips];
 }
 
-- (NSArray *)queryInternalWithDomain:(QNDomain *)domain needRecordInfo:(BOOL)needRecordInfo {
+- (NSArray *)queryInternalWithDomain:(QNDomain *)domain {
     if (domain.hostsFirst) {
         NSArray *ret = [_hosts query:domain networkInfo:_curNetwork];
         if (ret != nil && ret.count != 0) {
-            if (needRecordInfo) {
-                NSMutableArray *retP = [NSMutableArray array];
-                for (NSString *host in ret) {
-                    QNRecord *record = [[QNRecord alloc] init:host ttl:self.defalutTtl type:kQNTypeA];
-                    [retP addObject:record];
-                }
-                return [retP copy];
-            } else {
-                return ret;
-            }
+            return ret;
         }
     }
     NSMutableArray *result;
@@ -165,11 +144,7 @@ static NSArray *records2Ips(NSArray *records) {
         if (result != nil && result.count > 0) {
             QNRecord *record = [result objectAtIndex:0];
             if (![record expired:[[NSDate date] timeIntervalSince1970]]) {
-                if (needRecordInfo) {
-                    return result;
-                } else {
-                    return records2Ips(result);
-                }
+                return records2Ips(result);
             }
         }
     }
@@ -202,26 +177,12 @@ static NSArray *records2Ips(NSArray *records) {
                     [_cache setObject:ret forKey:domain.domain];
                 }
             }
-            if (needRecordInfo) {
-                return ret;
-            } else {
-                return records2Ips(ret);
-            }
+            return records2Ips(ret);
         }
     }
 
     if (!domain.hostsFirst) {
-        NSArray *ret = [_hosts query:domain networkInfo:_curNetwork];
-        if (needRecordInfo) {
-            NSMutableArray *retP = [NSMutableArray array];
-            for (NSString *host in ret) {
-                QNRecord *record = [[QNRecord alloc] init:host ttl:self.defalutTtl type:kQNTypeA];
-                [retP addObject:record];
-            }
-            return [retP copy];
-        } else {
-            return ret;
-        }
+        return [_hosts query:domain networkInfo:_curNetwork];
     }
     return nil;
 }

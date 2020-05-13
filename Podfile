@@ -2,7 +2,7 @@ source "https://github.com/CocoaPods/Specs.git"
 platform :ios, '10.0'
 inhibit_all_warnings!
 
-target '宝万盯盘' do
+target '万宝股票资讯' do
     pod 'AFNetworking', '3.1.0'
     pod 'ReactiveObjC', '3.0.0'
     pod 'Qiniu', '7.1.5'
