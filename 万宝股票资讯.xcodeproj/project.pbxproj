@@ -1553,7 +1553,7 @@
 				CODE_SIGN_ENTITLEMENTS = "万宝股票资讯/万宝股票资讯Debug.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VST9S452SK;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/万宝股票资讯/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/万宝股票资讯/Info.plist";
@@ -1562,7 +1562,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1626,7 +1626,7 @@
 				CODE_SIGN_ENTITLEMENTS = "万宝股票资讯/万宝股票资讯.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VST9S452SK;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/万宝股票资讯/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/万宝股票资讯/Info.plist";
@@ -1635,7 +1635,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

