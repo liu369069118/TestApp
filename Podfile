@@ -1,12 +1,12 @@
 source "https://github.com/CocoaPods/Specs.git"
+
 platform :ios, '10.0'
+
 inhibit_all_warnings!
 
-target '万宝股票资讯' do
-    pod 'AFNetworking', '3.1.0'
+target '万宝股票' do
+    pod 'AFNetworking', '~> 4.0.0'
     pod 'ReactiveObjC', '3.0.0'
-    pod 'Qiniu', '7.1.5'
-    pod 'JPush', '3.0.6'
     pod 'MJRefresh', '3.1.15.7'
     pod 'YYModel', '~> 1.0.4'
     pod 'YYCache', '1.0.4'
@@ -21,5 +21,6 @@ target '万宝股票资讯' do
     pod 'SDCycleScrollView'
     pod 'IQKeyboardManager'
     pod 'YYText'
-    pod 'JPush'
+    pod 'JCore', '2.1.2'
+    pod 'JPush', '3.2.6'
 end

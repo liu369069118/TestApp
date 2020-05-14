@@ -1,18 +1,18 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - DTCoreText (1.6.23):
     - DTCoreText/Core (= 1.6.23)
@@ -34,19 +34,15 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
-  - HappyDNS (0.3.15)
   - IQKeyboardManager (6.5.5)
-  - JCore (1.1.9)
+  - JCore (2.1.2)
   - JHChainableAnimations (3.0.1)
-  - JPush (3.0.6):
-    - JCore (~> 1.1.1)
+  - JPush (3.2.6):
+    - JCore (< 3.0.0, >= 2.0.0)
   - Masonry (1.1.0)
   - MJRefresh (3.1.15.7)
   - MMPopupView (1.7.2):
     - Masonry
-  - Qiniu (7.1.5):
-    - AFNetworking (~> 3)
-    - HappyDNS (~> 0.3)
   - ReactiveObjC (3.0.0)
   - RKNotificationHub (2.0.5)
   - SDCycleScrollView (1.80):
@@ -61,17 +57,16 @@ PODS:
   - zipzap (8.1.1)
 
 DEPENDENCIES:
-  - AFNetworking (= 3.1.0)
+  - AFNetworking (~> 4.0.0)
   - DTCoreText (~> 1.6.23)
   - FMDB (~> 2.7)
   - IQKeyboardManager
+  - JCore (= 2.1.2)
   - JHChainableAnimations (~> 3.0.1)
-  - JPush
-  - JPush (= 3.0.6)
+  - JPush (= 3.2.6)
   - Masonry
   - MJRefresh (= 3.1.15.7)
   - MMPopupView
-  - Qiniu (= 7.1.5)
   - ReactiveObjC (= 3.0.0)
   - RKNotificationHub
   - SDCycleScrollView
@@ -87,7 +82,6 @@ SPEC REPOS:
     - DTCoreText
     - DTFoundation
     - FMDB
-    - HappyDNS
     - IQKeyboardManager
     - JCore
     - JHChainableAnimations
@@ -95,7 +89,6 @@ SPEC REPOS:
     - Masonry
     - MJRefresh
     - MMPopupView
-    - Qiniu
     - ReactiveObjC
     - RKNotificationHub
     - SDCycleScrollView
@@ -107,19 +100,17 @@ SPEC REPOS:
     - zipzap
 
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   DTCoreText: 67023bb51b26711d5f640c851f4845aea14c24c9
   DTFoundation: 25aa19bb7c6e225b1dfae195604fb8cf1da0ab4c
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  HappyDNS: 00c15e651a347206e58a20503a32a5564589b56a
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
-  JCore: 27598485098d0db99d2812cba048003457d08cfb
+  JCore: 1a426120b510cdebfd67b82bfb9483238ee09413
   JHChainableAnimations: 0237489ed063f0ec5b351f5c7bb26c1891517074
-  JPush: c41be50eb1a574a66aeb68d237f00a4ec6ec3a82
+  JPush: 41dd48a69bd8c08abc692dc7f2b23c0fb281471f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   MMPopupView: fe1dd010824029dfb632fdf1a531db5dd5386020
-  Qiniu: 77a3dba411556a383d72d17e842345a9d4c83252
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
   RKNotificationHub: e926748820d719f21ff374657a47fceefa1796b4
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
@@ -130,6 +121,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   zipzap: 940162d9c9c60472c2eab341385e4214da0fdf1c
 
-PODFILE CHECKSUM: 473ce9f9d97a85aa0906fb5f64243ac70ececc6e
+PODFILE CHECKSUM: 3d4e9b1a585e22ee557ebdfa54029d52564adefc
 
 COCOAPODS: 1.9.1
