@@ -100,24 +100,6 @@
 
         return nil;
     }
-//    if ([AFNetworkReachabilityManager sharedManager].networkReachabilityStatus == AFNetworkReachabilityStatusNotReachable ||
-//        [AFNetworkReachabilityManager sharedManager].networkReachabilityStatus == AFNetworkReachabilityStatusUnknown) {
-//        failure ? failure(nil, nil) : nil;
-//
-//        return nil;
-//    }
-    
-    // 只有Get请求处理304问题
-    if (HCRequestMethodGet == self.requestMethod) {
-        NSString *modified = [HCRequestCache modifiedTimestampCacheForUrlString:_requestURL parameters:_parameters];
-        if (modified.length > 0) {
-            [kHCRequestAgentInstance.requestSerializer setValue:modified forHTTPHeaderField:@"If-Modified-Since"];
-        } else {
-            [kHCRequestAgentInstance.requestSerializer setValue:nil forHTTPHeaderField:@"If-Modified-Since"];
-        }
-    } else {
-        [kHCRequestAgentInstance.requestSerializer setValue:nil forHTTPHeaderField:@"If-Modified-Since"];
-    }
     
     __weak typeof(self) weakSelf = self;
     NSURLSessionDataTask *task = [kHCRequestAgentInstance requestWithMethod:_requestMethod urlString:_requestURL parameters:_parameters success:^(NSURLSessionDataTask *task, id responseObject) {

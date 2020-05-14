@@ -21,4 +21,5 @@ target '万宝股票资讯' do
     pod 'SDCycleScrollView'
     pod 'IQKeyboardManager'
     pod 'YYText'
+    pod 'JPush'
 end

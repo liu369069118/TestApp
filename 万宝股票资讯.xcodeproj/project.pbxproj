@@ -274,6 +274,8 @@
 		7B09B0832468E54400CB0D2C /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
 		7B09B0852468E55600CB0D2C /* SXHGTYAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXHGTYAlertViewController.h; sourceTree = "<group>"; };
 		7B09B0862468E55700CB0D2C /* SXHGTYAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXHGTYAlertViewController.m; sourceTree = "<group>"; };
+		7B2CB3B5246CE02E001269AB /* 万宝股票资讯.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "万宝股票资讯.entitlements"; sourceTree = "<group>"; };
+		7B2CB3B6246CE03F001269AB /* 万宝股票资讯Debug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "万宝股票资讯Debug.entitlements"; sourceTree = "<group>"; };
 		7B7F2A33246691F300E2134D /* home3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = home3.geojson; sourceTree = "<group>"; };
 		7B7F2A34246691F300E2134D /* home2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = home2.geojson; sourceTree = "<group>"; };
 		7BE9F9A72463E78400B90142 /* 万宝股票资讯.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "万宝股票资讯.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -657,6 +659,8 @@
 		7BE9F9A92463E78400B90142 /* 万宝股票资讯 */ = {
 			isa = PBXGroup;
 			children = (
+				7B2CB3B6246CE03F001269AB /* 万宝股票资讯Debug.entitlements */,
+				7B2CB3B5246CE02E001269AB /* 万宝股票资讯.entitlements */,
 				CF5136A52465B306009CED33 /* Login */,
 				7BE9F9E62463EA1000B90142 /* Base */,
 				7BE9F9E32463E93D00B90142 /* WBTabbarController.h */,
@@ -1546,7 +1550,8 @@
 			baseConfigurationReference = 70759580A1938E1F7C07B379 /* Pods-万宝股票资讯.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = "万宝股票资讯/万宝股票资讯Debug.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = VST9S452SK;
@@ -1608,7 +1613,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.home.wenan.wanbao.dingpan;
 				PRODUCT_NAME = "万宝股票资讯";
-				PROVISIONING_PROFILE_SPECIFIER = wanbao.des.11Later;
+				PROVISIONING_PROFILE_SPECIFIER = devProfile;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1618,7 +1623,8 @@
 			baseConfigurationReference = 4A30634673814533AB1C16CC /* Pods-万宝股票资讯.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = "万宝股票资讯/万宝股票资讯.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = VST9S452SK;
@@ -1680,7 +1686,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.home.wenan.wanbao.dingpan;
 				PRODUCT_NAME = "万宝股票资讯";
-				PROVISIONING_PROFILE_SPECIFIER = wanbao.des.11Later;
+				PROVISIONING_PROFILE_SPECIFIER = devProfile;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
