@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "WBTabbarController.h"
+#import "BDRootController.h"
 #import "HCBaseFetcher.h"
 
 #import <WebKit/WebKit.h>
@@ -123,8 +123,8 @@
 }
 
 - (void)showTabRootController {
-    WBTabbarController *rootTabbar = [[WBTabbarController alloc] init];
-    UINavigationController *rootNav = [[UINavigationController alloc] initWithRootViewController:rootTabbar];
+    BDRootController *rootVc = [[BDRootController alloc] init];
+    UINavigationController *rootNav = [[UINavigationController alloc] initWithRootViewController:rootVc];
     rootNav.navigationBar.hidden = YES;
     self.window.rootViewController = rootNav;
     [self.window makeKeyAndVisible];

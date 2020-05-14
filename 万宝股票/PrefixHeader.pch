@@ -31,5 +31,6 @@
 #import "MyLayout.h"
 #import "KNToast.h"
 #import "STWebviewController.h"
+#import <SDWebImage.h>
 
 #endif /* PrefixHeader_pch */

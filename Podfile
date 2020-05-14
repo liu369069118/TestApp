@@ -23,4 +23,5 @@ target '万宝股票' do
     pod 'YYText'
     pod 'JCore', '2.1.2'
     pod 'JPush', '3.2.6'
+    pod 'SDWebImage'
 end

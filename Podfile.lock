@@ -70,6 +70,7 @@ DEPENDENCIES:
   - ReactiveObjC (= 3.0.0)
   - RKNotificationHub
   - SDCycleScrollView
+  - SDWebImage
   - TTTAttributedLabel
   - YYCache (= 1.0.4)
   - YYModel (~> 1.0.4)
@@ -77,7 +78,7 @@ DEPENDENCIES:
   - zipzap (~> 8.1.1)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AFNetworking
     - DTCoreText
     - DTFoundation
@@ -121,6 +122,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   zipzap: 940162d9c9c60472c2eab341385e4214da0fdf1c
 
-PODFILE CHECKSUM: 3d4e9b1a585e22ee557ebdfa54029d52564adefc
+PODFILE CHECKSUM: 71b4de7d3d5ff76b9570970af691a8fdaec0556d
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.7.3

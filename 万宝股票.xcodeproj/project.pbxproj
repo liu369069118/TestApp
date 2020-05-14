@@ -150,6 +150,12 @@
 		CF513E0D2467ADA7009CED33 /* UIColor+JKRColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513E0C2467ADA6009CED33 /* UIColor+JKRColor.m */; };
 		CF513E102467AE5D009CED33 /* WBSearchListController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513E0F2467AE5D009CED33 /* WBSearchListController.m */; };
 		CF513E20246836F9009CED33 /* STWebviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513E1F246836F9009CED33 /* STWebviewController.m */; };
+		CF5ABD08246D716D008333FE /* BLPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5ABCFA246D716C008333FE /* BLPageController.m */; };
+		CF5ABD0A246D716D008333FE /* BLMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5ABCFD246D716C008333FE /* BLMenuItem.m */; };
+		CF5ABD0C246D716D008333FE /* BLMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5ABD02246D716D008333FE /* BLMenuView.m */; };
+		CF5ABD0D246D716D008333FE /* BLProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5ABD05246D716D008333FE /* BLProgressView.m */; };
+		CF5ABD0E246D716D008333FE /* BLScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5ABD07246D716D008333FE /* BLScrollView.m */; };
+		CF5ABD11246D7406008333FE /* BDRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5ABD10246D7406008333FE /* BDRootController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -457,6 +463,18 @@
 		CF513E0F2467AE5D009CED33 /* WBSearchListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBSearchListController.m; sourceTree = "<group>"; };
 		CF513E1E246836F9009CED33 /* STWebviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STWebviewController.h; sourceTree = "<group>"; };
 		CF513E1F246836F9009CED33 /* STWebviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STWebviewController.m; sourceTree = "<group>"; };
+		CF5ABCFA246D716C008333FE /* BLPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPageController.m; sourceTree = "<group>"; };
+		CF5ABCFB246D716C008333FE /* BLScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLScrollView.h; sourceTree = "<group>"; };
+		CF5ABCFD246D716C008333FE /* BLMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLMenuItem.m; sourceTree = "<group>"; };
+		CF5ABD01246D716C008333FE /* BLProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLProgressView.h; sourceTree = "<group>"; };
+		CF5ABD02246D716D008333FE /* BLMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLMenuView.m; sourceTree = "<group>"; };
+		CF5ABD03246D716D008333FE /* BLMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLMenuItem.h; sourceTree = "<group>"; };
+		CF5ABD04246D716D008333FE /* BLMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLMenuView.h; sourceTree = "<group>"; };
+		CF5ABD05246D716D008333FE /* BLProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLProgressView.m; sourceTree = "<group>"; };
+		CF5ABD06246D716D008333FE /* BLPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPageController.h; sourceTree = "<group>"; };
+		CF5ABD07246D716D008333FE /* BLScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLScrollView.m; sourceTree = "<group>"; };
+		CF5ABD0F246D7406008333FE /* BDRootController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDRootController.h; sourceTree = "<group>"; };
+		CF5ABD10246D7406008333FE /* BDRootController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDRootController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -661,12 +679,15 @@
 		7BE9F9A92463E78400B90142 /* 万宝股票 */ = {
 			isa = PBXGroup;
 			children = (
+				CF5ABCE3246D7112008333FE /* Tool */,
 				7B2CB3B6246CE03F001269AB /* 万宝股票Debug.entitlements */,
 				7B2CB3B5246CE02E001269AB /* 万宝股票.entitlements */,
 				CF5136A52465B306009CED33 /* Login */,
 				7BE9F9E62463EA1000B90142 /* Base */,
 				7BE9F9E32463E93D00B90142 /* WBTabbarController.h */,
 				7BE9F9E42463E93D00B90142 /* WBTabbarController.m */,
+				CF5ABD0F246D7406008333FE /* BDRootController.h */,
+				CF5ABD10246D7406008333FE /* BDRootController.m */,
 				7BE9F9E72463EAA600B90142 /* PrefixHeader.pch */,
 				7BE9FA982463FDF000B90142 /* HCDefine.h */,
 				7BE9FA872463F9B700B90142 /* home.geojson */,
@@ -1061,6 +1082,31 @@
 			path = SearchController;
 			sourceTree = "<group>";
 		};
+		CF5ABCE3246D7112008333FE /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				CF5ABCE4246D715B008333FE /* PageController */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		CF5ABCE4246D715B008333FE /* PageController */ = {
+			isa = PBXGroup;
+			children = (
+				CF5ABD03246D716D008333FE /* BLMenuItem.h */,
+				CF5ABCFD246D716C008333FE /* BLMenuItem.m */,
+				CF5ABD04246D716D008333FE /* BLMenuView.h */,
+				CF5ABD02246D716D008333FE /* BLMenuView.m */,
+				CF5ABD06246D716D008333FE /* BLPageController.h */,
+				CF5ABCFA246D716C008333FE /* BLPageController.m */,
+				CF5ABD01246D716C008333FE /* BLProgressView.h */,
+				CF5ABD05246D716D008333FE /* BLProgressView.m */,
+				CF5ABCFB246D716C008333FE /* BLScrollView.h */,
+				CF5ABD07246D716D008333FE /* BLScrollView.m */,
+			);
+			path = PageController;
+			sourceTree = "<group>";
+		};
 		E5091AC65CA703E59DD8F7DC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1276,6 +1322,7 @@
 				7B09AEEF2467F0AC00CB0D2C /* MyTableLayout.m in Sources */,
 				7BE9FBF124650C8900B90142 /* NSMutableAttributedString+TY.m in Sources */,
 				7B09AE912467EE3900CB0D2C /* SXHGTYGUPTableViewCell.m in Sources */,
+				CF5ABD0A246D716D008333FE /* BLMenuItem.m in Sources */,
 				7BE9F9AC2463E78400B90142 /* AppDelegate.m in Sources */,
 				7B09B0812468E50400CB0D2C /* SXHGTYReleaPageViewController.m in Sources */,
 				7BE9FBB02464029E00B90142 /* UIControl+XFExt.m in Sources */,
@@ -1287,6 +1334,7 @@
 				7BE9FBEE24650C8900B90142 /* TYDrawStorage.m in Sources */,
 				7BE9FBF424650C8900B90142 /* TYAttributedLabel.m in Sources */,
 				7B09AE872467E09000CB0D2C /* WBQuotationThirdCell.m in Sources */,
+				CF5ABD08246D716D008333FE /* BLPageController.m in Sources */,
 				CF5136CE2465B3B2009CED33 /* WBUserHeader.m in Sources */,
 				CF513E012467AC81009CED33 /* UIView+JKRTouch.m in Sources */,
 				7B09AEF42467F0AC00CB0D2C /* MyLinearLayout.m in Sources */,
@@ -1340,6 +1388,7 @@
 				7BE9FB842463FF6800B90142 /* KNToast.m in Sources */,
 				7B09AEED2467F0AC00CB0D2C /* MyBaseLayout.m in Sources */,
 				7BE9FB7E2463FF6800B90142 /* FLAnimatedImageView.m in Sources */,
+				CF5ABD11246D7406008333FE /* BDRootController.m in Sources */,
 				CF513E072467AD60009CED33 /* UIView+JKR_Frame.m in Sources */,
 				7BE9FB882463FF8D00B90142 /* BLExpandButton.m in Sources */,
 				7B09AEFB2467F15700CB0D2C /* SXHGTYGPUTButton.m in Sources */,
@@ -1355,10 +1404,12 @@
 				CF5136C92465B316009CED33 /* STRegisViewController.m in Sources */,
 				CF5136A12465A7FA009CED33 /* WBUserController.m in Sources */,
 				7BE9FBD424650BE800B90142 /* WBCommunityFunctionView.m in Sources */,
+				CF5ABD0C246D716D008333FE /* BLMenuView.m in Sources */,
 				7BE9FCD2246530AF00B90142 /* YYReachability.m in Sources */,
 				CF513E042467ACBC009CED33 /* UIView+JKRViewController.m in Sources */,
 				7BE9FBED24650C8900B90142 /* TYLinkTextStorage.m in Sources */,
 				7BE9FBF524650C8900B90142 /* TYTextContainer+Extended.m in Sources */,
+				CF5ABD0E246D716D008333FE /* BLScrollView.m in Sources */,
 				CF513DF72467AAF7009CED33 /* JKRSearchController.m in Sources */,
 				CF513E102467AE5D009CED33 /* WBSearchListController.m in Sources */,
 				7B09AEA42467EE8A00CB0D2C /* XHSegmentControl.m in Sources */,
@@ -1373,6 +1424,7 @@
 				7BE9FB782463FF6800B90142 /* KNActionSheet.m in Sources */,
 				7B09AEF02467F0AC00CB0D2C /* MyFloatLayout.m in Sources */,
 				7BE9FBF024650C8900B90142 /* TYImageStorage.m in Sources */,
+				CF5ABD0D246D716D008333FE /* BLProgressView.m in Sources */,
 				7BE9FBBD2464041F00B90142 /* HBActionSheet.m in Sources */,
 				7B09AEEC2467F0AC00CB0D2C /* MyLayoutMath.m in Sources */,
 				7BE9FCC824652D7700B90142 /* HCRequestAgent.m in Sources */,
@@ -1573,10 +1625,8 @@
 					"-l\"AFNetworking\"",
 					"-l\"DTCoreText\"",
 					"-l\"DTFoundation\"",
-					"-l\"HappyDNS\"",
 					"-l\"MJRefresh\"",
 					"-l\"Masonry\"",
-					"-l\"Qiniu\"",
 					"-l\"ReactiveObjC\"",
 					"-l\"YYCache\"",
 					"-l\"YYModel\"",
@@ -1644,10 +1694,8 @@
 					"-l\"AFNetworking\"",
 					"-l\"DTCoreText\"",
 					"-l\"DTFoundation\"",
-					"-l\"HappyDNS\"",
 					"-l\"MJRefresh\"",
 					"-l\"Masonry\"",
-					"-l\"Qiniu\"",
 					"-l\"ReactiveObjC\"",
 					"-l\"YYCache\"",
 					"-l\"YYModel\"",
