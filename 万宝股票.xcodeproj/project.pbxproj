@@ -156,6 +156,7 @@
 		CF5ABD0D246D716D008333FE /* BLProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5ABD05246D716D008333FE /* BLProgressView.m */; };
 		CF5ABD0E246D716D008333FE /* BLScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5ABD07246D716D008333FE /* BLScrollView.m */; };
 		CF5ABD11246D7406008333FE /* BDRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5ABD10246D7406008333FE /* BDRootController.m */; };
+		CF5ABD14246D909C008333FE /* UIImage+tool.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5ABD13246D909C008333FE /* UIImage+tool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -475,6 +476,8 @@
 		CF5ABD07246D716D008333FE /* BLScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLScrollView.m; sourceTree = "<group>"; };
 		CF5ABD0F246D7406008333FE /* BDRootController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDRootController.h; sourceTree = "<group>"; };
 		CF5ABD10246D7406008333FE /* BDRootController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDRootController.m; sourceTree = "<group>"; };
+		CF5ABD12246D909C008333FE /* UIImage+tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+tool.h"; sourceTree = "<group>"; };
+		CF5ABD13246D909C008333FE /* UIImage+tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+tool.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1086,6 +1089,8 @@
 			isa = PBXGroup;
 			children = (
 				CF5ABCE4246D715B008333FE /* PageController */,
+				CF5ABD12246D909C008333FE /* UIImage+tool.h */,
+				CF5ABD13246D909C008333FE /* UIImage+tool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1387,6 +1392,7 @@
 				7BE9FA8D2463FAAB00B90142 /* WBUitl.m in Sources */,
 				7BE9FB842463FF6800B90142 /* KNToast.m in Sources */,
 				7B09AEED2467F0AC00CB0D2C /* MyBaseLayout.m in Sources */,
+				CF5ABD14246D909C008333FE /* UIImage+tool.m in Sources */,
 				7BE9FB7E2463FF6800B90142 /* FLAnimatedImageView.m in Sources */,
 				CF5ABD11246D7406008333FE /* BDRootController.m in Sources */,
 				CF513E072467AD60009CED33 /* UIView+JKR_Frame.m in Sources */,

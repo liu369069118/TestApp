@@ -32,5 +32,6 @@
 #import "KNToast.h"
 #import "STWebviewController.h"
 #import <SDWebImage.h>
+#import "UIImage+tool.h"
 
 #endif /* PrefixHeader_pch */
