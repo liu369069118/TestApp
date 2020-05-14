@@ -31,6 +31,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"用户中心";
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_navigation_back_white"] style:UIBarButtonItemStyleDone target:self action:@selector(goHome)];
     
     _header = [[WBUserHeader alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 150)];
     MJWeakSelf
@@ -67,7 +69,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES];
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 #pragma mark - UITableViewDelegate
@@ -110,18 +112,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 1) {
         if (indexPath.row == 0) {
-
-            NSString *cacheString = [NSString stringWithFormat:@"如果您发现任何问题，请发送邮件联系我们，是否需要复制我们的邮箱到您的剪切板？"];
-            HBActionSheet *actionSheet = [[HBActionSheet alloc] initActionSheetWithTitle:@"" descriptiveText:cacheString cancelButtonTitle:@"取消" destructiveButtonTitles:@[@"复制邮箱"] otherButtonTitles:@[] itemAction:^(HBActionSheet *actionSheet, NSString *title, NSInteger index) {
-                if ([title isEqualToString:@"复制邮箱"]) {
-                    [UIPasteboard generalPasteboard].string = @"baowan@163.com";
-                    [[KNToast shareToast] initWithText:@"复制成功"];
-                } else {
-                    
-                }
-            }];
-            [actionSheet showAction];
-        } else if (indexPath.row == 1) {
             @WeakObj(self);
             NSString *cacheString = [NSString stringWithFormat:@"是否清空 %@ 缓存?",[self getCacheSize]];
             HBActionSheet *actionSheet = [[HBActionSheet alloc] initActionSheetWithTitle:@"" descriptiveText:cacheString cancelButtonTitle:@"取消" destructiveButtonTitles:@[@"清空"] otherButtonTitles:@[] itemAction:^(HBActionSheet *actionSheet, NSString *title, NSInteger index) {
@@ -132,12 +122,12 @@
                 }
             }];
             [actionSheet showAction];
-        } else if (indexPath.row == 2) {
+        } else if (indexPath.row == 1) {
             STWebviewController *web = [[STWebviewController alloc] init];
             web.titleStr = @"关于我们";
             web.type = 3;
             [self.navigationController pushViewController:web animated:YES];
-        } else if (indexPath.row == 3) {
+        } else if (indexPath.row == 2) {
             if ([STLoginTool sharedInstance].isLogin) {
                 MJWeakSelf
                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"确认退出当前账号吗？" preferredStyle:UIAlertControllerStyleAlert];
@@ -169,11 +159,15 @@
     }];
 }
 
+- (void)goHome {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (NSArray *)dataArray {
     if (!_dataArray) {
         _dataArray = @[
                         @[@"护眼模式"],
-                        @[@"联系我们",@"清空缓存",@"关于我们",@"退出账号"]
+                        @[@"清空缓存",@"关于我们",@"退出账号"]
                     ];
     }
     return _dataArray;

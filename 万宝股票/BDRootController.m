@@ -12,6 +12,7 @@
 #import "WBCommunityController.h"
 #import "WBUserController.h"
 #import "WBSearchListController.h"
+#import "HBActionSheet.h"
 
 @interface BDRootController ()
 
@@ -161,7 +162,16 @@
 }
 
 - (void)jumpEmail {
-    
+    NSString *cacheString = [NSString stringWithFormat:@"如果您发现任何问题，请发送邮件联系我们，是否需要复制我们的邮箱到您的剪切板？"];
+    HBActionSheet *actionSheet = [[HBActionSheet alloc] initActionSheetWithTitle:@"" descriptiveText:cacheString cancelButtonTitle:@"取消" destructiveButtonTitles:@[@"复制邮箱"] otherButtonTitles:@[] itemAction:^(HBActionSheet *actionSheet, NSString *title, NSInteger index) {
+        if ([title isEqualToString:@"复制邮箱"]) {
+            [UIPasteboard generalPasteboard].string = @"baowan@163.com";
+            [[KNToast shareToast] initWithText:@"复制成功"];
+        } else {
+            
+        }
+    }];
+    [actionSheet showAction];
 }
 
 - (void)jumpSearch {
