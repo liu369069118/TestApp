@@ -23,6 +23,7 @@
         
         UIImageView *log = [[UIImageView alloc] initWithFrame:CGRectMake(self.center.x-125.0/750.0*Shitu_SCREENWIDTH, 160.0/1334.0*Shitu_SCREENHEIGHT, 250.0/750.0*Shitu_SCREENWIDTH, 250.0/750.0*Shitu_SCREENWIDTH)];
         log.image = [UIImage imageNamed:@"login_pic"];
+        log.hidden = YES;
         [self addSubview:log];
         
         UIImageView *userAccount = [[UIImageView alloc] initWithFrame:CGRectMake(75.0/750.0*Shitu_SCREENWIDTH, log.frame.origin.y+log.frame.size.height+160.0/1334.0*Shitu_SCREENHEIGHT, 40, 40)];

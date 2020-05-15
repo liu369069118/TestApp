@@ -26,6 +26,7 @@
     _userIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"userIcon"]];
     _userIcon.userInteractionEnabled = YES;
     _userIcon.layer.cornerRadius = 30;
+    _userIcon.layer.masksToBounds = YES;
     _userIcon.contentMode = UIViewContentModeScaleAspectFill;
     [_userIcon addGestureRecognizer:iconTap];
     [self addSubview:_userIcon];
@@ -104,6 +105,8 @@
             [[NSUserDefaults standardUserDefaults] setObject:@([NSDate date].timeIntervalSince1970) forKey:@"signDate"];
             [self updateUI];
         }
+    } else {
+        [[KNToast shareToast] initWithText:@"登录后才能签到哦！~"];
     }
 }
 
