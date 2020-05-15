@@ -21,11 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *imgUrl;
 @property (nonatomic, copy) NSString *viewType;
 @property (nonatomic, copy) NSString *stockState;
-@property (nonatomic, copy) NSString *tags;
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic, copy) NSString *color;
 @property (nonatomic, copy) NSString *thumbImg;
 @property (nonatomic, copy) NSString *commentNum;
+
+@property (nonatomic, strong) NSArray <NSDictionary *>*tags;
 
 @end
 

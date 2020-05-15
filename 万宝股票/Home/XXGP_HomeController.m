@@ -6,6 +6,9 @@
 #import "XXGP_NewsLayout.h"
 #import "HCBaseFetcher.h"
 #import "XXGP_WebController.h"
+#import "XXGP_HomeNewNewsModel.h"
+#import "XXGP_HomeNewNewsCell.h"
+#import <YYModel/YYModel.h>
 
 @interface XXGP_HomeController () <UITableViewDelegate, UITableViewDataSource, XXGP_NewsCellDelegate>
 
@@ -34,7 +37,7 @@
     tableView.backgroundView.backgroundColor = [HCColor whiteColor];
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.decelerationRate = 10;
-    [tableView registerClass:[XXGP_NewsCell class] forCellReuseIdentifier:@"XXGP_NewsCell"];
+    [tableView registerClass:[XXGP_HomeNewNewsCell class] forCellReuseIdentifier:@"XXGP_HomeNewNewsCell"];
     [self.view addSubview:tableView];
     _tableView = tableView;
     
@@ -83,11 +86,10 @@
     NSArray *newsDicts = [homeDict getArray:@"list"];
 
     for (NSDictionary *tempDict in newsDicts) {
-        NSInteger cardType = [[tempDict getNotNilString:@"card"] integerValue];
-        if (cardType == 1 || cardType == 2) {
-            XXGP_NewsModel *model = [XXGP_NewsModel newsItemWithDict:tempDict];
-            XXGP_NewsLayout *layout = [[XXGP_NewsLayout alloc] initWithNews:model];
-            [_articleList addObject:layout];
+        XXGP_HomeNewNewsModel *model = [XXGP_HomeNewNewsModel yy_modelWithDictionary:tempDict];
+        
+        if (model) {
+            [_articleList addObject:model];
         }
     }
     
@@ -106,11 +108,10 @@
     NSArray *newsDicts = [homeDict getArray:@"list"];
 
     for (NSDictionary *tempDict in newsDicts) {
-        NSInteger cardType = [[tempDict getNotNilString:@"card"] integerValue];
-        if (cardType == 1 || cardType == 2) {
-            XXGP_NewsModel *model = [XXGP_NewsModel newsItemWithDict:tempDict];
-            XXGP_NewsLayout *layout = [[XXGP_NewsLayout alloc] initWithNews:model];
-            [_articleList addObject:layout];
+        XXGP_HomeNewNewsModel *model = [XXGP_HomeNewNewsModel yy_modelWithDictionary:tempDict];
+        
+        if (model) {
+            [_articleList addObject:model];
         }
     }
     
@@ -129,11 +130,10 @@
     NSArray *newsDicts = [homeDict getArray:@"list"];
 
     for (NSDictionary *tempDict in newsDicts) {
-        NSInteger cardType = [[tempDict getNotNilString:@"card"] integerValue];
-        if (cardType == 1 || cardType == 2) {
-            XXGP_NewsModel *model = [XXGP_NewsModel newsItemWithDict:tempDict];
-            XXGP_NewsLayout *layout = [[XXGP_NewsLayout alloc] initWithNews:model];
-            [_articleList addObject:layout];
+        XXGP_HomeNewNewsModel *model = [XXGP_HomeNewNewsModel yy_modelWithDictionary:tempDict];
+        
+        if (model) {
+            [_articleList addObject:model];
         }
     }
     
@@ -168,7 +168,7 @@ return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     
     fetcher.parameters = @{@"page_refer":@(_pageRefer)};
     
-    @WeakObj(self);
+    
     [fetcher requestWithSuccess:^(id responseObject) {
 
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -194,30 +194,25 @@ return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    XXGP_NewsLayout *newLayout = _articleList[indexPath.row];
-    return newLayout.cellHeight;
+    return 120;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    XXGP_NewsLayout *layout = _articleList[indexPath.row];
-    XXGP_NewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XXGP_NewsCell" forIndexPath:indexPath];
-    cell.layout = layout;
-    cell.delegate = self;
+    XXGP_HomeNewNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XXGP_HomeNewNewsCell" forIndexPath:indexPath];
+    cell.model = _articleList[indexPath.row];
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    XXGP_HomeNewNewsModel *model = _articleList[indexPath.row];
     
-    
-}
-
-- (void)newsCellDidSelect:(XXGP_NewsCell *)newsCell {
     XXGP_WebController *webVC = [[XXGP_WebController alloc] init];
-    webVC.url = newsCell.layout.news.detailUrl;
+    webVC.url = model.url;
     [self.navigationController pushViewController:webVC animated:YES];
 }
+
 
 @end
