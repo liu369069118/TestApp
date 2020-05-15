@@ -45,11 +45,41 @@
     [self addRefresh];
 }
 
+- (void)addRefresh {
+    @WeakObj(self);
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        selfWeak.pageRefer = 1;
+        [selfWeak loadArticleListData];
+    }];
+    header.lastUpdatedTimeLabel.hidden = YES;
+    header.stateLabel.hidden = YES;
+    _tableView.mj_header = header;
+    [_tableView.mj_header beginRefreshing];
+    
+    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        if (selfWeak.pageRefer == 2) {
+            [selfWeak loadArticleListData2];
+        } else if (selfWeak.pageRefer == 3) {
+            [selfWeak loadArticleListData3];
+        } else {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [[KNToast shareToast] initWithText:@"没有更多数据了~"];
+                [selfWeak.tableView.mj_header endRefreshing];
+                [selfWeak.tableView.mj_footer endRefreshing];
+            });
+        }
+    }];
+    footer.stateLabel.hidden = YES;
+    footer.refreshingTitleHidden = YES;
+    self.tableView.mj_footer = footer;
+}
+
 /// >>> 文章
 - (void)loadArticleListData {
-    NSDictionary *homeDict = [XXGP_Uitl readLocalFileWithName:@"home"];
+    [self loadCommunityTopicData];
     [_articleList removeAllObjects];
-
+    
+    NSDictionary *homeDict = [XXGP_Uitl readLocalFileWithName:@"home"];
     NSArray *newsDicts = [homeDict getArray:@"list"];
 
     for (NSDictionary *tempDict in newsDicts) {
@@ -71,6 +101,7 @@
 }
 
 - (void)loadArticleListData2 {
+    [self loadCommunityTopicData];
     NSDictionary *homeDict = [XXGP_Uitl readLocalFileWithName:@"home2"];
     NSArray *newsDicts = [homeDict getArray:@"list"];
 
@@ -93,6 +124,7 @@
 }
 
 - (void)loadArticleListData3 {
+    [self loadCommunityTopicData];
     NSDictionary *homeDict = [XXGP_Uitl readLocalFileWithName:@"home3"];
     NSArray *newsDicts = [homeDict getArray:@"list"];
 
@@ -126,34 +158,7 @@ return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 
 }
 
-- (void)addRefresh {
-    @WeakObj(self);
-    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        selfWeak.pageRefer = 1;
-        [selfWeak loadArticleListData];
-    }];
-    header.lastUpdatedTimeLabel.hidden = YES;
-    header.stateLabel.hidden = YES;
-    _tableView.mj_header = header;
-    [_tableView.mj_header beginRefreshing];
-    
-    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        if (selfWeak.pageRefer == 2) {
-            [selfWeak loadArticleListData2];
-        } else if (selfWeak.pageRefer == 3) {
-            [selfWeak loadArticleListData3];
-        } else {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [[KNToast shareToast] initWithText:@"没有更多数据了~"];
-                [selfWeak.tableView.mj_header endRefreshing];
-                [selfWeak.tableView.mj_footer endRefreshing];
-            });
-        }
-    }];
-    footer.stateLabel.hidden = YES;
-    footer.refreshingTitleHidden = YES;
-    self.tableView.mj_footer = footer;
-}
+
 
 - (void)loadCommunityTopicData {
     HCBaseFetcher *fetcher = [[HCBaseFetcher alloc] init];
@@ -165,33 +170,8 @@ return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     
     @WeakObj(self);
     [fetcher requestWithSuccess:^(id responseObject) {
-//        NSString *string = [self dictionaryToJson:responseObject];
-        
-        NSDictionary *dataDict = [responseObject getObject:@"data"];
-        
-        if (selfWeak.pageRefer == 1) {
-            [selfWeak.articleList removeAllObjects];
-        }
-        selfWeak.pageRefer = [[dataDict getNotNilString:@"page_refer"] integerValue];
-        
-        NSArray *newsDicts = [dataDict getArray:@"list"];
-        
-        for (NSDictionary *tempDict in newsDicts) {
-            NSInteger cardType = [[tempDict getNotNilString:@"card"] integerValue];
-            if (cardType == 1 || cardType == 2) {
-                XXGP_NewsModel *model = [XXGP_NewsModel newsItemWithDict:tempDict];
-                XXGP_NewsLayout *layout = [[XXGP_NewsLayout alloc] initWithNews:model];
-                [selfWeak.articleList addObject:layout];
-            }
-        }
-        
-        [selfWeak.tableView reloadData];
-        
-        [selfWeak.tableView.mj_header endRefreshing];
-        [selfWeak.tableView.mj_footer endRefreshing];
+
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        [selfWeak.tableView.mj_header endRefreshing];
-        [selfWeak.tableView.mj_footer endRefreshing];
     }];
 }
 
