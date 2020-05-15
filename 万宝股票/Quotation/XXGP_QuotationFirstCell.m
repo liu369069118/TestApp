@@ -23,7 +23,7 @@
         [self.contentView addSubview:topLabel];
         
         _mainScrollView = [[UIScrollView alloc] init];
-        _mainScrollView.frame = CGRectMake(0, 40, kScreenWidth, 422);
+        _mainScrollView.frame = CGRectMake(0, 40, kScreenWidth, 462);
         _mainScrollView.showsVerticalScrollIndicator = NO;
         _mainScrollView.showsHorizontalScrollIndicator = NO;
         [self.contentView addSubview:_mainScrollView];

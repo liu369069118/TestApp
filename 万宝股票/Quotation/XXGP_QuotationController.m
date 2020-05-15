@@ -60,7 +60,7 @@
     if (indexPath.row == 0) {
         return 90;
     } else if (indexPath.row == 1) {
-        return 40 + 422;
+        return 40 + 462;
     } else {
         return 65 * 90 + 50;
     }
