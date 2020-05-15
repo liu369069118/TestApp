@@ -10,7 +10,7 @@
 #import "XXGP_HomeNewNewsCell.h"
 #import <YYModel/YYModel.h>
 
-@interface XXGP_HomeController () <UITableViewDelegate, UITableViewDataSource, XXGP_NewsCellDelegate>
+@interface XXGP_HomeController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *articleList;

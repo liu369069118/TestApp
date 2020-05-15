@@ -64,6 +64,8 @@
 		7B09B0872468E55700CB0D2C /* XXGP_AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B0862468E55700CB0D2C /* XXGP_AlertViewController.m */; };
 		7B69D440246E470500E1EA75 /* XXGP_HomeNewNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B69D43F246E470500E1EA75 /* XXGP_HomeNewNewsCell.m */; };
 		7B69D443246E471100E1EA75 /* XXGP_HomeNewNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B69D442246E471100E1EA75 /* XXGP_HomeNewNewsModel.m */; };
+		7B69D446246E781C00E1EA75 /* XXGP_NewCommunityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B69D445246E781C00E1EA75 /* XXGP_NewCommunityCell.m */; };
+		7B69D449246E782900E1EA75 /* XXGP_newCommunityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B69D448246E782900E1EA75 /* XXGP_newCommunityModel.m */; };
 		7B7F2A35246691F300E2134D /* home3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B7F2A33246691F300E2134D /* home3.geojson */; };
 		7B7F2A36246691F300E2134D /* home2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7B7F2A34246691F300E2134D /* home2.geojson */; };
 		7BE9F9AC2463E78400B90142 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9F9AB2463E78400B90142 /* AppDelegate.m */; };
@@ -291,6 +293,10 @@
 		7B69D43F246E470500E1EA75 /* XXGP_HomeNewNewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXGP_HomeNewNewsCell.m; sourceTree = "<group>"; };
 		7B69D441246E471100E1EA75 /* XXGP_HomeNewNewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXGP_HomeNewNewsModel.h; sourceTree = "<group>"; };
 		7B69D442246E471100E1EA75 /* XXGP_HomeNewNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXGP_HomeNewNewsModel.m; sourceTree = "<group>"; };
+		7B69D444246E781C00E1EA75 /* XXGP_NewCommunityCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXGP_NewCommunityCell.h; sourceTree = "<group>"; };
+		7B69D445246E781C00E1EA75 /* XXGP_NewCommunityCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXGP_NewCommunityCell.m; sourceTree = "<group>"; };
+		7B69D447246E782900E1EA75 /* XXGP_newCommunityModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXGP_newCommunityModel.h; sourceTree = "<group>"; };
+		7B69D448246E782900E1EA75 /* XXGP_newCommunityModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXGP_newCommunityModel.m; sourceTree = "<group>"; };
 		7B7F2A33246691F300E2134D /* home3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = home3.geojson; sourceTree = "<group>"; };
 		7B7F2A34246691F300E2134D /* home2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = home2.geojson; sourceTree = "<group>"; };
 		7BE9F9A72463E78400B90142 /* 万宝股票.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "万宝股票.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -805,6 +811,10 @@
 			children = (
 				7BE9FA6D2463EEB500B90142 /* XXGP_CommunityController.h */,
 				7BE9FA6E2463EEB500B90142 /* XXGP_CommunityController.m */,
+				7B69D444246E781C00E1EA75 /* XXGP_NewCommunityCell.h */,
+				7B69D445246E781C00E1EA75 /* XXGP_NewCommunityCell.m */,
+				7B69D447246E782900E1EA75 /* XXGP_newCommunityModel.h */,
+				7B69D448246E782900E1EA75 /* XXGP_newCommunityModel.m */,
 				7BE9FBC62464F5BA00B90142 /* XXGP_CommunityModel.h */,
 				7BE9FBC72464F5BA00B90142 /* XXGP_CommunityModel.m */,
 				7BE9FBC92464F5C400B90142 /* XXGP_CommunityLayout.h */,
@@ -1393,7 +1403,9 @@
 				7B09AEF12467F0AC00CB0D2C /* MyLayoutDelegate.m in Sources */,
 				7BE9FB7B2463FF6800B90142 /* UIView+PBExtesion.m in Sources */,
 				7B09AEEE2467F0AC00CB0D2C /* MyPathLayout.m in Sources */,
+				7B69D446246E781C00E1EA75 /* XXGP_NewCommunityCell.m in Sources */,
 				7BE9FB822463FF6800B90142 /* KNProgressHUD.m in Sources */,
+				7B69D449246E782900E1EA75 /* XXGP_newCommunityModel.m in Sources */,
 				7BE9FBF224650C8900B90142 /* TYImageCache.m in Sources */,
 				7BE9FCBB24650EC800B90142 /* HCAvatarView.m in Sources */,
 				7B09AEA22467EE8A00CB0D2C /* ZFJSegmentedControl.m in Sources */,

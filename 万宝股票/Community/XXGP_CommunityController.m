@@ -5,8 +5,13 @@
 #import "XXGP_CommunityLayout.h"
 #import "HCBaseFetcher.h"
 #import "XXGP_ReleaPageViewController.h"
+#import <YYModel/YYModel.h>
+#import "XXGP_NewCommunityCell.h"
+#import "XXGP_newCommunityModel.h"
 
-@interface XXGP_CommunityController () <UITableViewDelegate, UITableViewDataSource, XXGP_CommunityCellDelegate>
+static CGFloat const loadDataTime = 0.1;
+
+@interface XXGP_CommunityController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *articleList;
@@ -34,7 +39,7 @@
     tableView.backgroundView.backgroundColor = [HCColor whiteColor];
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.decelerationRate = 10;
-    [tableView registerClass:[XXGP_CommunityCell class] forCellReuseIdentifier:@"XXGP_CommunityCell"];
+    [tableView registerClass:[XXGP_NewCommunityCell class] forCellReuseIdentifier:@"XXGP_NewCommunityCell"];
     [self.view addSubview:tableView];
     _tableView = tableView;
     
@@ -77,20 +82,22 @@
 
 /// >>> 文章
 - (void)loadArticleListData {
+    [self loadCommunityTopicData];
     NSDictionary *homeDict = [XXGP_Uitl readLocalFileWithName:@"community"];
     [_articleList removeAllObjects];
 
-    NSArray *newsDicts = [[homeDict getObject:@"data"] getArray:@"list"];
+    NSArray *newsDicts = [homeDict getArray:@"list"];
 
     for (NSDictionary *tempDict in newsDicts) {
-        XXGP_CommunityModel *model = [XXGP_CommunityModel createCommunityModelWithDict:tempDict];
-        XXGP_CommunityLayout *layout = [[XXGP_CommunityLayout alloc] initWithTopicModel:model];
+        XXGP_newCommunityModel *model = [XXGP_newCommunityModel yy_modelWithDictionary:tempDict];
         
-        [_articleList addObject:layout];
+        if (model) {
+            [_articleList addObject:model];
+        }
     }
     
     @WeakObj(self);
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(loadDataTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         selfWeak.pageRefer = 2;
         selfWeak.topicTime = @"";
         [selfWeak.tableView reloadData];
@@ -101,19 +108,21 @@
 
 /// >>> 文章
 - (void)loadArticleListData2 {
+    [self loadCommunityTopicData];
     NSDictionary *homeDict = [XXGP_Uitl readLocalFileWithName:@"community2"];
 
-    NSArray *newsDicts = [[homeDict getObject:@"data"] getArray:@"list"];
+    NSArray *newsDicts = [homeDict getArray:@"list"];
 
     for (NSDictionary *tempDict in newsDicts) {
-        XXGP_CommunityModel *model = [XXGP_CommunityModel createCommunityModelWithDict:tempDict];
-        XXGP_CommunityLayout *layout = [[XXGP_CommunityLayout alloc] initWithTopicModel:model];
+        XXGP_newCommunityModel *model = [XXGP_newCommunityModel yy_modelWithDictionary:tempDict];
         
-        [_articleList addObject:layout];
+        if (model) {
+            [_articleList addObject:model];
+        }
     }
     
     @WeakObj(self);
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(loadDataTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         selfWeak.pageRefer = 3;
         selfWeak.topicTime = @"";
         [selfWeak.tableView reloadData];
@@ -124,19 +133,21 @@
 
 /// >>> 文章
 - (void)loadArticleListData3 {
+    [self loadCommunityTopicData];
     NSDictionary *homeDict = [XXGP_Uitl readLocalFileWithName:@"community3"];
 
-    NSArray *newsDicts = [[homeDict getObject:@"data"] getArray:@"list"];
+    NSArray *newsDicts = [homeDict getArray:@"list"];
 
     for (NSDictionary *tempDict in newsDicts) {
-        XXGP_CommunityModel *model = [XXGP_CommunityModel createCommunityModelWithDict:tempDict];
-        XXGP_CommunityLayout *layout = [[XXGP_CommunityLayout alloc] initWithTopicModel:model];
+        XXGP_newCommunityModel *model = [XXGP_newCommunityModel yy_modelWithDictionary:tempDict];
         
-        [_articleList addObject:layout];
+        if (model) {
+            [_articleList addObject:model];
+        }
     }
     
     @WeakObj(self);
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(loadDataTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         selfWeak.pageRefer = 4;
         selfWeak.topicTime = @"";
         [selfWeak.tableView reloadData];
@@ -153,39 +164,9 @@
     
     fetcher.parameters = @{@"page_refer":@(_pageRefer), @"time":NotNullString(_topicTime)};
     
-    @WeakObj(self);
+    
     [fetcher requestWithSuccess:^(id responseObject) {
-//        NSString *string = [self dictionaryToJson:responseObject];
-        if ([[responseObject getNotNilString:@"code"] isEqualToString:@"1"]) {
-            NSDictionary *data = [responseObject getObject:@"data"];
-            
-            if (selfWeak.pageRefer == 1) {
-                [selfWeak.articleList removeAllObjects];
-            }
-            
-            selfWeak.topicTime = [data getNotNilString:@"time"];
-            selfWeak.pageRefer = [[data getNumber:@"page_refer"] integerValue];
-            
-            NSArray *listArray = [data getArray:@"list"];
-            
-            NSMutableArray *tempTopicArray = [NSMutableArray arrayWithCapacity:listArray.count];
-            for (NSDictionary *dict in listArray) {
-                XXGP_CommunityModel *model = [XXGP_CommunityModel createCommunityModelWithDict:dict];
-                XXGP_CommunityLayout *layout = [[XXGP_CommunityLayout alloc] initWithTopicModel:model];
-                
-                [tempTopicArray addObject:layout];
-            }
-            
-            [selfWeak.articleList addObjectsFromArray:tempTopicArray];
-        }
-        
-        [selfWeak.tableView reloadData];
-        
-        [selfWeak.tableView.mj_header endRefreshing];
-        [selfWeak.tableView.mj_footer endRefreshing];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        [selfWeak.tableView.mj_header endRefreshing];
-        [selfWeak.tableView.mj_footer endRefreshing];
     }];
 }
 
@@ -219,16 +200,13 @@ return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    XXGP_CommunityLayout *newLayout = _articleList[indexPath.row];
-    return newLayout.communityCellHeight;
+    XXGP_newCommunityModel *model = _articleList[indexPath.row];
+    return [XXGP_NewCommunityCell communityCellHeight:model];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    XXGP_CommunityLayout *layout = _articleList[indexPath.row];
-    XXGP_CommunityCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XXGP_CommunityCell" forIndexPath:indexPath];
-    cell.layout = layout;
-    cell.delegate = self;
+    XXGP_NewCommunityCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XXGP_NewCommunityCell" forIndexPath:indexPath];
+    cell.model = _articleList[indexPath.row];
     
     return cell;
 }
@@ -253,5 +231,6 @@ return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 - (void)likeClickForCummunityCell:(nonnull XXGP_CommunityCell *)mainCell {
     
 }
+
 
 @end

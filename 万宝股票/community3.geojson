@@ -1,8 +1,5 @@
 {
-    "errorCode": 0,
-    "errorMsg": "",
-    "total": 1,
-    "pageItems": [{
+    "list": [{
         "itemId": "129485",
         "type": "11",
         "typeId": "snscirclelive_129485",
@@ -817,7 +814,5 @@
             "replys": 28,
             "hasAgree": 0
         }
-    }],
-    "listInfo": "20|1|1|1|1|129458|",
-    "traceId": "50d599d9-3111-4afa-9909-ac48749b6467"
+    }]
 }
