@@ -60,9 +60,9 @@
     if (indexPath.row == 0) {
         return 90;
     } else if (indexPath.row == 1) {
-        return (kScreenWidth - 30 - 6) / 4 * 3 + 4 + 40;
+        return 40 + 422;
     } else {
-        return 60 * 90 + 50;
+        return 65 * 90 + 50;
     }
 }
 

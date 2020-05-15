@@ -10,7 +10,7 @@
 #import "XXGP_newCommunityModel.h"
 #import "XXGP_WebController.h"
 
-static CGFloat const loadDataTime = 0.1;
+static CGFloat const loadDataTime = 0.75;
 
 @interface XXGP_CommunityController () <UITableViewDelegate, UITableViewDataSource>
 

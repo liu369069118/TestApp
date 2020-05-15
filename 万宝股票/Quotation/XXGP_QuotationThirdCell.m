@@ -12,10 +12,11 @@
         
         UILabel *topLabel = [[UILabel alloc] init];
         topLabel.frame = CGRectMake(15, 0, kScreenWidth, 50);
-        topLabel.text = @"热门股票";
-        topLabel.font = [UIFont boldSystemFontOfSize:18];
+        topLabel.text = @"股票列表";
+        topLabel.font = [HCFont pingfangMedium:18];
         topLabel.textColor = [UIColor blackColor];
         topLabel.backgroundColor = [UIColor whiteColor];
+        topLabel.textAlignment = NSTextAlignmentCenter;
         [self.contentView addSubview:topLabel];
         
         [self createContentViews];
@@ -37,61 +38,55 @@
         [plateView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goNextVC:)]];
         [self.contentView addSubview:plateView];
         
-        view_y += btnH;
+        view_y += btnH + 5;
     }
 }
 
 - (UIView *)createPlateView:(XXGP_QuotationFirstModel *)model {
     UIView *plateView = [[UIView alloc] init];
     plateView.backgroundColor = [HCColor whiteColor];
+    plateView.layer.cornerRadius = 30.f;
+    plateView.layer.borderColor = HCColor(255, 69, 0).CGColor;
+    plateView.layer.borderWidth = 0.5;
     
-    UILabel *leftLabel = [self createLabel:model.block fontSizr:17];
-    leftLabel.textColor = [UIColor blackColor];
-    [plateView addSubview:leftLabel];
     
-    UILabel *subleftLabel = [self createLabel:model.code fontSizr:15];
-    subleftLabel.textColor = HCColor(220, 220, 220);
-    [plateView addSubview:subleftLabel];
-    
-    UILabel *centerLabel = [self createLabel:model.containtopTitle fontSizr:17];
-    centerLabel.textColor = [HCColor colorWithR:225 G:128 B:0];
+    UILabel *centerLabel = [self createLabel:model.block fontSizr:18];
+    centerLabel.textColor = [HCColor articleBlack_A70];
     [plateView addSubview:centerLabel];
     
+    UILabel *subCenterLabel = [self createLabel:model.code fontSizr:12];
+    subCenterLabel.textColor = [HCColor articleBlack_A30];
+    [plateView addSubview:subCenterLabel];
+    
+    UILabel *leftLabel = [self createLabel:model.containtopTitle fontSizr:17];
+    leftLabel.textColor = HCColor(255, 69, 0);
+    [plateView addSubview:leftLabel];
+    
     UILabel *rightLabel = [self createLabel:model.percent fontSizr:17];
-    rightLabel.textColor = [HCColor redColor];
+    rightLabel.textColor = HCColor(255, 69, 0);
     [plateView addSubview:rightLabel];
     
-    [leftLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_offset(5);
-        make.left.mas_offset(0);
-        make.height.mas_offset(20);
-    }];
-    
-    [subleftLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_offset(-5);
-        make.left.mas_offset(0);
-        make.height.mas_offset(20);
-    }];
     
     [centerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.bottom.mas_offset(0);
+        make.top.mas_offset(10);
         make.centerX.mas_offset(0);
     }];
     
-    [rightLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_offset(0);
+    [subCenterLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.mas_offset(-7);
+        make.centerX.mas_offset(0);
+    }];
+    
+    [leftLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_offset(50);
         make.centerY.mas_offset(0);
         make.height.mas_offset(20);
     }];
     
-    UIView *line = [[UIView alloc] init];
-    line.backgroundColor = [HCColor colorWithR:176 G:224 B:230];
-    [plateView addSubview:line];
-    
-    [line mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.mas_equalTo(0);
-        make.height.mas_equalTo(0.5);
-        make.bottom.mas_equalTo(0);
+    [rightLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_offset(-50);
+        make.centerY.mas_offset(0);
+        make.height.mas_offset(20);
     }];
     
     return plateView;
@@ -100,7 +95,7 @@
 - (UILabel *)createLabel:(NSString *)text fontSizr:(NSInteger)fontSize {
     UILabel *label = [[UILabel alloc] init];
     label.text = text;
-    label.font = [UIFont boldSystemFontOfSize:fontSize];
+    label.font = [HCFont pingfangRegular:fontSize];
     label.textAlignment = NSTextAlignmentCenter;
     
     return label;

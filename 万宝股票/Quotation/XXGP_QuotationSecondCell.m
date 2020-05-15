@@ -54,21 +54,21 @@
     UIView *plateView = [[UIView alloc] init];
     plateView.backgroundColor = [HCColor whiteColor];
     
-    UILabel *nameLabel = [self createLabel:model.block fontSizr:15];
+    UILabel *nameLabel = [self createLabel:model.block fontSizr:14];
     nameLabel.textColor = [UIColor blackColor];
     [plateView addSubview:nameLabel];
     
     UILabel *titleLabel = [self createLabel:model.name fontSizr:18];
-    titleLabel.textColor = [UIColor redColor];
+    titleLabel.textColor = HCColor(255, 69, 0);
     [plateView addSubview:titleLabel];
     
-    UILabel *subnameLabel = [self createLabel:model.percent fontSizr:13];
-    subnameLabel.textColor = [HCColor colorWithHexString:@"45b7ff"];
+    UILabel *subnameLabel = [self createLabel:model.percent fontSizr:12];
+    subnameLabel.textColor = HCColor(255, 69, 0);
     subnameLabel.font = kHCBoldFont12;
     [plateView addSubview:subnameLabel];
     
-    UILabel *rateLabel = [self createLabel:model.containtopTitle fontSizr:13];
-    rateLabel.textColor = [HCColor colorWithHexString:@"45b7ff"];
+    UILabel *rateLabel = [self createLabel:model.containtopTitle fontSizr:12];
+    rateLabel.textColor = HCColor(255, 69, 0);
     rateLabel.font = kHCBoldFont12;
     [plateView addSubview:rateLabel];
     
@@ -79,7 +79,7 @@
     
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(0);
-        make.top.mas_equalTo(nameLabel.mas_bottom).offset(5);
+        make.top.mas_equalTo(nameLabel.mas_bottom);
     }];
     
     [subnameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -100,7 +100,7 @@
 - (UILabel *)createLabel:(NSString *)text fontSizr:(NSInteger)fontSize {
     UILabel *label = [[UILabel alloc] init];
     label.text = text;
-    label.font = [UIFont boldSystemFontOfSize:fontSize];
+    label.font = [HCFont pingfangRegular:fontSize];
     label.textAlignment = NSTextAlignmentCenter;
     
     return label;
