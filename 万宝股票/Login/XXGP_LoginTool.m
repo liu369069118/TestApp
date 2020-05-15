@@ -41,10 +41,12 @@
         NSTimeInterval ago = [[login objectForKey:@"times"] doubleValue];
         if ([NSDate date].timeIntervalSince1970-ago > 7*24*3600) {
             self.isLogin = NO;
+            self.userIntegral = 0;
             [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"loginStatus"];
         } else {
             self.isLogin = YES;
             self.userAccount = [login objectForKey:@"account"];
+            self.userIntegral = [self getUserIntergralWithAccount:_userAccount];
         }
     } else {
         self.isLogin = NO;
@@ -66,6 +68,7 @@
             [[NSUserDefaults standardUserDefaults] setObject:loginStatus forKey:@"loginStatus"];
             self.isLogin = YES;
             self.userAccount = account;
+            self.userIntegral = [self getUserIntergralWithAccount:_userAccount];
             return YES;
         } else {
             return NO;
@@ -73,7 +76,6 @@
     } else {
         return NO;
     }
-    return YES;
 }
 
 - (BOOL)userRegisWithAccount:(NSString *)account password:(NSString *)key {
@@ -92,8 +94,51 @@
 - (BOOL)loginOut {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"loginStatus"];
     self.isLogin = NO;
-    self.userAccount = nil;
+    self.userAccount = @"";
+    self.userIntegral = 0;
     return YES;
+}
+
+- (void)updateIntergral:(NSInteger)value {
+    if (!self.isLogin) {
+        return;
+    }
+    NSDictionary *intergralData = [[NSUserDefaults standardUserDefaults] objectForKey:@"userIntergral"];
+    if (!intergralData) {
+        return;
+    }
+    if ([intergralData.allKeys containsObject:_userAccount]) {
+        NSMutableDictionary *mObj = intergralData.mutableCopy;
+        [mObj setObject:@(value) forKey:_userAccount];
+        [[NSUserDefaults standardUserDefaults] setObject:mObj.copy forKey:@"userIntergral"];
+        _userIntegral = value;
+    } else {
+        NSMutableDictionary *mObj = intergralData.mutableCopy;
+        [mObj setObject:@(0) forKey:_userAccount];
+        [[NSUserDefaults standardUserDefaults] setObject:mObj.copy forKey:@"userIntergral"];
+        _userIntegral = 0;
+    }
+}
+
+- (NSInteger)getUserIntergralWithAccount:(NSString *)account {
+    if (account) {
+        NSDictionary *intergralData = [[NSUserDefaults standardUserDefaults] objectForKey:@"userIntergral"];
+        if (intergralData) {
+            if ([intergralData.allKeys containsObject:account]) {
+                return [[intergralData objectForKey:account] integerValue];
+            } else {
+                NSMutableDictionary *mObj = intergralData.mutableCopy;
+                [mObj setObject:@(0) forKey:account];
+                [[NSUserDefaults standardUserDefaults] setObject:mObj.copy forKey:@"userIntergral"];
+                return 0;
+            }
+        } else {
+            NSDictionary *obj = @{account:@(0)};
+            [[NSUserDefaults standardUserDefaults] setObject:obj forKey:@"userIntergral"];
+            return 0;
+        }
+    }
+    return 0;
 }
 
 @end
