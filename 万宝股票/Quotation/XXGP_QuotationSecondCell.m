@@ -16,7 +16,7 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         _mainScrollView = [[UIScrollView alloc] init];
-        _mainScrollView.frame = CGRectMake(0, 10, kScreenWidth, 100);
+        _mainScrollView.frame = CGRectMake(0, 0, kScreenWidth, 90);
         _mainScrollView.showsVerticalScrollIndicator = NO;
         _mainScrollView.showsHorizontalScrollIndicator = NO;
         [self.contentView addSubview:_mainScrollView];
@@ -36,7 +36,7 @@
     
     for (int i = 0; i < list.count; i++) {
         UIView *plateView = [self createPlateView:list[i]];
-        plateView.frame = CGRectMake(view_x, view_y, btnW, 100);
+        plateView.frame = CGRectMake(view_x, view_y, btnW, 90);
         plateView.tag = 10000+i;
         [plateView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goNextVC:)]];
         
@@ -53,30 +53,28 @@
 - (UIView *)createPlateView:(XXGP_QuotationFirstModel *)model {
     UIView *plateView = [[UIView alloc] init];
     plateView.backgroundColor = [HCColor whiteColor];
-    plateView.layer.cornerRadius = 4.f;
-    plateView.layer.masksToBounds = YES;
-    plateView.layer.borderColor = [HCColor colorWithR:225 G:128 B:0].CGColor;
-    plateView.layer.borderWidth = 0.5;
     
     UILabel *nameLabel = [self createLabel:model.block fontSizr:15];
     nameLabel.textColor = [UIColor blackColor];
     [plateView addSubview:nameLabel];
     
-    UILabel *titleLabel = [self createLabel:model.name fontSizr:20];
+    UILabel *titleLabel = [self createLabel:model.name fontSizr:18];
     titleLabel.textColor = [UIColor redColor];
     [plateView addSubview:titleLabel];
     
     UILabel *subnameLabel = [self createLabel:model.percent fontSizr:13];
-    subnameLabel.textColor = [UIColor redColor];
+    subnameLabel.textColor = [HCColor colorWithHexString:@"45b7ff"];
+    subnameLabel.font = kHCBoldFont12;
     [plateView addSubview:subnameLabel];
     
     UILabel *rateLabel = [self createLabel:model.containtopTitle fontSizr:13];
-    rateLabel.textColor = [UIColor redColor];
+    rateLabel.textColor = [HCColor colorWithHexString:@"45b7ff"];
+    rateLabel.font = kHCBoldFont12;
     [plateView addSubview:rateLabel];
     
     [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(0);
-        make.top.mas_equalTo(15);
+        make.top.mas_equalTo(10);
     }];
     
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -86,13 +84,13 @@
     
     [subnameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_offset(5);
-        make.bottom.mas_equalTo(-10);
+        make.top.mas_equalTo(titleLabel.mas_bottom).offset(5);
         make.height.mas_offset(15);
     }];
     
     [rateLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_offset(-5);
-        make.bottom.mas_equalTo(-10);
+        make.top.mas_equalTo(titleLabel.mas_bottom).offset(5);
         make.height.mas_offset(15);
     }];
     

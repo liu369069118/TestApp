@@ -58,9 +58,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        return (kScreenWidth - 30 - 6) / 4 * 3 + 4 + 40;
+        return 90;
     } else if (indexPath.row == 1) {
-        return 110;
+        return (kScreenWidth - 30 - 6) / 4 * 3 + 4 + 40;
     } else {
         return 60 * 90 + 50;
     }
@@ -69,11 +69,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
     if (indexPath.row == 0) {
-        XXGP_QuotationFirstCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XXGP_QuotationFirstCell" forIndexPath:indexPath];
-        return cell;
-    } else if (indexPath.row == 1){
         XXGP_QuotationSecondCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XXGP_QuotationSecondCell" forIndexPath:indexPath];
-        return cell;
+               return cell;
+    } else if (indexPath.row == 1){
+       XXGP_QuotationFirstCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XXGP_QuotationFirstCell" forIndexPath:indexPath];
+       return cell;
     } else {
         XXGP_QuotationThirdCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XXGP_QuotationThirdCell" forIndexPath:indexPath];
         return cell;
