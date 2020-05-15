@@ -42,7 +42,7 @@
     _nb.text = dict[@"per"];
     _per.text = dict[@"gpperate"];
     _xy.text = dict[@"code"];
-    _t.text = dict[@"SXHG_sname"];
+    _t.text = dict[@"XXGP_sname"];
 
     NSMutableArray *l = [XXGP_Uitl mainDataList];
     //    self.gpcode = @"00769";

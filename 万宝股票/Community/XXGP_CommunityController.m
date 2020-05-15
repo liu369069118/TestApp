@@ -8,6 +8,7 @@
 #import <YYModel/YYModel.h>
 #import "XXGP_NewCommunityCell.h"
 #import "XXGP_newCommunityModel.h"
+#import "XXGP_WebController.h"
 
 static CGFloat const loadDataTime = 0.1;
 
@@ -208,29 +209,30 @@ return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     XXGP_NewCommunityCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XXGP_NewCommunityCell" forIndexPath:indexPath];
     cell.model = _articleList[indexPath.row];
     
+    @WeakObj(self);
+    cell.avatarActionBlock = ^(XXGP_newCommunityModel * _Nonnull model) {
+        XXGP_WebController *webVC = [[XXGP_WebController alloc] init];
+        webVC.url = model.avatarUrl;
+        webVC.navTitle = @"用户主页";
+        webVC.isShowProgressView = NO;
+        [selfWeak.navigationController pushViewController:webVC animated:YES];
+    };
+    
+    cell.commentActionBlock = ^(XXGP_newCommunityModel * _Nonnull model) {
+        XXGP_ReleaPageViewController *webVC = [[XXGP_ReleaPageViewController alloc] init];
+        webVC.naviTitle = @"评论";
+        [self.navigationController pushViewController:webVC animated:YES];
+    };
+    
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-- (void)cummunityCellAction:(XXGP_CommunityCell *)mainCell {
-    XXGP_ReleaPageViewController *webVC = [[XXGP_ReleaPageViewController alloc] init];
-    webVC.naviTitle = @"评论";
-    [self.navigationController pushViewController:webVC animated:YES];
-}
-
-- (void)commentClickForCummunityCell:(nonnull XXGP_CommunityCell *)mainCell {
-    XXGP_ReleaPageViewController *webVC = [[XXGP_ReleaPageViewController alloc] init];
-    webVC.naviTitle = @"评论";
-    [self.navigationController pushViewController:webVC animated:YES];
-}
-
-
-- (void)likeClickForCummunityCell:(nonnull XXGP_CommunityCell *)mainCell {
     
+    XXGP_ReleaPageViewController *webVC = [[XXGP_ReleaPageViewController alloc] init];
+    webVC.naviTitle = @"评论";
+    [self.navigationController pushViewController:webVC animated:YES];
 }
-
 
 @end

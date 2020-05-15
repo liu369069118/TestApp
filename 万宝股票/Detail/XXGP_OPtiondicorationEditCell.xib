@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,12 +34,12 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDl-z2-Idy">
-                        <rect key="frame" x="264" y="15" width="15" height="18"/>
+                        <rect key="frame" x="269" y="15" width="15" height="18"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="CGv-o5-OHt"/>
                             <constraint firstAttribute="width" constant="15" id="dW1-5T-MQl"/>
                         </constraints>
-                        <state key="normal" title="Button" image="SXHG_top"/>
+                        <state key="normal" title="Button" image="XXGP_top"/>
                         <connections>
                             <action selector="buttonClickAaction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nO1-7F-qgK"/>
                         </connections>
@@ -67,6 +65,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="SXHG_top" width="16" height="16"/>
+        <image name="XXGP_top" width="128" height="128"/>
     </resources>
 </document>

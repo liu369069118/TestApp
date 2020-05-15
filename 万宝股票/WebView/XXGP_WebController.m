@@ -11,6 +11,13 @@
 
 @implementation XXGP_WebController
 
+- (instancetype)init {
+    if (self = [super init]) {
+        _isShowProgressView = YES;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -21,7 +28,12 @@
     [backButton addTarget:self action:@selector(backButtonAction) forControlEvents:UIControlEventTouchUpInside];
     
     UILabel *label = [[UILabel alloc] init];
-    label.text = @"资讯";
+    if (_navTitle.length > 0) {
+        label.text = _navTitle;
+    } else {
+        label.text = @"资讯";
+    }
+    
     label.textColor = [UIColor blackColor];
     label.textAlignment = NSTextAlignmentCenter;
     label.font = [UIFont systemFontOfSize:20];
@@ -56,9 +68,9 @@
     _webView = webView;
     
     //进度条初始化
-    self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, kHCNavigationBarHeight, kScreenWidth, 1.5)];
+    self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, kHCNavigationBarHeight, kScreenWidth, 1)];
     self.progressView.backgroundColor = [UIColor clearColor];
-    self.progressView.transform = CGAffineTransformMakeScale(1.0f, 1.5f);
+    self.progressView.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
     [self.view addSubview:self.progressView];
     
     [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
@@ -102,9 +114,14 @@
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
     NSLog(@"开始加载网页");
     //开始加载网页时展示出progressView
-    self.progressView.hidden = NO;
+    if (_isShowProgressView) {
+        self.progressView.hidden = NO;
+    } else {
+        self.progressView.hidden = YES;
+    }
+    
     //开始加载网页的时候将progressView的Height恢复为1.5倍
-    self.progressView.transform = CGAffineTransformMakeScale(1.0f, 1.5f);
+    self.progressView.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
     //防止progressView被网页挡住
     [self.view bringSubviewToFront:self.progressView];
 }

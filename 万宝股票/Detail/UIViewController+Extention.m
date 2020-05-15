@@ -4,21 +4,21 @@
 @implementation UIViewController (Extention)
 
 
-- (UIBarButtonItem *)SXHG_NaviBackButton{
+- (UIBarButtonItem *)XXGP_NaviBackButton{
 //    UIButton *btn = [[[NSBundle mainBundle] loadNibNamed:@"XXGP_BackButton" owner:self options:nil] firstObject];
     
-//    UIBarButtonItem *SXHG_NaviBackButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_navigation_back_white"] style:UIBarButtonItemStyleDone target:self action:@selector(SXHG_NaviBackButtonClicked)];
+//    UIBarButtonItem *XXGP_NaviBackButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_navigation_back_white"] style:UIBarButtonItemStyleDone target:self action:@selector(XXGP_NaviBackButtonClicked)];
 //    
-//    [btn addTarget:self action:@selector(SXHG_NaviBackButtonClicked) forControlEvents:UIControlEventTouchUpInside];
-//    UIBarButtonItem *SXHG_NaviBackButton = [[UIBarButtonItem alloc] initWithCustomView:btn];
+//    [btn addTarget:self action:@selector(XXGP_NaviBackButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+//    UIBarButtonItem *XXGP_NaviBackButton = [[UIBarButtonItem alloc] initWithCustomView:btn];
     
-    UIBarButtonItem *SXHG_NaviBackButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_navigation_back_white"] style:UIBarButtonItemStyleDone target:self action:@selector(SXHG_NaviBackButtonClicked)];
+    UIBarButtonItem *XXGP_NaviBackButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_navigation_back_white"] style:UIBarButtonItemStyleDone target:self action:@selector(XXGP_NaviBackButtonClicked)];
     
-    return SXHG_NaviBackButton;
+    return XXGP_NaviBackButton;
 }
 
 
-- (void)SXHG_NaviBackButtonClicked{
+- (void)XXGP_NaviBackButtonClicked{
     [self.navigationController popViewControllerAnimated:YES];
 }
 

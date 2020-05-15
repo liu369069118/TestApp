@@ -2,8 +2,8 @@
 #import <UIKit/UIKit.h>
 
 @interface UIViewController (Extention)
-- (UIBarButtonItem *)SXHG_NaviBackButton;
-- (void)SXHG_NaviBackButtonClicked;
+- (UIBarButtonItem *)XXGP_NaviBackButton;
+- (void)XXGP_NaviBackButtonClicked;
 - (void)simpleAlertWithTitle:(NSString *)title
                      content:(NSString *)content
                     btnTitle:(NSString *)btnTitle

@@ -25,7 +25,7 @@
 }
 
 - (void)setModel:(NSDictionary *)model {
-     _stockName.text = model[@"SXHG_sname"];//名字去除头部空格
+     _stockName.text = model[@"XXGP_sname"];//名字去除头部空格
     _stockCode.text = model[@"code"];
 }
 
@@ -47,9 +47,9 @@
             imageView.size = CGSizeMake(15, 15);
             imageView.contentMode = UIViewContentModeScaleAspectFit;
             if (self.selected) {
-                imageView.image = [UIImage imageNamed:@"SXHG_selected"]; // 选中时的图片
+                imageView.image = [UIImage imageNamed:@"XXGP_selected"]; // 选中时的图片
             } else {
-                imageView.image = [UIImage imageNamed:@"SXHG_normal"];   // 未选中时的图片
+                imageView.image = [UIImage imageNamed:@"XXGP_normal"];   // 未选中时的图片
             }
         }
     }

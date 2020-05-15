@@ -19,7 +19,7 @@ static const CGFloat bottomViewHeight = 40;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBar.translucent = 1;
-    self.SXHG_ContetListGroups = [NSMutableArray new];
+    self.XXGP_ContetListGroups = [NSMutableArray new];
     self.original = [NSMutableArray new];
     [self getRequestMessageListDatass];
     [self initNavigationItem];
@@ -28,7 +28,7 @@ static const CGFloat bottomViewHeight = 40;
 
 - (void)getRequestMessageListDatass {
     NSMutableArray *all = [XXGP_Uitl mainDataList];
-    [self.SXHG_ContetListGroups removeAllObjects];
+    [self.XXGP_ContetListGroups removeAllObjects];
     
     for (int i = 0; i < all.count; i++) {
         NSDictionary *dict = all[i];
@@ -38,11 +38,11 @@ static const CGFloat bottomViewHeight = 40;
         
         
         if (isHad) {
-            [self.SXHG_ContetListGroups addObject:all[i]];
+            [self.XXGP_ContetListGroups addObject:all[i]];
             [self.original addObject:all[i]];
         }
     }
-    if (self.SXHG_ContetListGroups.count == 0) {
+    if (self.XXGP_ContetListGroups.count == 0) {
         [XXGP_ProgramProgressHUD showText:@"暂未添加股票"];
     }
     
@@ -51,7 +51,7 @@ static const CGFloat bottomViewHeight = 40;
 - (void)initNavigationItem {
     self.title = @"自选股";
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationItem.leftBarButtonItem = self.SXHG_NaviBackButton;
+    self.navigationItem.leftBarButtonItem = self.XXGP_NaviBackButton;
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }
 
@@ -82,17 +82,17 @@ static const CGFloat bottomViewHeight = 40;
     return 0;
 }
 
-- (void)SXHG_NaviBackButtonClicked {
+- (void)XXGP_NaviBackButtonClicked {
     
     for (NSDictionary* d in self.original) {
         
-        if (![self.SXHG_ContetListGroups containsObject:d]) {
+        if (![self.XXGP_ContetListGroups containsObject:d]) {
             [self deleteCode:d[@"code"]];
             
         }
     }
     NSMutableString *stockOrderString = [NSMutableString new];
-    for (NSDictionary* d  in _SXHG_ContetListGroups) {
+    for (NSDictionary* d  in _XXGP_ContetListGroups) {
         if ( [d[@"code"] length]) {
             
             
@@ -177,7 +177,7 @@ static const CGFloat bottomViewHeight = 40;
 //        self.bottomView.top-=44;
     }
     //删除
-    UIImageView *deteleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SXHG_optional_delete"]];
+    UIImageView *deteleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"XXGP_optional_delete"]];
     deteleImageView.backgroundColor = [UIColor clearColor];
     [self.bottomContainView addSubview:deteleImageView];
     [deteleImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -205,11 +205,11 @@ static const CGFloat bottomViewHeight = 40;
     NSLog(@"成功删除服务器数据");
     //2.删除数据源数据(这里也不能使用循环删除的方式，因为删除操作会引起数组容量的变化，导致数组越界等问题)
     //用下面这种方式删除多个不连续的元素
-    NSMutableIndexSet *indexes = [NSMutableIndexSet indexSet]; //用于记录_SXHG_ContetListGroups要删除元素的Indexes
+    NSMutableIndexSet *indexes = [NSMutableIndexSet indexSet]; //用于记录_XXGP_ContetListGroups要删除元素的Indexes
     for (NSIndexPath *indexPath in self.deleteQueue) {
         [indexes addIndex:(NSUInteger) indexPath.row];
     }
-    [self.SXHG_ContetListGroups removeObjectsAtIndexes:indexes];
+    [self.XXGP_ContetListGroups removeObjectsAtIndexes:indexes];
     
     
     
@@ -229,13 +229,13 @@ static const CGFloat bottomViewHeight = 40;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.SXHG_ContetListGroups.count;
+    return self.XXGP_ContetListGroups.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     XXGP_OPtiondicorationEditCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XXGP_OPtiondicorationEditCell"];
-    if (self.SXHG_ContetListGroups.count > 0) {
-        cell.model = self.SXHG_ContetListGroups[indexPath.row];
+    if (self.XXGP_ContetListGroups.count > 0) {
+        cell.model = self.XXGP_ContetListGroups[indexPath.row];
     }
     //置顶事件的回调
     WEAKSELF;
@@ -244,9 +244,9 @@ static const CGFloat bottomViewHeight = 40;
         NSIndexPath *fromIndexPath = [self.contentListTable indexPathForCell:cell];
         NSIndexPath *toIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
         [tableView moveRowAtIndexPath:fromIndexPath toIndexPath:toIndexPath];
-        id object = [self.SXHG_ContetListGroups objectAtIndex:fromIndexPath.row];
-        [self.SXHG_ContetListGroups removeObjectAtIndex:fromIndexPath.row];
-        [self.SXHG_ContetListGroups insertObject:object atIndex:toIndexPath.row];
+        id object = [self.XXGP_ContetListGroups objectAtIndex:fromIndexPath.row];
+        [self.XXGP_ContetListGroups removeObjectAtIndex:fromIndexPath.row];
+        [self.XXGP_ContetListGroups insertObject:object atIndex:toIndexPath.row];
     };
     return cell;
 }
@@ -291,9 +291,9 @@ static const CGFloat bottomViewHeight = 40;
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath
       toIndexPath:(NSIndexPath *)toIndexPath {
-    id object = [self.SXHG_ContetListGroups objectAtIndex:fromIndexPath.row];
-    [self.SXHG_ContetListGroups removeObjectAtIndex:fromIndexPath.row];
-    [self.SXHG_ContetListGroups insertObject:object atIndex:toIndexPath.row];
+    id object = [self.XXGP_ContetListGroups objectAtIndex:fromIndexPath.row];
+    [self.XXGP_ContetListGroups removeObjectAtIndex:fromIndexPath.row];
+    [self.XXGP_ContetListGroups insertObject:object atIndex:toIndexPath.row];
 }
 
 #pragma mark - Getters

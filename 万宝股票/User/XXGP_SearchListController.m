@@ -50,7 +50,7 @@ static NSString *const CellIdentifier = @"WEICHAT_ID";
     NSMutableArray *names = [NSMutableArray array];
     NSMutableDictionary *dics = [NSMutableDictionary dictionary];
     for (NSDictionary *dic in datas) {
-        NSString *name = [dic objectForKey:@"SXHG_sname"];
+        NSString *name = [dic objectForKey:@"XXGP_sname"];
         if (name) {
             [dics setObject:dic forKey:name.copy];
             [names addObject:name.copy];

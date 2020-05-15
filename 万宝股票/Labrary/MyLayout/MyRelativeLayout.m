@@ -1010,8 +1010,8 @@
             
             if (totalMulti != 0)
             {
-                CGFloat SXHG_contentTextHeight = _myCGFloatRound(floatingHeight * (sbvsc.heightSizeInner.multiVal / totalMulti));
-                sbvmyFrame.height = [self myValidMeasure:sbvsc.heightSizeInner sbv:sbv calcSize:SXHG_contentTextHeight sbvSize:sbvmyFrame.frame.size selfLayoutSize:selfSize];
+                CGFloat XXGP_contentTextHeight = _myCGFloatRound(floatingHeight * (sbvsc.heightSizeInner.multiVal / totalMulti));
+                sbvmyFrame.height = [self myValidMeasure:sbvsc.heightSizeInner sbv:sbv calcSize:XXGP_contentTextHeight sbvSize:sbvmyFrame.frame.size selfLayoutSize:selfSize];
                 
                 if ([self myIsNoLayoutSubview:sbv])
                 {
@@ -1019,7 +1019,7 @@
                 }
                 else
                 {
-                    floatingHeight -= SXHG_contentTextHeight;
+                    floatingHeight -= XXGP_contentTextHeight;
                     totalMulti -= sbvsc.heightSizeInner.multiVal;
                 }
                 
@@ -1029,10 +1029,10 @@
                     {
                         if (dime.dimeVal == nil)
                         {
-                            SXHG_contentTextHeight = _myCGFloatRound(floatingHeight * (dime.multiVal / totalMulti));
-                            floatingHeight -= SXHG_contentTextHeight;
+                            XXGP_contentTextHeight = _myCGFloatRound(floatingHeight * (dime.multiVal / totalMulti));
+                            floatingHeight -= XXGP_contentTextHeight;
                             totalMulti -= dime.multiVal;
-                            dime.view.myFrame.height = SXHG_contentTextHeight;
+                            dime.view.myFrame.height = XXGP_contentTextHeight;
                         }
                         
                         dime.view.myFrame.height = [self myValidMeasure:dime.view.heightSize sbv:dime.view calcSize:dime.view.myFrame.height sbvSize:dime.view.myFrame.frame.size selfLayoutSize:selfSize];

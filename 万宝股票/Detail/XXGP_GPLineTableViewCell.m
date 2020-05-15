@@ -18,7 +18,7 @@
 
 - (void)updateListCellDataWithDict:(NSDictionary *)dict {
 
-    _name.text = dict[@"SXHG_sname"];
+    _name.text = dict[@"XXGP_sname"];
     _code.text = dict[@"code"];
     _per.text = dict[@"gpperate"];
     _gplprice.text = dict[@"per"];

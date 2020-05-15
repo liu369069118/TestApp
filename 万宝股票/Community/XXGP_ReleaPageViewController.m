@@ -9,17 +9,17 @@
 #undef  RGBCOLOR
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
 
-#define kSXHG_TextViewH 134
+#define kXXGP_TextViewH 134
 
 
 @interface XXGP_ReleaPageViewController ()<UITextViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
-@property (nonatomic, strong) PlaceholderTextView * SXHG_ConyTextV;
+@property (nonatomic, strong) PlaceholderTextView * XXGP_ConyTextV;
 
-@property (nonatomic, strong) UIButton * SXHG_TijSaveButton;
+@property (nonatomic, strong) UIButton * XXGP_TijSaveButton;
 
 @property (nonatomic, strong) UIView * aView;
-@property (nonatomic, strong) UILabel * SXHG_tipLab;
+@property (nonatomic, strong) UILabel * XXGP_tipLab;
 
 //回收键盘
 @property (nonatomic, strong)UITextField *textField;
@@ -47,7 +47,7 @@
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    self.navigationItem.leftBarButtonItem = self.SXHG_NaviBackButton;
+    self.navigationItem.leftBarButtonItem = self.XXGP_NaviBackButton;
     self.view.backgroundColor = [UIColor whiteColor];
 
     self.aView = [[UIView alloc]init];
@@ -56,14 +56,14 @@
     [self.view addSubview:_aView];
     self.navigationItem.title = self.naviTitle;
 
-    self.SXHG_tipLab = [[UILabel alloc]initWithFrame:CGRectMake(15 , _aView.bottom, kScreenWidth - 30, 30)];
-    self.SXHG_tipLab.font = [UIFont systemFontOfSize:13];
-    self.SXHG_tipLab.textColor = HCColor(255, 97, 0);
-    self.SXHG_tipLab.text = @"您发表的评论我们将在8小时内完成审核";
-    self.SXHG_tipLab.textAlignment = NSTextAlignmentRight;
-    [self.view addSubview:self.SXHG_tipLab];
+    self.XXGP_tipLab = [[UILabel alloc]initWithFrame:CGRectMake(15 , kScreenHeight / 2, kScreenWidth - 30, 30)];
+    self.XXGP_tipLab.font = [UIFont systemFontOfSize:13];
+    self.XXGP_tipLab.textColor = HCColor(255, 97, 0);
+    self.XXGP_tipLab.text = @"您发表的评论我们将在8小时内完成审核";
+    self.XXGP_tipLab.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:self.XXGP_tipLab];
     
-    self.wordLimitCountLabel = [[UILabel alloc]initWithFrame:CGRectMake(self.SXHG_ConyTextV.frame.origin.x + 20,  self.SXHG_ConyTextV.frame.size.height + kSXHG_TextViewH - 1, [UIScreen mainScreen].bounds.size.width - 40, 20)];
+    self.wordLimitCountLabel = [[UILabel alloc]initWithFrame:CGRectMake(self.XXGP_ConyTextV.left + 20,  201, kScreenWidth - 45, 20)];
     self.wordLimitCountLabel.font = [UIFont systemFontOfSize:14.f];
     self.wordLimitCountLabel.textColor = [UIColor lightGrayColor];
     self.wordLimitCountLabel.text = @"0/120";
@@ -71,35 +71,35 @@
     self.wordLimitCountLabel.textAlignment = NSTextAlignmentRight;
     [self.view addSubview:self.wordLimitCountLabel];
     
-    UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(self.SXHG_ConyTextV.frame.origin.x + 20,  self.SXHG_ConyTextV.frame.size.height + kSXHG_TextViewH - 1 + 23, [UIScreen mainScreen].bounds.size.width - 40, 1)];
-    lineView.backgroundColor = [UIColor lightGrayColor];
-    [self.view addSubview:lineView];
+//    UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(self.XXGP_ConyTextV.frame.origin.x + 20,  self.XXGP_ConyTextV.frame.size.height + kXXGP_TextViewH - 1 + 23, [UIScreen mainScreen].bounds.size.width - 40, 1)];
+//    lineView.backgroundColor = [UIColor lightGrayColor];
+//    [self.view addSubview:lineView];
     
-    [_aView addSubview:self.SXHG_ConyTextV];
+    [_aView addSubview:self.XXGP_ConyTextV];
     
-    [self.view addSubview:self.SXHG_TijSaveButton];
+    [self.view addSubview:self.XXGP_TijSaveButton];
 }
 
--(PlaceholderTextView *)SXHG_ConyTextV{
+-(PlaceholderTextView *)XXGP_ConyTextV{
 
-    if (!_SXHG_ConyTextV) {
-        _SXHG_ConyTextV = [[PlaceholderTextView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth - 40, 100)];
-        _SXHG_ConyTextV.backgroundColor = [UIColor whiteColor];
-        _SXHG_ConyTextV.delegate = self;
-        _SXHG_ConyTextV.font = [UIFont systemFontOfSize:14.f];
-        _SXHG_ConyTextV.textColor = [UIColor blackColor];
-        _SXHG_ConyTextV.textAlignment = NSTextAlignmentLeft;
-        _SXHG_ConyTextV.editable = YES;
-        _SXHG_ConyTextV.layer.cornerRadius = 4.0f;
-        _SXHG_ConyTextV.layer.borderColor = kTextBorderColor.CGColor;
-        _SXHG_ConyTextV.layer.borderWidth = 0.5;
-        _SXHG_ConyTextV.placeholderColor = RGBCOLOR(0x89, 0x89, 0x89);
-        _SXHG_ConyTextV.placeholder = @"写下您的看法吧~~";
+    if (!_XXGP_ConyTextV) {
+        _XXGP_ConyTextV = [[PlaceholderTextView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth - 40, 100)];
+        _XXGP_ConyTextV.backgroundColor = [UIColor whiteColor];
+        _XXGP_ConyTextV.delegate = self;
+        _XXGP_ConyTextV.font = [UIFont systemFontOfSize:14.f];
+        _XXGP_ConyTextV.textColor = [UIColor blackColor];
+        _XXGP_ConyTextV.textAlignment = NSTextAlignmentLeft;
+        _XXGP_ConyTextV.editable = YES;
+        _XXGP_ConyTextV.layer.cornerRadius = 4.0f;
+        _XXGP_ConyTextV.layer.borderColor = kTextBorderColor.CGColor;
+        _XXGP_ConyTextV.layer.borderWidth = 0.5;
+        _XXGP_ConyTextV.placeholderColor = RGBCOLOR(0x89, 0x89, 0x89);
+        _XXGP_ConyTextV.placeholder = @"写下您的看法吧~~";
        
         
     }
     
-    return _SXHG_ConyTextV;
+    return _XXGP_ConyTextV;
 }
 
 //把回车键当做退出键盘的响应键  textView退出键盘的操作
@@ -117,18 +117,22 @@
     return YES;
 }
 
-- (UIButton *)SXHG_TijSaveButton{
+- (UIButton *)XXGP_TijSaveButton{
 
-    if (!_SXHG_TijSaveButton) {
-        _SXHG_TijSaveButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _SXHG_TijSaveButton.layer.cornerRadius = 20.0f;
-        _SXHG_TijSaveButton.frame = CGRectMake(50, _SXHG_tipLab.bottom + 50, kScreenWidth - 100, 40);
-        _SXHG_TijSaveButton.backgroundColor = [self colorWithRGBHex:0xeb5b32];
-        [_SXHG_TijSaveButton setTitle:@"发布评论" forState:UIControlStateNormal];
-        [_SXHG_TijSaveButton addTarget:self action:@selector(sendFeedBack) forControlEvents:UIControlEventTouchUpInside];
+    if (!_XXGP_TijSaveButton) {
+        _XXGP_TijSaveButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _XXGP_TijSaveButton.layer.cornerRadius = 20.0f;
+        _XXGP_TijSaveButton.frame = CGRectMake(50, _XXGP_tipLab.bottom, kScreenWidth - 100, 40);
+        _XXGP_TijSaveButton.backgroundColor = [HCColor whiteColor];
+        _XXGP_TijSaveButton.layer.borderColor = [self colorWithRGBHex:0xeb5b32].CGColor;
+        _XXGP_TijSaveButton.layer.borderWidth = 1;
+        _XXGP_TijSaveButton.titleLabel.font = [HCFont pingfangRegular:15];
+        [_XXGP_TijSaveButton setTitle:@"发布评论" forState:UIControlStateNormal];
+        [_XXGP_TijSaveButton setTitleColor:[self colorWithRGBHex:0xeb5b32] forState:UIControlStateNormal];
+        [_XXGP_TijSaveButton addTarget:self action:@selector(sendFeedBack) forControlEvents:UIControlEventTouchUpInside];
     }
 
-    return _SXHG_TijSaveButton;
+    return _XXGP_TijSaveButton;
 
 }
 
@@ -143,7 +147,7 @@
         return;
     }
     
-    if (self.SXHG_ConyTextV.text.length == 0) {
+    if (self.XXGP_ConyTextV.text.length == 0) {
         UIAlertController *alertLength = [UIAlertController alertControllerWithTitle:@"提示" message:@"你输入的信息为空，请重新输入" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *suer = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
         [alertLength addAction:suer];
@@ -197,18 +201,18 @@
 -(BOOL)wordLimit:(UITextView *)text{
     if (text.text.length < 300) {
         NSLog(@"%ld",text.text.length);
-        self.SXHG_ConyTextV.editable = YES;
+        self.XXGP_ConyTextV.editable = YES;
         
     }
     else{
-        self.SXHG_ConyTextV.editable = NO;
+        self.XXGP_ConyTextV.editable = NO;
     
     }
     return nil;
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    [_SXHG_ConyTextV resignFirstResponder];
+    [_XXGP_ConyTextV resignFirstResponder];
     [_textField resignFirstResponder];
 }
 

@@ -295,14 +295,14 @@
         
         if (sbvsc.weight != 0)
         {
-            CGFloat SXHG_contentTextHeight = _myCGFloatRound((totalFloatHeight * sbvsc.weight / totalWeight));
+            CGFloat XXGP_contentTextHeight = _myCGFloatRound((totalFloatHeight * sbvsc.weight / totalWeight));
             if (sbvsc.heightSizeInner != nil)
-                SXHG_contentTextHeight = [sbvsc.heightSizeInner measureWith:SXHG_contentTextHeight];
+                XXGP_contentTextHeight = [sbvsc.heightSizeInner measureWith:XXGP_contentTextHeight];
             
-            totalFloatHeight -= SXHG_contentTextHeight;
+            totalFloatHeight -= XXGP_contentTextHeight;
             totalWeight -= sbvsc.weight;
             
-            sbvmyFrame.height =  [self myValidMeasure:sbvsc.heightSizeInner sbv:sbv calcSize:SXHG_contentTextHeight sbvSize:sbvmyFrame.frame.size selfLayoutSize:selfSize];
+            sbvmyFrame.height =  [self myValidMeasure:sbvsc.heightSizeInner sbv:sbv calcSize:XXGP_contentTextHeight sbvSize:sbvmyFrame.frame.size selfLayoutSize:selfSize];
             sbvmyFrame.bottom = sbvmyFrame.top + sbvmyFrame.height;
             
             if (sbvsc.widthSizeInner.dimeRelaVal != nil && sbvsc.widthSizeInner.dimeRelaVal == sbvsc.heightSizeInner)

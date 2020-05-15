@@ -46,7 +46,7 @@
     for (NSDictionary *d in l) {
         if ([d[@"code"] isEqualToString:self.gpcode]) {
             self.gid = [NSString stringWithFormat:@"%lu", (unsigned long)[l indexOfObject:d]];
-            self.title = d[@"SXHG_sname"];
+            self.title = d[@"XXGP_sname"];
         }
     }
     if (!self.gid) {
@@ -54,9 +54,9 @@
     }
     
     NSDictionary *dict = l[self.gid.intValue];
-    self.title = [NSString stringWithFormat:@"%@", dict[@"SXHG_sname"]];
+    self.title = [NSString stringWithFormat:@"%@", dict[@"XXGP_sname"]];
     
-    self.navigationItem.leftBarButtonItem = self.SXHG_NaviBackButton;
+    self.navigationItem.leftBarButtonItem = self.XXGP_NaviBackButton;
     
 //    if ([self has]) {
 //        [self addRightBarButtonItemWithTitle:@"删除自选" action:@selector(sc)];
@@ -118,7 +118,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initSCommonViews];
-    self.navigationItem.leftBarButtonItem = self.SXHG_NaviBackButton;
+    self.navigationItem.leftBarButtonItem = self.XXGP_NaviBackButton;
     // Do any additional setup after loading the view from its nib.
     //    self.gpcode = @"sz300066";
     UIScrollView *sc = self.view;

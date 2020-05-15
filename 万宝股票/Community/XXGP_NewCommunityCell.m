@@ -77,6 +77,7 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self setupLayout];
     }
     return self;
@@ -86,7 +87,10 @@
     _headerImage = [[UIImageView alloc] init];
     _headerImage.layer.masksToBounds = YES;
     _headerImage.layer.cornerRadius = 20;
+    _headerImage.userInteractionEnabled = YES;
     [self.contentView addSubview:_headerImage];
+    
+//    [_headerImage addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(avatarAction)]];
     
     _nickName = [[UILabel alloc] init];
     _nickName.textColor = HCColor(41, 36, 32);
@@ -205,13 +209,17 @@
 }
 
 - (void)commentButtonAction {
-    
+    if (_commentActionBlock) {
+        _commentActionBlock(_model);
+    }
 }
 
 - (void)changeFollowState:(BOOL)isFollow {
-    [_model.likesModel setValue:[NSString stringWithFormat:@"%d",!isFollow] forKey:@"hasAgree"];
-    NSString *likes = [_model.likesModel getNotNilString:@"likes"];
-    BOOL is_rates = [_model.likesModel getBOOL:@"hasAgree"];
+    NSMutableDictionary *newLikesModel = [NSMutableDictionary dictionaryWithDictionary:_model.likesModel];
+    [newLikesModel setValue:[NSString stringWithFormat:@"%d",!isFollow] forKey:@"hasAgree"];
+    
+    NSString *likes = [newLikesModel getNotNilString:@"likes"];
+    BOOL is_rates = [newLikesModel getBOOL:@"hasAgree"];
     
     NSInteger viewsCount = likes.integerValue;
     if (is_rates) {
@@ -226,12 +234,14 @@
     }
     
     if (viewsCount > 0) {
-        [_model.likesModel setValue:[NSString stringWithFormat:@"%tu",viewsCount] forKey:@"likes"];
+        [newLikesModel setValue:[NSString stringWithFormat:@"%tu",viewsCount] forKey:@"likes"];
     } else {
-        [_model.likesModel setValue:@"" forKey:@"likes"];
+        [newLikesModel setValue:@"" forKey:@"likes"];
     }
     
-    _likeButton.titleText = [_model.likesModel getNotNilString:@"likes"];
+    _likeButton.titleText = [newLikesModel getNotNilString:@"likes"];
+    
+    _model.likesModel = newLikesModel;
 }
 
 - (NSString *)timeStampConversionNSString:(NSString *)timeStamp {
@@ -276,5 +286,11 @@
     return frameSize;
 }
 
+
+- (void)avatarAction {
+    if (_avatarActionBlock) {
+        _avatarActionBlock(_model);
+    }
+}
 
 @end

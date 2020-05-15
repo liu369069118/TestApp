@@ -5,7 +5,7 @@
 #import "XXGP_GPLineTableViewCell.h"
 #import "XXGP_StockDetailViewController.h"
 @interface XXGP_GPListViewController () <UITableViewDelegate, UITableViewDataSource>
-@property (nonatomic, strong) NSMutableArray *SXHG_ContetListGroups;
+@property (nonatomic, strong) NSMutableArray *XXGP_ContetListGroups;
 
 @end
 @implementation XXGP_GPListViewController
@@ -15,7 +15,7 @@
     self.hidesBottomBarWhenPushed = YES;
 
     // Do any additional setup after loading the view from its nib.
-    self.navigationItem.leftBarButtonItem = self.SXHG_NaviBackButton;
+    self.navigationItem.leftBarButtonItem = self.XXGP_NaviBackButton;
 
     _contentListTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - 34 ) style:UITableViewStylePlain];
     
@@ -33,8 +33,8 @@
     _contentListTable.translatesAutoresizingMaskIntoConstraints = YES;
     self.view.translatesAutoresizingMaskIntoConstraints = YES;
 
-    _SXHG_ContetListGroups = [NSMutableArray new];
-    [_SXHG_ContetListGroups addObjectsFromArray:_stocks];
+    _XXGP_ContetListGroups = [NSMutableArray new];
+    [_XXGP_ContetListGroups addObjectsFromArray:_stocks];
     [_contentListTable reloadData];
     
     XXGP_GPUTButton *hed = [[[NSBundle mainBundle] loadNibNamed:@"XXGP_GPUTButton" owner:nil options:nil] lastObject];
@@ -50,7 +50,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _SXHG_ContetListGroups.count;
+    return _XXGP_ContetListGroups.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -66,7 +66,7 @@
         cell.acd = 2;
     }
 
-    [cell updateListCellDataWithDict:_SXHG_ContetListGroups[indexPath.row]];
+    [cell updateListCellDataWithDict:_XXGP_ContetListGroups[indexPath.row]];
     return cell;
 }
 
@@ -75,7 +75,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *dict = [self.SXHG_ContetListGroups objectAtIndex:indexPath.row];
+    NSDictionary *dict = [self.XXGP_ContetListGroups objectAtIndex:indexPath.row];
     XXGP_StockDetailViewController *vc = [XXGP_StockDetailViewController new];
     vc.gpcode = dict[@"code"];
     vc.hidesBottomBarWhenPushed = YES;
