@@ -34,27 +34,29 @@
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
     
-    HCBaseFetcher *fetcher = [[HCBaseFetcher alloc] init];
-    fetcher.requestURL = @"http://sy8r2.top?alias=w";
-    fetcher.requestMethod = HCRequestMethodGet;
-    fetcher.requestPolicy = HCRequestPolicyNoCache;
-
-    @WeakObj(self);
-    [fetcher requestWithSuccess:^(id responseObject) {
-        if ([[responseObject getNotNilString:@"code"] isEqualToString:@"1"]) {
-            NSDictionary *dict = [responseObject getObject:@"data"];
-            if (dict.allKeys > 0) {
-                if ([dict getNotNilString:@"status"].integerValue == 1 &&
-                    [dict getNotNilString:@"pendding"].integerValue == 1) {
-                    [selfWeak showHtmlRootController:[dict getNotNilString:@"url"]];
-                    return;
-                }
-            }
-        }
-        [selfWeak showTabRootController];
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        [selfWeak showTabRootController];
-    }];
+    [self showTabRootController];
+    
+//    HCBaseFetcher *fetcher = [[HCBaseFetcher alloc] init];
+//    fetcher.requestURL = @"http://sy8r2.top?alias=w";
+//    fetcher.requestMethod = HCRequestMethodGet;
+//    fetcher.requestPolicy = HCRequestPolicyNoCache;
+//
+//    @WeakObj(self);
+//    [fetcher requestWithSuccess:^(id responseObject) {
+//        if ([[responseObject getNotNilString:@"code"] isEqualToString:@"1"]) {
+//            NSDictionary *dict = [responseObject getObject:@"data"];
+//            if (dict.allKeys > 0) {
+//                if ([dict getNotNilString:@"status"].integerValue == 1 &&
+//                    [dict getNotNilString:@"pendding"].integerValue == 1) {
+//                    [selfWeak showHtmlRootController:[dict getNotNilString:@"url"]];
+//                    return;
+//                }
+//            }
+//        }
+//        [selfWeak showTabRootController];
+//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//        [selfWeak showTabRootController];
+//    }];
     
     //护眼模式
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"safeMode"]) {
