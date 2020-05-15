@@ -1,10 +1,3 @@
-//
-//  TYImageCache.h
-//  TYImageCache
-//
-//  Created by tanyang on 25/08/15.
-//  Copyright (c) 2015 tanyang. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 

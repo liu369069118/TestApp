@@ -1,10 +1,3 @@
-//
-//  HCDownloadAgent.m
-//  hotbody
-//
-//  Created by Belle on 2017/2/14.
-//  Copyright © 2017年 Beijing Fitcare inc. All rights reserved.
-//
 
 #import "HCDownloadAgent.h"
 #import "NSString+MD5.h"

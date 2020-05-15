@@ -1,10 +1,3 @@
-//
-//  KNPhotoBrowerNumView.m
-//  KNPhotoBrower
-//
-//  Created by LuKane on 16/9/2.
-//  Copyright © 2016年 LuKane. All rights reserved.
-//
 
 #import "KNPhotoBrowerNumView.h"
 

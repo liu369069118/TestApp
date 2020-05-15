@@ -1,10 +1,3 @@
-//
-//  ZFJSegmentedControl.m
-//  TextDemo
-//
-//  Created by ZFJ on 2016/12/28.
-//  Copyright © 2016年 ZFJ. All rights reserved.
-//
 
 #import "ZFJSegmentedControl.h"
 

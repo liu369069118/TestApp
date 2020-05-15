@@ -1,10 +1,3 @@
-//
-//  BLPageController.h
-//  hotbody
-//
-//  Created by Belle on 2016/10/26.
-//  Copyright © 2016年 Beijing Fitcare inc. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 #import "BLMenuView.h"

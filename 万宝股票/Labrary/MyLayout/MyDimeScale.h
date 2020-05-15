@@ -1,10 +1,3 @@
-//
-//  MyDimeScale.h
-//  MyLayout
-//
-//  Created by oybq on 16/2/23.
-//  Copyright (c) 2015年 YoungSoft. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 

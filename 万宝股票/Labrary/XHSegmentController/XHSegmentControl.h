@@ -1,9 +1,3 @@
-//
-//  XHSegmentControl.h
-//
-//  Created by xihe on 15-9-17.
-//  Copyright (c) 2015年 xihe. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 #import "XHSegmentItem.h"

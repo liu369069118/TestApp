@@ -1,10 +1,3 @@
-//
-//  TYAttributedLabel.m
-//  TYAttributedLabelDemo
-//
-//  Created by tanyang on 15/4/8.
-//  Copyright (c) 2015年 tanyang. All rights reserved.
-//
 
 #import "TYAttributedLabel.h"
 #import <CoreText/CoreText.h>

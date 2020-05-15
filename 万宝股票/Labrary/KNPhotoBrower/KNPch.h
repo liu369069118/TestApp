@@ -1,10 +1,3 @@
-//
-//  KNPch.h
-//  KNPhotoBrower
-//
-//  Created by LuKane on 16/8/16.
-//  Copyright © 2016年 LuKane. All rights reserved.
-//
 
 #ifndef ScreenWidth
     #define ScreenWidth [UIScreen mainScreen].bounds.size.width

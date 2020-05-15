@@ -1,10 +1,3 @@
-//
-//  MyGridLayout.m
-//  MyLayout
-//
-//  Created by apple on 2017/6/19.
-//  Copyright © 2017年 YoungSoft. All rights reserved.
-//
 
 #import "MyGridLayout.h"
 #import "MyLayoutInner.h"

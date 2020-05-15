@@ -1,8 +1,3 @@
-//
-//  UIViewController+Extention.m
-//  SXHGTYProgram
-//
-//  Created by Zhang yuanhong on 2019/4/27.
 
 #import "UIViewController+Extention.h"
 
@@ -10,7 +5,7 @@
 
 
 - (UIBarButtonItem *)SXHG_NaviBackButton{
-//    UIButton *btn = [[[NSBundle mainBundle] loadNibNamed:@"SXHGTYBackButton" owner:self options:nil] firstObject];
+//    UIButton *btn = [[[NSBundle mainBundle] loadNibNamed:@"XXGP_BackButton" owner:self options:nil] firstObject];
     
 //    UIBarButtonItem *SXHG_NaviBackButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_navigation_back_white"] style:UIBarButtonItemStyleDone target:self action:@selector(SXHG_NaviBackButtonClicked)];
 //    

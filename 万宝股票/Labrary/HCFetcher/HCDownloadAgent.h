@@ -1,10 +1,3 @@
-//
-//  HCDownloadAgent.h
-//  hotbody
-//
-//  Created by Belle on 2017/2/14.
-//  Copyright © 2017年 Beijing Fitcare inc. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 

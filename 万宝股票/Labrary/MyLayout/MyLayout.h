@@ -1,17 +1,4 @@
-//
-//  MyLayout.h
-//  MyLayout
-//
-//  Created by oybq on 15/7/5.
-//  Copyright (c) 2015年 YoungSoft. All rights reserved.
-//  Email:    obq0387_cn@sina.com
-//  QQ:       156355113
-//  QQ群:     178573773
-//  Github:   https://github.com/youngsoft/MyLinearLayout  forObjective-C
-//  Github:   https://github.com/youngsoft/TangramKit      forSwift
-//  HomePage: http://www.jianshu.com/users/3c9287519f58
-//  HomePage: http://blog.csdn.net/yangtiang
-//
+
 /*
  The MIT License (MIT)
  

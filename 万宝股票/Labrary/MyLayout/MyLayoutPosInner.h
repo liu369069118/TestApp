@@ -1,10 +1,3 @@
-//
-//  MyLayoutPosInner.h
-//  MyLayout
-//
-//  Created by oybq on 15/6/14.
-//  Copyright (c) 2015年 YoungSoft. All rights reserved.
-//
 
 #import "MyLayoutPos.h"
 

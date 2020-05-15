@@ -1,10 +1,3 @@
-//
-//  MyGridNode.h
-//  MyLayout
-//
-//  Created by oubaiquan on 2017/8/24.
-//  Copyright © 2017年 YoungSoft. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 #import "MyGrid.h"

@@ -1,10 +1,4 @@
-//
-//  UIView+PBExtesion.m
-//  KNPhotoBrower
-//
-//  Created by LuKane on 16/8/17.
-//  Copyright © 2016年 LuKane. All rights reserved.
-//
+
 
 #import "UIView+PBExtesion.h"
 

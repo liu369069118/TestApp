@@ -1,10 +1,3 @@
-//
-//  HCAlertController.h
-//  HoldCoin
-//
-//  Created by 宋恒 on 2018/7/27.
-//  Copyright © 2018年 Beijing Bai Cheng Media Technology Co.LTD. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 #import "HCAlertAction.h"

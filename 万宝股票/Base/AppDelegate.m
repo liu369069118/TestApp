@@ -1,13 +1,6 @@
-//
-//  AppDelegate.m
-//  万宝股票
-//
-//  Created by 辛峰 on 2020/5/7.
-//  Copyright © 2020 万宝股票. All rights reserved.
-//
 
 #import "AppDelegate.h"
-#import "BDRootController.h"
+#import "XXGP_RootController.h"
 #import "HCBaseFetcher.h"
 
 #import <WebKit/WebKit.h>
@@ -123,7 +116,7 @@
 }
 
 - (void)showTabRootController {
-    BDRootController *rootVc = [[BDRootController alloc] init];
+    XXGP_RootController *rootVc = [[XXGP_RootController alloc] init];
     UINavigationController *rootNav = [[UINavigationController alloc] initWithRootViewController:rootVc];
     rootNav.navigationBar.hidden = YES;
     self.window.rootViewController = rootNav;

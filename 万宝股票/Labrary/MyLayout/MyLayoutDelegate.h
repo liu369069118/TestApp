@@ -1,10 +1,4 @@
-//
-//  MyLayoutDelegate.h
-//  MyLayout
-//
-//  Created by oubaiquan on 2017/9/2.
-//  Copyright © 2017年 YoungSoft. All rights reserved.
-//
+
 
 #import <Foundation/Foundation.h>
 #include "MyBorderline.h"

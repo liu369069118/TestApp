@@ -1,10 +1,3 @@
-//
-//  MyGridNode.m
-//  MyLayout
-//
-//  Created by oubaiquan on 2017/8/24.
-//  Copyright © 2017年 YoungSoft. All rights reserved.
-//
 
 #import "MyGridNode.h"
 #import "MyLayoutDelegate.h"
@@ -88,33 +81,33 @@
 
 
 
-typedef struct _MyGridSXHGTYOPtiondicorationProperties1
+typedef struct _MyGridXXGP_OPtiondicorationProperties1
 {
     uint32_t subGridType:2;
     uint32_t gravity:16;
     uint32_t placeholder:1;
     uint32_t anchor:1;
     
-}MyGridSXHGTYOPtiondicorationProperties1;
+}MyGridXXGP_OPtiondicorationProperties1;
 
 
 /**
  为节省栅格的内存而构建的可选属性列表1:子栅格间距，栅格内边距，停靠方式。
  */
-typedef struct  _MyGridSXHGTYOPtiondicorationProperties2
+typedef struct  _MyGridXXGP_OPtiondicorationProperties2
 {
     //格子内子栅格的间距
     CGFloat subviewSpace;
     //格子内视图的内边距。
     UIEdgeInsets padding;
     //格子内子视图的对齐停靠方式。
-}MyGridSXHGTYOPtiondicorationProperties2;
+}MyGridXXGP_OPtiondicorationProperties2;
 
 
 @interface MyGridNode()
 
-@property(nonatomic, assign) MyGridSXHGTYOPtiondicorationProperties1 SXHGTYOPtiondicorationProperties1;
-@property(nonatomic, assign) MyGridSXHGTYOPtiondicorationProperties2 *SXHGTYOPtiondicorationProperties2;
+@property(nonatomic, assign) MyGridXXGP_OPtiondicorationProperties1 XXGP_OPtiondicorationProperties1;
+@property(nonatomic, assign) MyGridXXGP_OPtiondicorationProperties2 *XXGP_OPtiondicorationProperties2;
 @property(nonatomic, strong) MyBorderlineLayerDelegate *borderlineLayerDelegate;
 @property(nonatomic, strong) MyGridNodeTouchEventDelegate *touchEventDelegate;
 
@@ -133,31 +126,31 @@ typedef struct  _MyGridSXHGTYOPtiondicorationProperties2
         _subGrids = nil;
         _gridRect = CGRectZero;
         _superGrid = superGrid;
-        _SXHGTYOPtiondicorationProperties2 = NULL;
+        _XXGP_OPtiondicorationProperties2 = NULL;
         _borderlineLayerDelegate = nil;
         _touchEventDelegate = nil;
-        memset(&_SXHGTYOPtiondicorationProperties1, 0, sizeof(MyGridSXHGTYOPtiondicorationProperties1));
+        memset(&_XXGP_OPtiondicorationProperties1, 0, sizeof(MyGridXXGP_OPtiondicorationProperties1));
     }
     
     return self;
 }
 
--(MyGridSXHGTYOPtiondicorationProperties2*)SXHGTYOPtiondicorationProperties2
+-(MyGridXXGP_OPtiondicorationProperties2*)XXGP_OPtiondicorationProperties2
 {
-    if (_SXHGTYOPtiondicorationProperties2 == NULL)
+    if (_XXGP_OPtiondicorationProperties2 == NULL)
     {
-        _SXHGTYOPtiondicorationProperties2 = (MyGridSXHGTYOPtiondicorationProperties2*)malloc(sizeof(MyGridSXHGTYOPtiondicorationProperties2));
-        memset(_SXHGTYOPtiondicorationProperties2, 0, sizeof(MyGridSXHGTYOPtiondicorationProperties2));
+        _XXGP_OPtiondicorationProperties2 = (MyGridXXGP_OPtiondicorationProperties2*)malloc(sizeof(MyGridXXGP_OPtiondicorationProperties2));
+        memset(_XXGP_OPtiondicorationProperties2, 0, sizeof(MyGridXXGP_OPtiondicorationProperties2));
     }
     
-    return _SXHGTYOPtiondicorationProperties2;
+    return _XXGP_OPtiondicorationProperties2;
 }
 
 -(void)dealloc
 {
-    if (_SXHGTYOPtiondicorationProperties2 != NULL)
-        free(_SXHGTYOPtiondicorationProperties2);
-    _SXHGTYOPtiondicorationProperties2 = NULL;
+    if (_XXGP_OPtiondicorationProperties2 != NULL)
+        free(_XXGP_OPtiondicorationProperties2);
+    _XXGP_OPtiondicorationProperties2 = NULL;
 }
 
 #pragma mark -- MyGridAction
@@ -236,44 +229,44 @@ typedef struct  _MyGridSXHGTYOPtiondicorationProperties2
 
 -(MySubGridsType)subGridsType
 {
-    return (MySubGridsType)_SXHGTYOPtiondicorationProperties1.subGridType;
+    return (MySubGridsType)_XXGP_OPtiondicorationProperties1.subGridType;
 }
 
 -(void)setSubGridsType:(MySubGridsType)subGridsType
 {
-    _SXHGTYOPtiondicorationProperties1.subGridType = subGridsType;
+    _XXGP_OPtiondicorationProperties1.subGridType = subGridsType;
 }
 
 
 -(MyGravity)gravity
 {
-    return (MyGravity)_SXHGTYOPtiondicorationProperties1.gravity;
+    return (MyGravity)_XXGP_OPtiondicorationProperties1.gravity;
 }
 
 -(void)setGravity:(MyGravity)gravity
 {
-    _SXHGTYOPtiondicorationProperties1.gravity = gravity;
+    _XXGP_OPtiondicorationProperties1.gravity = gravity;
 }
 
 
 -(BOOL)placeholder
 {
-    return _SXHGTYOPtiondicorationProperties1.placeholder == 1;
+    return _XXGP_OPtiondicorationProperties1.placeholder == 1;
 }
 
 -(void)setPlaceholder:(BOOL)placeholder
 {
-    _SXHGTYOPtiondicorationProperties1.placeholder = placeholder ? 1 : 0;
+    _XXGP_OPtiondicorationProperties1.placeholder = placeholder ? 1 : 0;
 }
 
 -(BOOL)anchor
 {
-    return _SXHGTYOPtiondicorationProperties1.anchor;
+    return _XXGP_OPtiondicorationProperties1.anchor;
 }
 
 -(void)setAnchor:(BOOL)anchor
 {
-    _SXHGTYOPtiondicorationProperties1.anchor = anchor ? 1 : 0;
+    _XXGP_OPtiondicorationProperties1.anchor = anchor ? 1 : 0;
 }
 
 -(MyGravity)overlap
@@ -377,7 +370,7 @@ typedef struct  _MyGridSXHGTYOPtiondicorationProperties2
     grid.gravity = self.gravity;
     grid.tag = self.tag;
     grid.actionData = self.actionData;
-    if (self->_SXHGTYOPtiondicorationProperties2 != NULL)
+    if (self->_XXGP_OPtiondicorationProperties2 != NULL)
     {
         grid.subviewSpace = self.subviewSpace;
         grid.padding = self.padding;
@@ -443,30 +436,30 @@ typedef struct  _MyGridSXHGTYOPtiondicorationProperties2
 //格子内子栅格的间距
 -(CGFloat)subviewSpace
 {
-    if (_SXHGTYOPtiondicorationProperties2 == NULL)
+    if (_XXGP_OPtiondicorationProperties2 == NULL)
         return 0;
     else
-        return _SXHGTYOPtiondicorationProperties2->subviewSpace;
+        return _XXGP_OPtiondicorationProperties2->subviewSpace;
 }
 
 -(void)setSubviewSpace:(CGFloat)subviewSpace
 {
-    self.SXHGTYOPtiondicorationProperties2->subviewSpace = subviewSpace;
+    self.XXGP_OPtiondicorationProperties2->subviewSpace = subviewSpace;
 }
 
 //格子内视图的内边距。
 -(UIEdgeInsets)padding
 {
-    if (_SXHGTYOPtiondicorationProperties2 == NULL)
+    if (_XXGP_OPtiondicorationProperties2 == NULL)
         return UIEdgeInsetsZero;
     else
-        return _SXHGTYOPtiondicorationProperties2->padding;
+        return _XXGP_OPtiondicorationProperties2->padding;
     
 }
 
 -(void)setPadding:(UIEdgeInsets)padding
 {
-    self.SXHGTYOPtiondicorationProperties2->padding = padding;
+    self.XXGP_OPtiondicorationProperties2->padding = padding;
 }
 
 

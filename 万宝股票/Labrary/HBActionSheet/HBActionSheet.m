@@ -1,10 +1,3 @@
-//
-//  HBActionSheet.m
-//  hotbody
-//
-//  Created by xinfeng on 16/5/17.
-//  Copyright © 2016年 Beijing Fitcare inc. All rights reserved.
-//
 
 #import "HBActionSheet.h"
 

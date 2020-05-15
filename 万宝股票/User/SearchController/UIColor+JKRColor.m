@@ -1,10 +1,3 @@
-//
-//  UIColor+JKRColor.m
-//  JKRAddressSelect
-//
-//  Created by Lucky on 2017/4/9.
-//  Copyright © 2017年 Lucky. All rights reserved.
-//
 
 #import "UIColor+JKRColor.h"
 

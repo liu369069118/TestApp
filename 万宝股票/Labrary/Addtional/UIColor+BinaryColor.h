@@ -1,10 +1,3 @@
-//
-//  UIColor+BinaryColor.h
-//  GPC
-//
-//  Created by 追@寻 on 16/11/23.
-//  Copyright © 2016年 wangynalei. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 #define RGBA_COLOR(R, G, B, A) [UIColor colorWithRed:((R) / 255.0f) green:((G) / 255.0f) blue:((B) / 255.0f) alpha:A]

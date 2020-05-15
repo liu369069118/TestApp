@@ -1,12 +1,4 @@
 
-//
-//  UIViewController+JKRStatusBarStyle.m
-//  JKRTest
-//
-//  Created by Joker on 2016/5/7.
-//  Copyright © 2016年 Lucky. All rights reserved.
-//
-
 #import "UIViewController+JKRStatusBarStyle.h"
 #import <objc/runtime.h>
 

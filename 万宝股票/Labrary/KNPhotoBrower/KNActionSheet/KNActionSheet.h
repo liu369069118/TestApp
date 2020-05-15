@@ -1,10 +1,3 @@
-//
-//  KNActionSheeth
-//  KNActionSheet
-//
-//  Created by LuKane on 16/9/5.
-//  Copyright © 2016年 LuKane. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 

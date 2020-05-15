@@ -1,10 +1,3 @@
-//
-//  MyLayoutSizeClass.m
-//  MyLayout
-//
-//  Created by fzy on 16/1/22.
-//  Copyright © 2016年 YoungSoft. All rights reserved.
-//
 
 #import "MyLayoutSizeClass.h"
 #import "MyLayoutPosInner.h"

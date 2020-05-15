@@ -1,13 +1,6 @@
-//
-//  HCAvatarView.h
-//  HoldCoin
-//
-//  Created by Song on 2019/3/13.
-//  Copyright © 2019 Beijing Bai Cheng Media Technology Co.LTD. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
-#import "WBUserModel.h"
+#import "XXGP_UserModel.h"
 
 typedef enum : NSUInteger {
     /// >>> 16*16
@@ -26,10 +19,10 @@ typedef enum : NSUInteger {
 
 - (void)setAvatarImage:(UIImage *)image userType:(HCVipType)userType size:(HCAvatarSize)size;
 - (void)setAvatarURL:(NSString *)url userType:(HCVipType)userType size:(HCAvatarSize)size;
-- (void)setAvatarWithUserModel:(WBUserModel *)userModel  size:(HCAvatarSize)size;
+- (void)setAvatarWithUserModel:(XXGP_UserModel *)userModel  size:(HCAvatarSize)size;
 
 + (UIImage *)vipLogoWithVipType:(HCVipType)type;
 
-@property (strong,nonatomic,readonly) WBUserModel *currentUser;
+@property (strong,nonatomic,readonly) XXGP_UserModel *currentUser;
 
 @end

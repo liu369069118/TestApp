@@ -1,10 +1,3 @@
-//
-//  TYAttributedLabel.h
-//  TYAttributedLabelDemo
-//
-//  Created by tanyang on 15/4/8.
-//  Copyright (c) 2015年 tanyang. All rights reserved.
-//  TYAttributedLabel v2.0 verson 
 
 #import <UIKit/UIKit.h>
 #import "TYTextContainer.h"

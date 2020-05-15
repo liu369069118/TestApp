@@ -1,15 +1,8 @@
-//
-//  HCDefine.h
-//  hotbody
-//
-//  Created by Belle on 16/5/11.
-//  Copyright © 2016年 Beijing Fitcare inc. All rights reserved.
-//
 
 #ifndef HCDefine_h
 #define HCDefine_h
 
-#define  kSXHGW_SeletCell @"SXHGTY_SelectCell"
+#define  kSXHGW_SeletCell @"XXGP__SelectCell"
 #define WEAKSELF __weak typeof(self) weakSelf = self
 
 // 判断机型
@@ -24,7 +17,7 @@
 #define iPhoneXS ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 #define iPhoneXSM ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) : NO)
 
-#define iPhoneX_Series ([WBUitl isFullScreenIPhone])
+#define iPhoneX_Series ([XXGP_Uitl isFullScreenIPhone])
 
 // 判断系统
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)

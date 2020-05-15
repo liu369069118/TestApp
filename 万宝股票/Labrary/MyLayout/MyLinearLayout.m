@@ -1,10 +1,3 @@
-//
-//  MyLinearLayout.m
-//  MyLayout
-//
-//  Created by oybq on 15/2/12.
-//  Copyright (c) 2015年 YoungSoft. All rights reserved.
-//
 
 #import "MyLinearLayout.h"
 #import "MyLayoutInner.h"

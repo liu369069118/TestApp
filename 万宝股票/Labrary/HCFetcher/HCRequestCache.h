@@ -1,10 +1,4 @@
-//
-//  HCRequestCache.h
-//  HBRequest
-//
-//  Created by Belle on 2017/3/26.
-//  Copyright © 2017年 Beijing Fitcare inc. All rights reserved.
-//
+
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>

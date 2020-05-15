@@ -1,10 +1,3 @@
-//
-//  KNPhotoBrowerCell.m
-//  KNPhotoBrower
-//
-//  Created by LuKane on 16/8/18.
-//  Copyright © 2016年 LuKane. All rights reserved.
-//
 
 #import "KNPhotoBrowerCell.h"
 #import "KNPch.h"

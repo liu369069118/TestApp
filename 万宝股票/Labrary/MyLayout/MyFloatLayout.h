@@ -1,10 +1,3 @@
-//
-//  MyFloatLayout.h
-//  MyLayout
-//
-//  Created by oybq on 16/2/18.
-//  Copyright © 2016年 YoungSoft. All rights reserved.
-//
 
 #import "MyBaseLayout.h"
 

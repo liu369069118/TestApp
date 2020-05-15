@@ -1,10 +1,3 @@
-//
-//  UIImage+tool.m
-//  万宝股票
-//
-//  Created by 刘涛 on 2020/5/14.
-//  Copyright © 2020 宝万盯盘. All rights reserved.
-//
 
 #import "UIImage+tool.h"
 

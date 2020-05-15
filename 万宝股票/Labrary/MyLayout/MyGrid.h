@@ -1,10 +1,3 @@
-//
-//  MyGrid.h
-//  MyLayout
-//
-//  Created by oubaiquan on 2017/8/23.
-//  Copyright © 2017年 YoungSoft. All rights reserved.
-//
 
 #import "MyLayoutDef.h"
 #import "MyBorderline.h"

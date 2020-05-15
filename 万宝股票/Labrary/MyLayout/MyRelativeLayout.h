@@ -1,10 +1,4 @@
-//
-//  MyRelativeLayout.h
-//  MyLayout
-//
-//  Created by oybq on 15/7/1.
-//  Copyright (c) 2015年 YoungSoft. All rights reserved.
-//
+
 
 #import "MyBaseLayout.h"
 

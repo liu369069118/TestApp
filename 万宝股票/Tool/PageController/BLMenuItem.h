@@ -1,10 +1,4 @@
-//
-//  BLMenuItem.h
-//  hotbody
-//
-//  Created by shicuf on 16/7/6.
-//  Copyright © 2016年 Beijing Fitcare inc. All rights reserved.
-//
+
 
 #import <UIKit/UIKit.h>
 @class BLMenuItem;

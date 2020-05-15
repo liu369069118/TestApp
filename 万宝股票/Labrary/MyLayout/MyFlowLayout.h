@@ -1,10 +1,4 @@
-//
-//  MyFlowLayout.h
-//  MyLayout
-//
-//  Created by oybq on 15/10/31.
-//  Copyright (c) 2015年 YoungSoft. All rights reserved.
-//
+
 
 #import "MyBaseLayout.h"
 

@@ -1,10 +1,3 @@
-//
-//  HCColor.h
-//  HoldCoin
-//
-//  Created by Song on 2019/6/10.
-//  Copyright © 2019 Beijing Bai Cheng Media Technology Co.LTD. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 

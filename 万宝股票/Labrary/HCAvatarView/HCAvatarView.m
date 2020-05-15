@@ -1,10 +1,3 @@
-//
-//  HCAvatarView.m
-//  HoldCoin
-//
-//  Created by Song on 2019/3/13.
-//  Copyright © 2019 Beijing Bai Cheng Media Technology Co.LTD. All rights reserved.
-//
 
 #import "HCAvatarView.h"
 #import "UIImageView+WebCache.h"
@@ -23,7 +16,7 @@ static NSDictionary<NSNumber *,NSNumber *> *HCAvatarVipImageCornerRadius = nil;
 @property (copy,nonatomic) NSString *avatarURL;
 @property (assign,nonatomic) HCVipType userType;
 @property (assign,nonatomic) HCAvatarSize avatarSize;
-@property (strong,nonatomic) WBUserModel *userModel;
+@property (strong,nonatomic) XXGP_UserModel *userModel;
 
 @end
 
@@ -106,7 +99,7 @@ static NSDictionary<NSNumber *,NSNumber *> *HCAvatarVipImageCornerRadius = nil;
     }];
 }
 
-- (void)setAvatarWithUserModel:(WBUserModel *)userModel size:(HCAvatarSize)size{
+- (void)setAvatarWithUserModel:(XXGP_UserModel *)userModel size:(HCAvatarSize)size{
     self.userModel = userModel;
     [self setAvatarURL:userModel.user_avatar userType:userModel.type size:size];
 }
@@ -167,7 +160,7 @@ static NSDictionary<NSNumber *,NSNumber *> *HCAvatarVipImageCornerRadius = nil;
 }
 
 #pragma mark - getter
-- (WBUserModel *)currentUser{
+- (XXGP_UserModel *)currentUser{
     return self.userModel;
 }
 

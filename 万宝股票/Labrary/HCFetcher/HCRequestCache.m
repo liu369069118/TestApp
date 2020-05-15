@@ -1,10 +1,3 @@
-//
-//  HCRequestCache.m
-//  HBRequest
-//
-//  Created by Belle on 2017/3/26.
-//  Copyright © 2017年 Beijing Fitcare inc. All rights reserved.
-//
 
 #import "HCRequestCache.h"
 #import <YYCache/YYCache.h>

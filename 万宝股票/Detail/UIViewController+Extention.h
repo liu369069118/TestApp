@@ -1,10 +1,3 @@
-//
-//  UIViewController+Extention.h
-//  SXHGTYProgram
-//
-//  Created by Zhang yuanhong on 2019/4/27.
-//  Copyright © 2019年 stvenq. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 

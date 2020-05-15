@@ -1,10 +1,4 @@
-//
-//  UIColor+BinaryColor.m
-//  GPC
-//
-//  Created by 追@寻 on 16/11/23.
-//  Copyright © 2016年 wangynalei. All rights reserved.
-//
+
 
 #import "UIColor+BinaryColor.h"
 

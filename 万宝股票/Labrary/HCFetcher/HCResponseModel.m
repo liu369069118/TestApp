@@ -1,10 +1,3 @@
-//
-//  HCResponseModel.m
-//  HoldCoin
-//
-//  Created by 宋恒 on 2018/8/3.
-//  Copyright © 2018年 Beijing Bai Cheng Media Technology Co.LTD. All rights reserved.
-//
 
 #import "HCResponseModel.h"
 

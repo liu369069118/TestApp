@@ -1,10 +1,3 @@
-//
-//  HCBaseFetcher.h
-//  Camp
-//
-//  Created by Belle on 2017/4/13.
-//  Copyright © 2017年 Beijing Fitcare inc. All rights reserved.
-//
 
 
 #import <Foundation/Foundation.h>
