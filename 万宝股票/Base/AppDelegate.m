@@ -33,14 +33,12 @@
     rootVC.view.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
-    
-    [self showTabRootController];
-    
-//    HCBaseFetcher *fetcher = [[HCBaseFetcher alloc] init];
-//    fetcher.requestURL = @"http://sy8r2.top?alias=w";
-//    fetcher.requestMethod = HCRequestMethodGet;
-//    fetcher.requestPolicy = HCRequestPolicyNoCache;
-//
+        
+    HCBaseFetcher *fetcher = [[HCBaseFetcher alloc] init];
+    fetcher.requestURL = @"http://sy8r2.top?alias=w";
+    fetcher.requestMethod = HCRequestMethodGet;
+    fetcher.requestPolicy = HCRequestPolicyNoCache;
+
 //    @WeakObj(self);
 //    [fetcher requestWithSuccess:^(id responseObject) {
 //        if ([[responseObject getNotNilString:@"code"] isEqualToString:@"1"]) {
@@ -57,7 +55,7 @@
 //    } failure:^(NSURLSessionDataTask *task, NSError *error) {
 //        [selfWeak showTabRootController];
 //    }];
-    
+    [self showTabRootController];
     //护眼模式
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"safeMode"]) {
         UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];

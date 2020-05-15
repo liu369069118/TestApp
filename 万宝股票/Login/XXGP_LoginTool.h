@@ -7,6 +7,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) BOOL isLogin; //登录态
 @property (nonatomic, copy) NSString *userAccount; //已登录用户
+@property (nonatomic, assign) NSInteger userIntegral; //用户积分
 
 + (instancetype)sharedInstance;
 
@@ -16,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)loginOut;
 
+- (void)updateIntergral:(NSInteger)value;
 
 @end
 
