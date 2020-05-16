@@ -60,7 +60,7 @@
     if (indexPath.row == 0) {
         return 90;
     } else if (indexPath.row == 1) {
-        return 40 + 462;
+        return 40 + [XXGP_QuotationFirstCell XXGP_auotationFirstCellHeight];
     } else {
         return 65 * 90 + 50;
     }
