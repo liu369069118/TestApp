@@ -4,6 +4,8 @@
 #import "XXGP_QuotationSecondCell.h"
 #import "XXGP_QuotationThirdCell.h"
 #import "XXGP_SearchListController.h"
+#import "XXGP_LoadViewController.h"
+#import "XXGP_ReleaPageViewController.h"
 
 @interface XXGP_QuotationController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -12,6 +14,18 @@
 @end
 
 @implementation XXGP_QuotationController
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"kHCShowWindowPublishButton" object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"kHCHiddenWindowPublishButton" object:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,6 +51,19 @@
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.bottom.right.top.mas_equalTo(0);
     }];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(windowButtonAction) name:@"kHCWindowPublishButtonAction" object:nil];
+}
+
+- (void)windowButtonAction {
+    if (![XXGP_LoginTool sharedInstance].isLogin) {
+        XXGP_LoadViewController *desVc = [[XXGP_LoadViewController alloc] init];
+        [self.navigationController pushViewController:desVc animated:YES];
+    } else {
+        XXGP_ReleaPageViewController *webVC = [[XXGP_ReleaPageViewController alloc] init];
+        webVC.naviTitle = @"发布";
+        [self.navigationController pushViewController:webVC animated:YES];
+    }
 }
 
 #pragma mark - UITableViewDelegate && UITAbleViewDataSource

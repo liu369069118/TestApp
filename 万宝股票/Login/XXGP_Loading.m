@@ -34,7 +34,7 @@
         _username.layer.cornerRadius = 6.f;
         _username.layer.masksToBounds = YES;
         _username.backgroundColor = [UIColor colorWithRed:240/255.0 green:220/255.0 blue:210/255.0 alpha:0.8];
-        _username.textColor = [UIColor colorWithHexRGBString:@"ffffff"];
+        _username.textColor = [UIColor blackColor];
         NSMutableAttributedString *attrName = [[NSMutableAttributedString alloc] initWithString:@"请输入用户名"];
         [attrName addAttribute:NSFontAttributeName value:kHCBoldFont16 range:NSMakeRange(0, 6)];
         [attrName addAttribute:NSForegroundColorAttributeName value:[HCColor colorWithHexString:@"999999"] range:NSMakeRange(0, 6)];
@@ -60,7 +60,7 @@
         [attrPass addAttribute:NSFontAttributeName value:kHCBoldFont16 range:NSMakeRange(0, 5)];
         [attrPass addAttribute:NSForegroundColorAttributeName value:[HCColor colorWithHexString:@"999999"] range:NSMakeRange(0, 5)];
         _userpass.attributedPlaceholder = attrPass;
-        _userpass.textColor = [UIColor colorWithHexRGBString:@"ffffff"];
+        _userpass.textColor = [UIColor blackColor];
         _userpass.secureTextEntry = YES;
         _userpass.tag = 1002;
         [self addSubview:_userpass];

@@ -23,7 +23,7 @@
 - (void)setupLayoutView {
     UITapGestureRecognizer *iconTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(jumpLogin)];
     
-    _userIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"userIcon"]];
+    _userIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"img_default_avatar_n"]];
     _userIcon.userInteractionEnabled = YES;
     _userIcon.layer.cornerRadius = 30;
     _userIcon.layer.masksToBounds = YES;

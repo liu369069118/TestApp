@@ -121,6 +121,16 @@
             web.type = 3;
             [self.navigationController pushViewController:web animated:YES];
         } else if (indexPath.row == 2) {
+            XXGP_WebviewController *web = [[XXGP_WebviewController alloc] init];
+            web.titleStr = @"隐私协议";
+            web.type = 1;
+            [self.navigationController pushViewController:web animated:YES];
+        } else if (indexPath.row == 3) {
+            XXGP_WebviewController *web = [[XXGP_WebviewController alloc] init];
+            web.titleStr = @"注册协议";
+            web.type = 2;
+            [self.navigationController pushViewController:web animated:YES];
+        } else if (indexPath.row == 4) {
             if ([XXGP_LoginTool sharedInstance].isLogin) {
                 MJWeakSelf
                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"确认退出当前账号吗？" preferredStyle:UIAlertControllerStyleAlert];
@@ -134,6 +144,8 @@
                 [alert addAction:action1];
                 [alert addAction:action2];
                 [self presentViewController:alert animated:YES completion:nil];
+            } else {
+                [[KNToast shareToast] initWithText:@"未登录不需要退出登录哦~"];
             }
         }
     }
@@ -160,7 +172,7 @@
     if (!_dataArray) {
         _dataArray = @[
                         @[@"护眼模式"],
-                        @[@"清空缓存",@"关于我们",@"退出账号"]
+                        @[@"清空缓存",@"关于我们",@"隐私协议",@"注册协议",@"退出账号"]
                     ];
     }
     return _dataArray;
