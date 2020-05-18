@@ -3,6 +3,9 @@
 #import "XXGP_QuotationFirstModel.h"
 #import <YYModel/YYModel.h>
 #import "XXGP_StockDetailViewController.h"
+
+#define kXXGP_PlateViewWidth (kScreenWidth - 20 - 15 - 15 - 20) / 3
+
 @interface XXGP_QuotationFirstCell ()
 
 @property (nonatomic, strong) UIScrollView *mainScrollView;
@@ -10,6 +13,10 @@
 @end
 
 @implementation XXGP_QuotationFirstCell
+
++ (CGFloat)XXGP_auotationFirstCellHeight {
+    return 10 + kXXGP_PlateViewWidth * 4 - 5;
+}
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
@@ -23,7 +30,7 @@
         [self.contentView addSubview:topLabel];
         
         _mainScrollView = [[UIScrollView alloc] init];
-        _mainScrollView.frame = CGRectMake(0, 40, kScreenWidth, 422);
+        _mainScrollView.frame = CGRectMake(0, 40, kScreenWidth, [XXGP_QuotationFirstCell XXGP_auotationFirstCellHeight]);
         _mainScrollView.showsVerticalScrollIndicator = NO;
         _mainScrollView.showsHorizontalScrollIndicator = NO;
         [self.contentView addSubview:_mainScrollView];
@@ -38,7 +45,7 @@
     CGFloat margin = 15;
     CGFloat view_x = 20;
     CGFloat view_y = 10;
-    CGFloat btnW = (kScreenWidth - 20 - margin - margin - 20) / 3;
+    CGFloat btnW = kXXGP_PlateViewWidth;
     CGFloat btnH = btnW - 15;
     
     for (int i = 0; i < list.count; i++) {
@@ -55,7 +62,6 @@
             view_x = 20;
         }
     }
-    
 }
 
 - (UIView *)createPlateView:(XXGP_QuotationFirstModel *)model {

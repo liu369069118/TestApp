@@ -23,17 +23,18 @@
         
         UIImageView *log = [[UIImageView alloc] initWithFrame:CGRectMake(self.center.x-125.0/750.0*Shitu_SCREENWIDTH, 160.0/1334.0*Shitu_SCREENHEIGHT, 250.0/750.0*Shitu_SCREENWIDTH, 250.0/750.0*Shitu_SCREENWIDTH)];
         log.image = [UIImage imageNamed:@"login_pic"];
+        log.hidden = YES;
         [self addSubview:log];
         
-        UIImageView *userAccount = [[UIImageView alloc] initWithFrame:CGRectMake(75.0/750.0*Shitu_SCREENWIDTH, log.frame.origin.y+log.frame.size.height+160.0/1334.0*Shitu_SCREENHEIGHT, 40, 40)];
+        UIImageView *userAccount = [[UIImageView alloc] initWithFrame:CGRectMake(75.0/750.0*Shitu_SCREENWIDTH, 180, 40, 40)];
         userAccount.image = [[UIImage imageNamed:@"login_name_icon"] imageWithTintColor:[UIColor whiteColor] blendMode:kCGBlendModeDestinationIn alpha:1.f];
         [self addSubview:userAccount];
         
-        _username = [[UITextField alloc] initWithFrame:CGRectMake(userAccount.frame.origin.x+40.0, userAccount.frame.origin.y, 600.0/750.0*Shitu_SCREENWIDTH-40, 40)];
+        _username = [[UITextField alloc] initWithFrame:CGRectMake(userAccount.frame.origin.x+40.0, userAccount.frame.origin.y - 5, 600.0/750.0*Shitu_SCREENWIDTH-40, 50)];
         _username.layer.cornerRadius = 6.f;
         _username.layer.masksToBounds = YES;
         _username.backgroundColor = [UIColor colorWithRed:240/255.0 green:220/255.0 blue:210/255.0 alpha:0.8];
-        _username.textColor = [UIColor colorWithHexRGBString:@"ffffff"];
+        _username.textColor = [UIColor blackColor];
         NSMutableAttributedString *attrName = [[NSMutableAttributedString alloc] initWithString:@"请输入用户名"];
         [attrName addAttribute:NSFontAttributeName value:kHCBoldFont16 range:NSMakeRange(0, 6)];
         [attrName addAttribute:NSForegroundColorAttributeName value:[HCColor colorWithHexString:@"999999"] range:NSMakeRange(0, 6)];
@@ -46,12 +47,12 @@
         [self addSubview:lineAccount];
         //密码
         
-        UIImageView *userSecret = [[UIImageView alloc] initWithFrame:CGRectMake(75.0/750.0*Shitu_SCREENWIDTH, userAccount.frame.origin.y+userAccount.frame.size.height+24.0/1334.0*Shitu_SCREENHEIGHT, 40, 40)];
+        UIImageView *userSecret = [[UIImageView alloc] initWithFrame:CGRectMake(75.0/750.0*Shitu_SCREENWIDTH, userAccount.bottom + 40, 40, 40)];
         userSecret.image = [[UIImage imageNamed:@"login_pwd_icon"] imageWithTintColor:[UIColor whiteColor] blendMode:kCGBlendModeDestinationIn alpha:1.f];
 
         [self addSubview:userSecret];
         
-        _userpass = [[UITextField alloc] initWithFrame:CGRectMake(userSecret.frame.origin.x+40.0, userSecret.frame.origin.y, 600.0/750.0*Shitu_SCREENWIDTH-40, 40)];
+        _userpass = [[UITextField alloc] initWithFrame:CGRectMake(userSecret.frame.origin.x+40.0, userSecret.frame.origin.y - 5, 600.0/750.0*Shitu_SCREENWIDTH-40, 50)];
         _userpass.layer.cornerRadius = 6.f;
         _userpass.layer.masksToBounds = YES;
         _userpass.backgroundColor = [UIColor colorWithRed:240/255.0 green:220/255.0 blue:210/255.0 alpha:0.8];
@@ -59,7 +60,7 @@
         [attrPass addAttribute:NSFontAttributeName value:kHCBoldFont16 range:NSMakeRange(0, 5)];
         [attrPass addAttribute:NSForegroundColorAttributeName value:[HCColor colorWithHexString:@"999999"] range:NSMakeRange(0, 5)];
         _userpass.attributedPlaceholder = attrPass;
-        _userpass.textColor = [UIColor colorWithHexRGBString:@"ffffff"];
+        _userpass.textColor = [UIColor blackColor];
         _userpass.secureTextEntry = YES;
         _userpass.tag = 1002;
         [self addSubview:_userpass];
@@ -116,8 +117,10 @@
         
         [_backbtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(40, 40));
-            make.centerX.mas_equalTo(0);
-            make.bottom.equalTo(tip.mas_top).offset(-100);
+            make.left.mas_offset(20);
+            make.top.mas_offset(kHCStatusBarHeight + 10);
+//            make.centerX.mas_equalTo(0);
+//            make.bottom.equalTo(tip.mas_top).offset(-100);
         }];
         
         [tip mas_makeConstraints:^(MASConstraintMaker *make) {

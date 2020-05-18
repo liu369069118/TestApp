@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00D79727246FD05D009FDA4B /* HCWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D79725246FD05D009FDA4B /* HCWindow.m */; };
 		0FAF47585D60844053227183 /* libPods-万宝股票.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 165810C17486B94C9C796838 /* libPods-万宝股票.a */; };
 		7B09AE742467B59000CB0D2C /* XXGP_QuotationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09AE732467B59000CB0D2C /* XXGP_QuotationController.m */; };
 		7B09AE782467BFC100CB0D2C /* XXGP_QuotationFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09AE772467BFC100CB0D2C /* XXGP_QuotationFirstCell.m */; };
@@ -181,6 +182,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00D79725246FD05D009FDA4B /* HCWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCWindow.m; sourceTree = "<group>"; };
+		00D79726246FD05D009FDA4B /* HCWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCWindow.h; sourceTree = "<group>"; };
 		165810C17486B94C9C796838 /* libPods-万宝股票.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-万宝股票.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A30634673814533AB1C16CC /* Pods-万宝股票资讯.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-万宝股票资讯.release.xcconfig"; path = "Target Support Files/Pods-万宝股票资讯/Pods-万宝股票资讯.release.xcconfig"; sourceTree = "<group>"; };
 		5089F9DD7B096E071580D46B /* Pods-万宝股票.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-万宝股票.debug.xcconfig"; path = "Target Support Files/Pods-万宝股票/Pods-万宝股票.debug.xcconfig"; sourceTree = "<group>"; };
@@ -518,6 +521,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00D79724246FD05D009FDA4B /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				00D79726246FD05D009FDA4B /* HCWindow.h */,
+				00D79725246FD05D009FDA4B /* HCWindow.m */,
+			);
+			path = Window;
+			sourceTree = "<group>";
+		};
 		767A4660F0BC6068CD05337F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -953,6 +965,7 @@
 		7BE9FBBE2464048400B90142 /* Labrary */ = {
 			isa = PBXGroup;
 			children = (
+				00D79724246FD05D009FDA4B /* Window */,
 				7BE9F9E82463EB9000B90142 /* HCColor */,
 				7BE9F9EB2463EB9000B90142 /* HCFont */,
 				7B09AF032467F3B800CB0D2C /* Addtional */,
@@ -1352,6 +1365,7 @@
 				7B09B0812468E50400CB0D2C /* XXGP_ReleaPageViewController.m in Sources */,
 				7BE9FBB02464029E00B90142 /* UIControl+XFExt.m in Sources */,
 				7B09AEF72467F0AC00CB0D2C /* MyLayoutSizeClass.m in Sources */,
+				00D79727246FD05D009FDA4B /* HCWindow.m in Sources */,
 				7B09AE742467B59000CB0D2C /* XXGP_QuotationController.m in Sources */,
 				7B09AEE52467F0AC00CB0D2C /* MyFlowLayout.m in Sources */,
 				CF513E0D2467ADA7009CED33 /* UIColor+JKRColor.m in Sources */,

@@ -146,11 +146,12 @@
 
 /// >>> 判断链接是否允许跳转
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-    if ([navigationAction.request.URL.path isEqualToString:@"/guide.html"]) {
-        decisionHandler(WKNavigationActionPolicyCancel);
+    if ([navigationAction.request.URL.host containsString:@"news"]) {
+        decisionHandler(WKNavigationActionPolicyAllow);
         return;
     }
     
-    decisionHandler(WKNavigationActionPolicyAllow);
+    
+    decisionHandler(WKNavigationActionPolicyCancel);
 }
 @end

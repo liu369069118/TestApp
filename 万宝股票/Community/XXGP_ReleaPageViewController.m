@@ -56,7 +56,7 @@
     [self.view addSubview:_aView];
     self.navigationItem.title = self.naviTitle;
 
-    self.XXGP_tipLab = [[UILabel alloc]initWithFrame:CGRectMake(15 , kScreenHeight / 2, kScreenWidth - 30, 30)];
+    self.XXGP_tipLab = [[UILabel alloc]initWithFrame:CGRectMake(15 , kScreenHeight / 2 - 50, kScreenWidth - 30, 30)];
     self.XXGP_tipLab.font = [UIFont systemFontOfSize:13];
     self.XXGP_tipLab.textColor = HCColor(255, 97, 0);
     self.XXGP_tipLab.text = @"您发表的评论我们将在8小时内完成审核";
@@ -138,7 +138,8 @@
 
 #pragma mark 提交意见反馈
 - (void)sendFeedBack{
-  BOOL isFirst =   [[NSUserDefaults standardUserDefaults] objectForKey:@"isLoad"];
+    [self.view endEditing:YES];
+    BOOL isFirst =   [[NSUserDefaults standardUserDefaults] objectForKey:@"isLoad"];
     if (!isFirst) {
         XXGP_AlertViewController *alertVC = [XXGP_AlertViewController alertControllerWithTitle:@"发表规则" message:@"1.用户对其发表的信息负责，应尽可能提供详尽、真实、准确的材料,不得发表不真实的、有歧义的信息，绝对禁止发表误导性的、恶意的消息产品。  \n   2.用户不得在平台内发表与本应用无关的内容，我们会在8小时内对用户的内容进行审核,审核通过后才可发表到产品平台内.   \n     3.用户如发现其他用户发表的内容不当，应在内容页进行举报!收到举报后我们会在8小时内对内容进行重新审核!" preferredStyle:UIAlertControllerStyleAlert];
         alertVC.source = XXGP_AlertViewSourceTypeReleas;
@@ -159,15 +160,17 @@
             
             [XXGP_ProgramProgressHUD hideHUDAnimated:YES];
             
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"发表成功" message:@"内容审核通过后8小时内会显示相关内容~" preferredStyle:UIAlertControllerStyleAlert];
-            
-            UIAlertAction *album = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                [self.navigationController popViewControllerAnimated:YES];
-            }];
-            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-            [alertController addAction:album];
-            [alertController addAction:cancel];
-            [self presentViewController:alertController animated:YES completion:nil];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"发表成功" message:@"内容审核通过后8小时内会显示相关内容~" preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction *album = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    [self.navigationController popViewControllerAnimated:YES];
+                }];
+                UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+                [alertController addAction:album];
+                [alertController addAction:cancel];
+                [self presentViewController:alertController animated:YES completion:nil];
+            });
         });
         
     }
