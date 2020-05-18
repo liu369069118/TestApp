@@ -4,7 +4,7 @@ platform :ios, '10.0'
 
 inhibit_all_warnings!
 
-target '万宝股票' do
+target '万宝配资头条' do
     pod 'AFNetworking', '~> 4.0.0'
     pod 'ReactiveObjC', '3.0.0'
     pod 'MJRefresh', '3.1.15.7'
