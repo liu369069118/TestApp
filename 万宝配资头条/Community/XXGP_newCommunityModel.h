@@ -37,6 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *topicUrl;
 @property (nonatomic, copy) NSString *topicWebrsid;
 @property (nonatomic, copy) NSString *isMember;
+@property (nonatomic, copy) NSString *shareUrl;
 
 @property (nonatomic, strong) NSDictionary *likesModel;
 

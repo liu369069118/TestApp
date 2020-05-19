@@ -146,7 +146,8 @@
 
 /// >>> 判断链接是否允许跳转
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-    if ([navigationAction.request.URL.host containsString:@"news"]) {
+    if ([navigationAction.request.URL.host containsString:@"news"] ||
+        [navigationAction.request.URL.absoluteString containsString:@"/m/live"]) {
         decisionHandler(WKNavigationActionPolicyAllow);
         return;
     }

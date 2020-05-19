@@ -8,6 +8,7 @@
 #import <YYModel/YYModel.h>
 #import "XXGP_NewCommunityCell.h"
 #import "XXGP_newCommunityModel.h"
+#import "XXGP_CommunityDetailController.h"
 #import "XXGP_WebController.h"
 
 static CGFloat const loadDataTime = 0.75;
@@ -230,9 +231,11 @@ return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    XXGP_ReleaPageViewController *webVC = [[XXGP_ReleaPageViewController alloc] init];
-    webVC.naviTitle = @"评论";
-    [self.navigationController pushViewController:webVC animated:YES];
+    XXGP_newCommunityModel *model = _articleList[indexPath.row];
+    
+    XXGP_CommunityDetailController *detailVc = [[XXGP_CommunityDetailController alloc] init];
+    detailVc.model = model;
+    [self.navigationController pushViewController:detailVc animated:YES];
 }
 
 @end

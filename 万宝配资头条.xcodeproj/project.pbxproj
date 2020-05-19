@@ -63,6 +63,7 @@
 		7B09B0812468E50400CB0D2C /* XXGP_ReleaPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B0802468E50300CB0D2C /* XXGP_ReleaPageViewController.m */; };
 		7B09B0842468E54400CB0D2C /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B0822468E54400CB0D2C /* PlaceholderTextView.m */; };
 		7B09B0872468E55700CB0D2C /* XXGP_AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B09B0862468E55700CB0D2C /* XXGP_AlertViewController.m */; };
+		7B40012A24736FD4005355CC /* XXGP_CommunityDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B40012924736FD3005355CC /* XXGP_CommunityDetailController.m */; };
 		7B69D440246E470500E1EA75 /* XXGP_HomeNewNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B69D43F246E470500E1EA75 /* XXGP_HomeNewNewsCell.m */; };
 		7B69D443246E471100E1EA75 /* XXGP_HomeNewNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B69D442246E471100E1EA75 /* XXGP_HomeNewNewsModel.m */; };
 		7B69D446246E781C00E1EA75 /* XXGP_NewCommunityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B69D445246E781C00E1EA75 /* XXGP_NewCommunityCell.m */; };
@@ -290,6 +291,8 @@
 		7B09B0862468E55700CB0D2C /* XXGP_AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXGP_AlertViewController.m; sourceTree = "<group>"; };
 		7B2CB3B5246CE02E001269AB /* 万宝配资头条.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "万宝配资头条.entitlements"; sourceTree = "<group>"; };
 		7B2CB3B6246CE03F001269AB /* 万宝配资头条Debug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "万宝配资头条Debug.entitlements"; sourceTree = "<group>"; };
+		7B40012824736FD3005355CC /* XXGP_CommunityDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXGP_CommunityDetailController.h; sourceTree = "<group>"; };
+		7B40012924736FD3005355CC /* XXGP_CommunityDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXGP_CommunityDetailController.m; sourceTree = "<group>"; };
 		7B69D43E246E470500E1EA75 /* XXGP_HomeNewNewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXGP_HomeNewNewsCell.h; sourceTree = "<group>"; };
 		7B69D43F246E470500E1EA75 /* XXGP_HomeNewNewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXGP_HomeNewNewsCell.m; sourceTree = "<group>"; };
 		7B69D441246E471100E1EA75 /* XXGP_HomeNewNewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXGP_HomeNewNewsModel.h; sourceTree = "<group>"; };
@@ -821,6 +824,8 @@
 			children = (
 				7BE9FA6D2463EEB500B90142 /* XXGP_CommunityController.h */,
 				7BE9FA6E2463EEB500B90142 /* XXGP_CommunityController.m */,
+				7B40012824736FD3005355CC /* XXGP_CommunityDetailController.h */,
+				7B40012924736FD3005355CC /* XXGP_CommunityDetailController.m */,
 				7B69D444246E781C00E1EA75 /* XXGP_NewCommunityCell.h */,
 				7B69D445246E781C00E1EA75 /* XXGP_NewCommunityCell.m */,
 				7B69D447246E782900E1EA75 /* XXGP_newCommunityModel.h */,
@@ -1357,6 +1362,7 @@
 				7BE9FBF124650C8900B90142 /* NSMutableAttributedString+TY.m in Sources */,
 				7B09AE912467EE3900CB0D2C /* XXGP_GUPTableViewCell.m in Sources */,
 				CF5ABD0A246D716D008333FE /* BLMenuItem.m in Sources */,
+				7B40012A24736FD4005355CC /* XXGP_CommunityDetailController.m in Sources */,
 				7BE9F9AC2463E78400B90142 /* AppDelegate.m in Sources */,
 				7B09B0812468E50400CB0D2C /* XXGP_ReleaPageViewController.m in Sources */,
 				7BE9FBB02464029E00B90142 /* UIControl+XFExt.m in Sources */,
@@ -1581,7 +1587,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1633,7 +1639,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1649,7 +1655,7 @@
 				CODE_SIGN_ENTITLEMENTS = "万宝配资头条/万宝配资头条Debug.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = KKL25DGBTX;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/万宝配资头条/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/万宝配资头条/Info.plist";
@@ -1658,7 +1664,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1718,7 +1724,7 @@
 				CODE_SIGN_ENTITLEMENTS = "万宝配资头条/万宝配资头条.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = KKL25DGBTX;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/万宝配资头条/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/万宝配资头条/Info.plist";
@@ -1727,7 +1733,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

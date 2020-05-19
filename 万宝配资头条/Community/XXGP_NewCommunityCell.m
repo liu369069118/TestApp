@@ -83,8 +83,6 @@
     _headerImage.userInteractionEnabled = YES;
     [self.contentView addSubview:_headerImage];
     
-//    [_headerImage addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(avatarAction)]];
-    
     _nickName = [[UILabel alloc] init];
     _nickName.textColor = HCColor(41, 36, 32);
     _nickName.font = [HCFont pingfangRegular:15];
@@ -116,6 +114,7 @@
     _contentLabel.textColor = [HCColor blackColor];
     _contentLabel.font = [HCFont pingfangRegular:17];
     _contentLabel.numberOfLines = 3;
+    _contentLabel.lineBreakMode = NSLineBreakByWordWrapping;
     [self.contentView addSubview:_contentLabel];
     
     _linkImage = [[UIImageView alloc] init];
