@@ -21,12 +21,12 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [self checkoutLoginData];
+        [self XXGP_CheckoutLoginData];
     }
     return self;
 }
 
-- (void)checkoutLoginData {
+- (void)XXGP_CheckoutLoginData {
     NSDictionary *accountDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"loginData"];
     if (!accountDic) {
         _accountDic = [NSMutableDictionary dictionary];
@@ -46,14 +46,14 @@
         } else {
             self.isLogin = YES;
             self.userAccount = [login objectForKey:@"account"];
-            self.userIntegral = [self getUserIntergralWithAccount:_userAccount];
+            self.userIntegral = [self XXGP_GetUserIntergralWithAccount:_userAccount];
         }
     } else {
         self.isLogin = NO;
     }
 }
 
-- (BOOL)userLoginWithAccount:(NSString *)account password:(NSString *)key {
+- (BOOL)XXGP_UserLoginWithAccount:(NSString *)account password:(NSString *)key {
     if (!account || account.length == 0) {
         return NO;
     }
@@ -68,7 +68,7 @@
             [[NSUserDefaults standardUserDefaults] setObject:loginStatus forKey:@"loginStatus"];
             self.isLogin = YES;
             self.userAccount = account;
-            self.userIntegral = [self getUserIntergralWithAccount:_userAccount];
+            self.userIntegral = [self XXGP_GetUserIntergralWithAccount:_userAccount];
             return YES;
         } else {
             return NO;
@@ -78,7 +78,7 @@
     }
 }
 
-- (BOOL)userRegisWithAccount:(NSString *)account password:(NSString *)key {
+- (BOOL)XXGP_UserRegisWithAccount:(NSString *)account password:(NSString *)key {
     if (!account || account.length == 0) {
         return NO;
     }
@@ -91,7 +91,7 @@
     return YES;
 }
 
-- (BOOL)loginOut {
+- (BOOL)XXGP_LoginOut {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"loginStatus"];
     self.isLogin = NO;
     self.userAccount = @"";
@@ -99,7 +99,7 @@
     return YES;
 }
 
-- (void)updateIntergral:(NSInteger)value {
+- (void)XXGP_UpdateIntergral:(NSInteger)value {
     if (!self.isLogin) {
         return;
     }
@@ -120,7 +120,7 @@
     }
 }
 
-- (NSInteger)getUserIntergralWithAccount:(NSString *)account {
+- (NSInteger)XXGP_GetUserIntergralWithAccount:(NSString *)account {
     if (account) {
         NSDictionary *intergralData = [[NSUserDefaults standardUserDefaults] objectForKey:@"userIntergral"];
         if (intergralData) {

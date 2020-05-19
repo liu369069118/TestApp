@@ -101,7 +101,7 @@
             lock = YES;
         }
         if (lock) {
-            [[XXGP_LoginTool sharedInstance] updateIntergral:[XXGP_LoginTool sharedInstance].userIntegral+1];
+            [[XXGP_LoginTool sharedInstance] XXGP_UpdateIntergral:[XXGP_LoginTool sharedInstance].userIntegral+1];
             [[NSUserDefaults standardUserDefaults] setObject:@([NSDate date].timeIntervalSince1970) forKey:@"signDate"];
             [self updateUI];
         }

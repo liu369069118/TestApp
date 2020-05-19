@@ -11,13 +11,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedInstance;
 
-- (BOOL)userLoginWithAccount:(NSString *)account password:(NSString *)key;
+- (BOOL)XXGP_UserLoginWithAccount:(NSString *)account password:(NSString *)key;
 
-- (BOOL)userRegisWithAccount:(NSString *)account password:(NSString *)key;
+- (BOOL)XXGP_UserRegisWithAccount:(NSString *)account password:(NSString *)key;
 
-- (BOOL)loginOut;
+- (BOOL)XXGP_LoginOut;
 
-- (void)updateIntergral:(NSInteger)value;
+- (void)XXGP_UpdateIntergral:(NSInteger)value;
 
 @end
 

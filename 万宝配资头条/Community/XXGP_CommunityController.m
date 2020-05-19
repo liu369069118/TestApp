@@ -166,7 +166,6 @@ static CGFloat const loadDataTime = 0.75;
     
     fetcher.parameters = @{@"page_refer":@(_pageRefer), @"time":NotNullString(_topicTime)};
     
-    
     [fetcher requestWithSuccess:^(id responseObject) {
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
     }];

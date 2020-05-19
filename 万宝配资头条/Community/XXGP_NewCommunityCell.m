@@ -15,7 +15,7 @@
 
 @property (nonatomic, strong) UILabel *readLabel;
 @property (nonatomic, strong) XXGP_CommunityButton *likeButton;
-@property (nonatomic, strong) XXGP_CommunityButton *commentButton;
+
 
 @end
 
@@ -47,7 +47,7 @@
     _readLabel.text = [NSString stringWithFormat:@"%@人已阅读",[model.likesModel getNotNilString:@"clicks"]];
     BOOL is_rates = [model.likesModel getBOOL:@"hasAgree"];
     NSString *likes = [model.likesModel getNotNilString:@"likes"];
-    NSString *replys = [model.likesModel getNotNilString:@"replys"];
+//    NSString *replys = [model.likesModel getNotNilString:@"replys"];
     
     if (is_rates) {
         _likeButton.imageName = @"btn_new_community_cell_like_s";
@@ -61,11 +61,11 @@
         _likeButton.titleText = @"赞";
     }
     
-    if (replys.integerValue > 0) {
-        _commentButton.titleText = replys;
-    } else {
-       _commentButton.titleText = @"评论";
-    }
+//    if (replys.integerValue > 0) {
+//        _commentButton.titleText = replys;
+//    } else {
+//       _commentButton.titleText = @"评论";
+//    }
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -159,12 +159,12 @@
     [self setButtonNormalState:likeButton];
     [self.contentView addSubview:likeButton];
     _likeButton = likeButton;
-    
-    XXGP_CommunityButton *commentButton = [[XXGP_CommunityButton alloc] init];
-    commentButton.imageName = @"btn_new_community_cell_comment_n";
-    [self setButtonNormalState:commentButton];
-    [self.contentView addSubview:commentButton];
-    _commentButton = commentButton;
+//
+//    XXGP_CommunityButton *commentButton = [[XXGP_CommunityButton alloc] init];
+//    commentButton.imageName = @"btn_new_community_cell_comment_n";
+//    [self setButtonNormalState:commentButton];
+//    [self.contentView addSubview:commentButton];
+//    _commentButton = commentButton;
     
     [_readLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(15);
@@ -173,19 +173,19 @@
     }];
     
     [_likeButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(commentButton.mas_left).offset(-28);
-        make.bottom.mas_equalTo(0);
-        make.height.mas_equalTo(40);
-    }];
-    
-    [_commentButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(-15);
         make.bottom.mas_equalTo(0);
         make.height.mas_equalTo(40);
     }];
+    
+//    [_commentButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.right.mas_equalTo(-15);
+//        make.bottom.mas_equalTo(0);
+//        make.height.mas_equalTo(40);
+//    }];
 
     [_likeButton addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(likeButtonAction)]];
-    [_commentButton addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(commentButtonAction)]];
+//    [_commentButton addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(commentButtonAction)]];
 }
 
 

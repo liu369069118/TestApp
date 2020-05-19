@@ -135,7 +135,7 @@
                 MJWeakSelf
                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"确认退出当前账号吗？" preferredStyle:UIAlertControllerStyleAlert];
                 UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-                    [[XXGP_LoginTool sharedInstance] loginOut];
+                    [[XXGP_LoginTool sharedInstance] XXGP_LoginOut];
                     [weakSelf.header updateUI];
                 }];
                 UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {

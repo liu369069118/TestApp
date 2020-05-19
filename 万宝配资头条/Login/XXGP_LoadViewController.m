@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self layoutView];
+    [self XXGP_LayoutView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -41,10 +41,10 @@
 
 #pragma -mark -events response
 
-- (void)loadorregis:(UIButton *)btn{
+- (void)XXGP_Loadorregis:(UIButton *)btn{
     if (btn.tag == 1003) {
         //登陆
-        BOOL loginstate = [[XXGP_LoginTool sharedInstance] userLoginWithAccount:_loading.username.text password:_loading.userpass.text];
+        BOOL loginstate = [[XXGP_LoginTool sharedInstance] XXGP_UserLoginWithAccount:_loading.username.text password:_loading.userpass.text];
         if (loginstate) {
             if (self.loadStatus) {
                 self.loadStatus();
@@ -60,18 +60,18 @@
         [self presentViewController:regis animated:YES completion:nil];
     }
 }
-- (void)jumpBack:(UIButton *)btn{
+- (void)XXGP_JumpBack:(UIButton *)btn{
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)jumpLoginWeb {
+- (void)XXGP_JumpLoginWeb {
     XXGP_WebviewController *web = [[XXGP_WebviewController alloc] init];
     web.titleStr = @"隐私协议";
     web.type = 1;
     [self.navigationController pushViewController:web animated:YES];
 }
 
-- (void)jumpRegisWeb {
+- (void)XXGP_JumpRegisWeb {
     XXGP_WebviewController *web = [[XXGP_WebviewController alloc] init];
     web.titleStr = @"注册协议";
     web.type = 2;
@@ -80,18 +80,18 @@
 
 #pragma -mark -LayoutView
 
-- (void)layoutView{
+- (void)XXGP_LayoutView{
     self.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     _loading = [[XXGP_Loading alloc] initWithFrame:self.view.frame];
     [self.view addSubview:_loading];
     _loading.username.delegate =  self;
     _loading.userpass.delegate =  self;
-    [_loading.log_sure addTarget:self action:@selector(loadorregis:) forControlEvents:UIControlEventTouchUpInside];//登录
-    [_loading.regisAcc addTarget:self action:@selector(loadorregis:) forControlEvents:UIControlEventTouchUpInside];//注册
-    [_loading.backbtn addTarget:self action:@selector(jumpBack:) forControlEvents:UIControlEventTouchUpInside];//随便逛逛
-    [_loading.loginAgreement addTarget:self action:@selector(jumpLoginWeb) forControlEvents:UIControlEventTouchUpInside];
-    [_loading.regisAgreement addTarget:self action:@selector(jumpRegisWeb) forControlEvents:UIControlEventTouchUpInside];
+    [_loading.log_sure addTarget:self action:@selector(XXGP_Loadorregis:) forControlEvents:UIControlEventTouchUpInside];//登录
+    [_loading.regisAcc addTarget:self action:@selector(XXGP_Loadorregis:) forControlEvents:UIControlEventTouchUpInside];//注册
+    [_loading.backbtn addTarget:self action:@selector(XXGP_JumpBack:) forControlEvents:UIControlEventTouchUpInside];//随便逛逛
+    [_loading.loginAgreement addTarget:self action:@selector(XXGP_JumpLoginWeb) forControlEvents:UIControlEventTouchUpInside];
+    [_loading.regisAgreement addTarget:self action:@selector(XXGP_JumpRegisWeb) forControlEvents:UIControlEventTouchUpInside];
 }
 
 @end

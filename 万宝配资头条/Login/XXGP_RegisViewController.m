@@ -62,7 +62,7 @@
 
 - (void)regisMyAccount:(UIButton *)btn{
     if ([_mysec isEqualToString:_mysecs]&&_myEmail.length!=0&&_myName.length!=0&&_mysec.length!=0&&_mysecs.length!=0) {
-        if ([[XXGP_LoginTool sharedInstance] userRegisWithAccount:_myName password:_mysec]) {
+        if ([[XXGP_LoginTool sharedInstance] XXGP_UserRegisWithAccount:_myName password:_mysec]) {
             [[KNToast shareToast] initWithText:@"注册成功"];
             [self dismissViewControllerAnimated:YES completion:nil];
         }else{
